@@ -1,0 +1,7 @@
+C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|7e7c10d3-70cf-4155-8ab0-a04247e95202
+C:\Users\mac_000\Documents\PSoC Creator\4.3\Downloads ( 4.3).cylib\Downloads ( 4.3).cyprj|17ce22e2-47a9-4ed5-9847-94045292b172
+C:\Users\mac_000\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|b7d3d543-b5d0-4d98-b59b-c88a09209c9b
+C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|821dcfcf-3f1b-44e4-853e-9ab4abba1f7b
+C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|fa34553c-1508-4f12-80bd-0b5cf62bd770
+C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|b0abe7be-a3d9-43fa-833b-5b3f14240cb4
+C:\Users\mac_000\Documents\Git_IR_REMO\PSoC\IR_REMO4200M.cydsn\IR_REMO4200M.cyprj|8b8cf103-3017-4f07-b7d4-317f2a6ef2c4

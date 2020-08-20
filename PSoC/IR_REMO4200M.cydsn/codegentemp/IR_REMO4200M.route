@@ -165,8 +165,8 @@ net \Timer2:TimerUDB:run_mode\
 	switch ":udb@[UDB=(1,0)]:pld0:mc2.q==>:udb@[UDB=(1,0)]:pld0:output_permute2.q_2"
 	switch ":udb@[UDB=(1,0)]:pld0:output_permute2.output_2==>Stub-:udbswitch@[UDB=(0,0)][side=top]:v29"
 	switch "OStub-:udbswitch@[UDB=(0,0)][side=top]:v29"
-	switch ":udbswitch@[UDB=(0,0)][side=top]:29,56"
-	switch ":udbswitch@[UDB=(0,0)][side=top]:13,56_f"
+	switch ":udbswitch@[UDB=(0,0)][side=top]:29,41"
+	switch ":udbswitch@[UDB=(0,0)][side=top]:13,41_f"
 	switch "IStub-:udbswitch@[UDB=(0,0)][side=top]:v13"
 	switch "Stub-:udbswitch@[UDB=(0,0)][side=top]:v13==>:udb@[UDB=(1,0)]:pld0:input_permute.input_6"
 	switch ":udb@[UDB=(1,0)]:pld0:input_permute.mc3_main_0==>:udb@[UDB=(1,0)]:pld0:mc3.main_0"
@@ -204,7 +204,7 @@ net \Timer2:TimerUDB:trig_disable\
 	switch ":udb@[UDB=(1,0)]:pld0:input_permute.mc1_main_4==>:udb@[UDB=(1,0)]:pld0:mc1.main_4"
 	term   ":udb@[UDB=(1,0)]:pld0:mc1.main_4"
 end \Timer2:TimerUDB:trig_disable\
-net Net_98
+net Net_230
 	term   ":ioport0:pin7.fb"
 	switch ":ioport0:pin7.fb==>:ioport0:hsiom_in7.hsiom7_in"
 	switch ":ioport0:hsiom_in7.dsi==>Stub-:dsiswitch_bottom@[DSI=(1,1)][side=bottom]:dsihc_bottom:v13+:dsiswitch_bottom@[DSI=(1,1)][side=bottom]:dsihc_bottom:v15"
@@ -241,7 +241,7 @@ net Net_98
 	term   ":udb@[UDB=(1,0)]:pld0:mc0.main_0"
 	switch ":udb@[UDB=(1,0)]:pld0:input_permute.mc1_main_0==>:udb@[UDB=(1,0)]:pld0:mc1.main_0"
 	term   ":udb@[UDB=(1,0)]:pld0:mc1.main_0"
-end Net_98
+end Net_230
 net ClockBlock_HFClk
 	term   ":m0s8clockblockcell.hfclk"
 	switch ":m0s8clockblockcell.hfclk==>:udb@[UDB=(1,1)]:controlcell.busclk"
@@ -257,6 +257,24 @@ net ClockBlock_HFClk
 	switch ":m0s8clockblockcell.hfclk==>:udb@[UDB=(1,0)]:dp_wrapper:datapath.busclk"
 	term   ":udb@[UDB=(1,0)]:dp_wrapper:datapath.busclk"
 end ClockBlock_HFClk
+net Net_228_digital
+	term   ":m0s8clockgenblockcell.gen_clk_out_1"
+	switch ":m0s8clockgenblockcell.gen_clk_out_1==>:udb@[UDB=(1,0)]:clockreset:clk_sc_mux.in_1"
+	switch ":udb@[UDB=(1,0)]:clockreset:clk_sc_mux.sc_clk==>:udb@[UDB=(1,0)]:controlcell.clock"
+	term   ":udb@[UDB=(1,0)]:controlcell.clock"
+	switch ":udb@[UDB=(1,0)]:clockreset:clk_sc_mux.sc_clk==>:udb@[UDB=(1,0)]:statusicell.clock"
+	term   ":udb@[UDB=(1,0)]:statusicell.clock"
+	switch ":m0s8clockgenblockcell.gen_clk_out_1==>:udb@[UDB=(1,0)]:clockreset:clk_dp_mux.in_1"
+	switch ":udb@[UDB=(1,0)]:clockreset:clk_dp_mux.dp_clk==>:udb@[UDB=(1,0)]:dp_wrapper:datapath.clock"
+	term   ":udb@[UDB=(1,0)]:dp_wrapper:datapath.clock"
+	switch ":m0s8clockgenblockcell.gen_clk_out_1==>:udb@[UDB=(1,0)]:clockreset:clk_pld0_mux.in_1"
+	switch ":udb@[UDB=(1,0)]:clockreset:clk_pld0_mux.pld0_clk==>:udb@[UDB=(1,0)]:pld0:mc2.clock_0"
+	term   ":udb@[UDB=(1,0)]:pld0:mc2.clock_0"
+	switch ":udb@[UDB=(1,0)]:clockreset:clk_pld0_mux.pld0_clk==>:udb@[UDB=(1,0)]:pld0:mc0.clock_0"
+	term   ":udb@[UDB=(1,0)]:pld0:mc0.clock_0"
+	switch ":udb@[UDB=(1,0)]:clockreset:clk_pld0_mux.pld0_clk==>:udb@[UDB=(1,0)]:pld0:mc1.clock_0"
+	term   ":udb@[UDB=(1,0)]:pld0:mc1.clock_0"
+end Net_228_digital
 net Net_23_digital
 	term   ":m0s8clockgenblockcell.gen_clk_out_0"
 	switch ":m0s8clockgenblockcell.gen_clk_out_0==>:udb@[UDB=(1,1)]:clockreset:clk_sc_mux.in_0"
@@ -276,24 +294,6 @@ net Net_23_digital
 	switch ":udb@[UDB=(1,1)]:clockreset:clk_pld0_mux.pld0_clk==>:udb@[UDB=(1,1)]:pld0:mc1.clock_0"
 	term   ":udb@[UDB=(1,1)]:pld0:mc1.clock_0"
 end Net_23_digital
-net Net_73_digital
-	term   ":m0s8clockgenblockcell.gen_clk_out_1"
-	switch ":m0s8clockgenblockcell.gen_clk_out_1==>:udb@[UDB=(1,0)]:clockreset:clk_sc_mux.in_1"
-	switch ":udb@[UDB=(1,0)]:clockreset:clk_sc_mux.sc_clk==>:udb@[UDB=(1,0)]:controlcell.clock"
-	term   ":udb@[UDB=(1,0)]:controlcell.clock"
-	switch ":udb@[UDB=(1,0)]:clockreset:clk_sc_mux.sc_clk==>:udb@[UDB=(1,0)]:statusicell.clock"
-	term   ":udb@[UDB=(1,0)]:statusicell.clock"
-	switch ":m0s8clockgenblockcell.gen_clk_out_1==>:udb@[UDB=(1,0)]:clockreset:clk_dp_mux.in_1"
-	switch ":udb@[UDB=(1,0)]:clockreset:clk_dp_mux.dp_clk==>:udb@[UDB=(1,0)]:dp_wrapper:datapath.clock"
-	term   ":udb@[UDB=(1,0)]:dp_wrapper:datapath.clock"
-	switch ":m0s8clockgenblockcell.gen_clk_out_1==>:udb@[UDB=(1,0)]:clockreset:clk_pld0_mux.in_1"
-	switch ":udb@[UDB=(1,0)]:clockreset:clk_pld0_mux.pld0_clk==>:udb@[UDB=(1,0)]:pld0:mc2.clock_0"
-	term   ":udb@[UDB=(1,0)]:pld0:mc2.clock_0"
-	switch ":udb@[UDB=(1,0)]:clockreset:clk_pld0_mux.pld0_clk==>:udb@[UDB=(1,0)]:pld0:mc0.clock_0"
-	term   ":udb@[UDB=(1,0)]:pld0:mc0.clock_0"
-	switch ":udb@[UDB=(1,0)]:clockreset:clk_pld0_mux.pld0_clk==>:udb@[UDB=(1,0)]:pld0:mc1.clock_0"
-	term   ":udb@[UDB=(1,0)]:pld0:mc1.clock_0"
-end Net_73_digital
 net Net_30
 	term   ":udb@[UDB=(1,1)]:pld0:mc1.q"
 	switch ":udb@[UDB=(1,1)]:pld0:mc1.q==>:udb@[UDB=(1,1)]:pld0:output_permute0.q_1"

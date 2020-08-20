@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="IR-Remo\IR_REMO4200M\Source Files\main.c">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="IR-Remo\IR_REMO4200M\TopDesign">
 <ExpandedNodeIds>
 <v>IR-Remo</v>
 <v>IR-Remo\IR_REMO4200M</v>
@@ -65,6 +65,10 @@
 <v>IR-Remo\IR_REMO4200M\Generated_Source\PSoC4\IR\IR_PM.c</v>
 <v>IR-Remo\IR_REMO4200M\Generated_Source\PSoC4\ISR1</v>
 <v>IR-Remo\IR_REMO4200M\Generated_Source\PSoC4\LED</v>
+<v>IR-Remo\IR_REMO4200M\Generated_Source\PSoC4\M_BL</v>
+<v>IR-Remo\IR_REMO4200M\Generated_Source\PSoC4\M_BR</v>
+<v>IR-Remo\IR_REMO4200M\Generated_Source\PSoC4\M_FL</v>
+<v>IR-Remo\IR_REMO4200M\Generated_Source\PSoC4\M_FR</v>
 <v>IR-Remo\IR_REMO4200M\Generated_Source\PSoC4\timer_clk2</v>
 <v>IR-Remo\IR_REMO4200M\Generated_Source\PSoC4\timer_clock</v>
 <v>IR-Remo\IR_REMO4200M\Generated_Source\PSoC4\timer_clock_1</v>
@@ -79,10 +83,6 @@
 <v>IR-Remo\IR_REMO4200M\Generated_Source\PSoC4\cydevice_trm.h</v>
 <v>IR-Remo\IR_REMO4200M\Generated_Source\PSoC4\cydevicegnu_trm.inc</v>
 <v>IR-Remo\IR_REMO4200M\Generated_Source\PSoC4\cydeviceiar_trm.inc</v>
-<v>IR-Remo\IR_REMO4200M\Generated_Source\PSoC4\cydevicerv_trm.inc</v>
-<v>IR-Remo\IR_REMO4200M\Generated_Source\PSoC4\cydisabledsheets.h</v>
-<v>IR-Remo\IR_REMO4200M\Generated_Source\PSoC4\cyfitter.h</v>
-<v>IR-Remo\IR_REMO4200M\Generated_Source\PSoC4\cyfitter_cfg.c</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
@@ -123,6 +123,14 @@
 <v>IR-Remo\IR_REMO4200M\CortexM0\ARM_GCC_541\Debug\Listing Files\ISR1.lst</v>
 <v>IR-Remo\IR_REMO4200M\CortexM0\ARM_GCC_541\Debug\Listing Files\LED.lst</v>
 <v>IR-Remo\IR_REMO4200M\CortexM0\ARM_GCC_541\Debug\Listing Files\LED_PM.lst</v>
+<v>IR-Remo\IR_REMO4200M\CortexM0\ARM_GCC_541\Debug\Listing Files\M_BL.lst</v>
+<v>IR-Remo\IR_REMO4200M\CortexM0\ARM_GCC_541\Debug\Listing Files\M_BL_PM.lst</v>
+<v>IR-Remo\IR_REMO4200M\CortexM0\ARM_GCC_541\Debug\Listing Files\M_BR.lst</v>
+<v>IR-Remo\IR_REMO4200M\CortexM0\ARM_GCC_541\Debug\Listing Files\M_BR_PM.lst</v>
+<v>IR-Remo\IR_REMO4200M\CortexM0\ARM_GCC_541\Debug\Listing Files\M_FL.lst</v>
+<v>IR-Remo\IR_REMO4200M\CortexM0\ARM_GCC_541\Debug\Listing Files\M_FL_PM.lst</v>
+<v>IR-Remo\IR_REMO4200M\CortexM0\ARM_GCC_541\Debug\Listing Files\M_FR.lst</v>
+<v>IR-Remo\IR_REMO4200M\CortexM0\ARM_GCC_541\Debug\Listing Files\M_FR_PM.lst</v>
 <v>IR-Remo\IR_REMO4200M\CortexM0\ARM_GCC_541\Debug\Listing Files\main.lst</v>
 <v>IR-Remo\IR_REMO4200M\CortexM0\ARM_GCC_541\Debug\Listing Files\timer_clk2.lst</v>
 <v>IR-Remo\IR_REMO4200M\CortexM0\ARM_GCC_541\Debug\Listing Files\timer_clock.lst</v>
@@ -172,6 +180,14 @@
 <v>IR-Remo\IR_REMO4200M\CortexM0\ARM_GCC_541\Debug\Listing Files\ISR1.lst</v>
 <v>IR-Remo\IR_REMO4200M\CortexM0\ARM_GCC_541\Debug\Listing Files\LED.lst</v>
 <v>IR-Remo\IR_REMO4200M\CortexM0\ARM_GCC_541\Debug\Listing Files\LED_PM.lst</v>
+<v>IR-Remo\IR_REMO4200M\CortexM0\ARM_GCC_541\Debug\Listing Files\M_BL.lst</v>
+<v>IR-Remo\IR_REMO4200M\CortexM0\ARM_GCC_541\Debug\Listing Files\M_BL_PM.lst</v>
+<v>IR-Remo\IR_REMO4200M\CortexM0\ARM_GCC_541\Debug\Listing Files\M_BR.lst</v>
+<v>IR-Remo\IR_REMO4200M\CortexM0\ARM_GCC_541\Debug\Listing Files\M_BR_PM.lst</v>
+<v>IR-Remo\IR_REMO4200M\CortexM0\ARM_GCC_541\Debug\Listing Files\M_FL.lst</v>
+<v>IR-Remo\IR_REMO4200M\CortexM0\ARM_GCC_541\Debug\Listing Files\M_FL_PM.lst</v>
+<v>IR-Remo\IR_REMO4200M\CortexM0\ARM_GCC_541\Debug\Listing Files\M_FR.lst</v>
+<v>IR-Remo\IR_REMO4200M\CortexM0\ARM_GCC_541\Debug\Listing Files\M_FR_PM.lst</v>
 <v>IR-Remo\IR_REMO4200M\CortexM0\ARM_GCC_541\Debug\Listing Files\main.lst</v>
 <v>IR-Remo\IR_REMO4200M\CortexM0\ARM_GCC_541\Debug\Listing Files\timer_clk2.lst</v>
 <v>IR-Remo\IR_REMO4200M\CortexM0\ARM_GCC_541\Debug\Listing Files\timer_clock.lst</v>
@@ -189,14 +205,6 @@
 <v>IR-Remo\IR_REMO4200M\CortexM0\ARM_GCC_541\Debug\Listing Files\UART1_SPI_UART_INT.lst</v>
 <v>IR-Remo\IR_REMO4200M\CortexM0\ARM_GCC_541\Debug\Listing Files\UART1_tx.lst</v>
 <v>IR-Remo\IR_REMO4200M\CortexM0\ARM_GCC_541\Debug\Listing Files\UART1_tx_PM.lst</v>
-<v>IR-Remo\IR_REMO4200M\CortexM0\ARM_GCC_541\Debug\Listing Files\UART1_UART.lst</v>
-<v>IR-Remo\IR_REMO4200M\CortexM0\ARM_GCC_541\Debug\Listing Files\UART1_UART_BOOT.lst</v>
-<v>IR-Remo\IR_REMO4200M\CortexM0\ARM_GCC_541\Debug\IR_REMO4200M.elf</v>
-<v>IR-Remo\IR_REMO4200M\CortexM0\ARM_GCC_541\Debug\IR_REMO4200M.hex</v>
-<v>IR-Remo\IR_REMO4200M\CortexM0\ARM_GCC_541\Debug\IR_REMO4200M.map</v>
-<v>IR-Remo\IR_REMO4200M\IR_REMO4200M.gpdsc</v>
-<v>IR-Remo\IR_REMO4200M\IR_REMO4200M.rpt</v>
-<v>IR-Remo\IR_REMO4200M\IR_REMO4200M_timing.html</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -216,13 +224,13 @@
 <v>IR-Remo\IR_REMO4200M\System Reference Guides\cy_lfclk_v1_20</v>
 <v>IR-Remo\IR_REMO4200M\cy_clock_v2_20</v>
 <v>IR-Remo\IR_REMO4200M\cy_clock_v2_20\cy_clock_v2_20.pdf</v>
+<v>IR-Remo\IR_REMO4200M\cy_constant_v1_0.pdf</v>
 <v>IR-Remo\IR_REMO4200M\cy_isr_v1_70.pdf</v>
 <v>IR-Remo\IR_REMO4200M\cy_pins_v2_20</v>
 <v>IR-Remo\IR_REMO4200M\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
 <v>IR-Remo\IR_REMO4200M\SCB_P4_v4_0.pdf</v>
 <v>IR-Remo\IR_REMO4200M\Timer_v2_80</v>
 <v>IR-Remo\IR_REMO4200M\Timer_v2_80\Timer_v2_80.pdf</v>
-<v>IR-Remo\IR_REMO4200M\ZeroTerminal.pdf</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>IR-Remo</v>
@@ -235,13 +243,13 @@
 <v>IR-Remo\IR_REMO4200M\System Reference Guides\cy_lfclk_v1_20</v>
 <v>IR-Remo\IR_REMO4200M\cy_clock_v2_20</v>
 <v>IR-Remo\IR_REMO4200M\cy_clock_v2_20\cy_clock_v2_20.pdf</v>
+<v>IR-Remo\IR_REMO4200M\cy_constant_v1_0.pdf</v>
 <v>IR-Remo\IR_REMO4200M\cy_isr_v1_70.pdf</v>
 <v>IR-Remo\IR_REMO4200M\cy_pins_v2_20</v>
 <v>IR-Remo\IR_REMO4200M\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
 <v>IR-Remo\IR_REMO4200M\SCB_P4_v4_0.pdf</v>
 <v>IR-Remo\IR_REMO4200M\Timer_v2_80</v>
 <v>IR-Remo\IR_REMO4200M\Timer_v2_80\Timer_v2_80.pdf</v>
-<v>IR-Remo\IR_REMO4200M\ZeroTerminal.pdf</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStatesV2>

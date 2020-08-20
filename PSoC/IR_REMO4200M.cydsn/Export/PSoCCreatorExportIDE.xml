@@ -130,6 +130,22 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Timer2_PM.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\timer_clk2.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\timer_clk2.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\M_FL.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\M_FL.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\M_FL_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\M_FL_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\M_BL.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\M_BL.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\M_BL_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\M_BL_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\M_FR.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\M_FR.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\M_FR_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\M_FR_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\M_BR.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\M_BR.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\M_BR_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\M_BR_PM.c</File>
         </Files>
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\codegentemp">

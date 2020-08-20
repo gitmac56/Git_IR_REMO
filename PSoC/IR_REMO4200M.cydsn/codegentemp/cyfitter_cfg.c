@@ -220,7 +220,7 @@ static void ClockSetup(void)
 
 
 	/* Setup phase aligned clocks */
-	CY_SET_REG32((void *)CYREG_PERI_DIV_16_CTL1, 0x0012BF00u);
+	CY_SET_REG32((void *)CYREG_PERI_DIV_16_CTL1, 0x00BB7F00u);
 	CY_SET_REG32((void *)CYREG_PERI_DIV_CMD, 0x8000FF41u);
 	CY_SET_REG32((void *)CYREG_PERI_DIV_16_5_CTL0, 0x0000B200u);
 	CY_SET_REG32((void *)CYREG_PERI_DIV_CMD, 0x8000FF80u);
@@ -307,7 +307,7 @@ void cyfitter_cfg(void)
 			0x400F303Au, /* Base address: 0x400F3000 Count: 58 */
 			0x400F311Fu, /* Base address: 0x400F3100 Count: 31 */
 			0x400F322Au, /* Base address: 0x400F3200 Count: 42 */
-			0x400F331Du, /* Base address: 0x400F3300 Count: 29 */
+			0x400F331Bu, /* Base address: 0x400F3300 Count: 27 */
 			0x400F4005u, /* Base address: 0x400F4000 Count: 5 */
 			0x400F4102u, /* Base address: 0x400F4100 Count: 2 */
 			0x400F6002u, /* Base address: 0x400F6000 Count: 2 */
@@ -448,14 +448,12 @@ void cyfitter_cfg(void)
 			{0x6Cu, 0x80u},
 			{0x6Eu, 0x80u},
 			{0x04u, 0x40u},
-			{0x0Du, 0x80u},
-			{0x0Eu, 0x08u},
+			{0x0Du, 0xA0u},
 			{0x0Fu, 0x20u},
 			{0x14u, 0x08u},
 			{0x17u, 0x80u},
 			{0x1Cu, 0x40u},
-			{0x1Du, 0x80u},
-			{0x1Eu, 0x08u},
+			{0x1Du, 0xA0u},
 			{0x1Fu, 0x08u},
 			{0x44u, 0x08u},
 			{0x45u, 0x80u},
@@ -541,7 +539,7 @@ void cyfitter_cfg(void)
 	/* Perform second pass device configuration. These items must be configured in specific order after the regular configuration is done. */
 	/* IOPINS0_0 Starting address: CYDEV_GPIO_PRT0_BASE */
 	CY_SET_REG32((void *)(CYDEV_GPIO_PRT0_BASE), 0x00000080u);
-	CY_SET_REG32((void *)(CYREG_GPIO_PRT0_PC), 0x00400000u);
+	CY_SET_REG32((void *)(CYREG_GPIO_PRT0_PC), 0x00400DB6u);
 
 	/* IOPINS0_1 Starting address: CYDEV_GPIO_PRT1_BASE */
 	CY_SET_REG32((void *)(CYDEV_GPIO_PRT1_BASE), 0x00000040u);

@@ -1,0 +1,1285 @@
+ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccfkNUHS.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m0
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 0
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"Count1.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.Count1_Init,"ax",%progbits
+  20              		.align	2
+  21              		.global	Count1_Init
+  22              		.code	16
+  23              		.thumb_func
+  24              		.type	Count1_Init, %function
+  25              	Count1_Init:
+  26              	.LFB1:
+  27              		.file 1 "Generated_Source\\PSoC4\\Count1.c"
+   1:Generated_Source\PSoC4/Count1.c **** /*******************************************************************************
+   2:Generated_Source\PSoC4/Count1.c **** * File Name: Count1.c
+   3:Generated_Source\PSoC4/Count1.c **** * Version 1.0
+   4:Generated_Source\PSoC4/Count1.c **** *
+   5:Generated_Source\PSoC4/Count1.c **** * Description:
+   6:Generated_Source\PSoC4/Count1.c **** *  This file provides source code for the Count7 component's API.
+   7:Generated_Source\PSoC4/Count1.c **** *
+   8:Generated_Source\PSoC4/Count1.c **** * Note:
+   9:Generated_Source\PSoC4/Count1.c **** *
+  10:Generated_Source\PSoC4/Count1.c **** ********************************************************************************
+  11:Generated_Source\PSoC4/Count1.c **** * Copyright 2013, Cypress Semiconductor Corporation.  All rights reserved.
+  12:Generated_Source\PSoC4/Count1.c **** * You may use this file only in accordance with the license, terms, conditions,
+  13:Generated_Source\PSoC4/Count1.c **** * disclaimers, and limitations in the end user license agreement accompanying
+  14:Generated_Source\PSoC4/Count1.c **** * the software package with which this file was provided.
+  15:Generated_Source\PSoC4/Count1.c **** *******************************************************************************/
+  16:Generated_Source\PSoC4/Count1.c **** 
+  17:Generated_Source\PSoC4/Count1.c **** #include "Count1.h"
+  18:Generated_Source\PSoC4/Count1.c **** 
+  19:Generated_Source\PSoC4/Count1.c **** uint8 Count1_initVar = 0u;
+  20:Generated_Source\PSoC4/Count1.c **** 
+  21:Generated_Source\PSoC4/Count1.c **** 
+  22:Generated_Source\PSoC4/Count1.c **** /*******************************************************************************
+  23:Generated_Source\PSoC4/Count1.c **** * Function Name: Count1_Init
+  24:Generated_Source\PSoC4/Count1.c **** ********************************************************************************
+  25:Generated_Source\PSoC4/Count1.c **** *
+  26:Generated_Source\PSoC4/Count1.c **** * Summary:
+  27:Generated_Source\PSoC4/Count1.c **** *  Initializes or restores the component according to the parameter editor
+  28:Generated_Source\PSoC4/Count1.c **** *  settings.
+  29:Generated_Source\PSoC4/Count1.c **** *
+  30:Generated_Source\PSoC4/Count1.c **** * Parameters:
+ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccfkNUHS.s 			page 2
+
+
+  31:Generated_Source\PSoC4/Count1.c **** *  None
+  32:Generated_Source\PSoC4/Count1.c **** *
+  33:Generated_Source\PSoC4/Count1.c **** * Return:
+  34:Generated_Source\PSoC4/Count1.c **** *  None
+  35:Generated_Source\PSoC4/Count1.c **** *
+  36:Generated_Source\PSoC4/Count1.c **** * Theory:
+  37:Generated_Source\PSoC4/Count1.c **** *  It is not necessary to call Count7_Init() because the Count7_Start() API
+  38:Generated_Source\PSoC4/Count1.c **** *  calls this function and is the preferred method to begin component
+  39:Generated_Source\PSoC4/Count1.c **** *  operation.
+  40:Generated_Source\PSoC4/Count1.c **** *
+  41:Generated_Source\PSoC4/Count1.c **** *******************************************************************************/
+  42:Generated_Source\PSoC4/Count1.c **** void Count1_Init(void) 
+  43:Generated_Source\PSoC4/Count1.c **** {
+  28              		.loc 1 43 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              		@ link register save eliminated.
+  44:Generated_Source\PSoC4/Count1.c ****     /* Set the initial period value from parameter editor */
+  45:Generated_Source\PSoC4/Count1.c ****     Count1_PERIOD_REG = Count1_INITIAL_PERIOD;
+  33              		.loc 1 45 0
+  34 0000 6422     		movs	r2, #100
+  35 0002 014B     		ldr	r3, .L2
+  36 0004 1A70     		strb	r2, [r3]
+  46:Generated_Source\PSoC4/Count1.c **** }
+  37              		.loc 1 46 0
+  38              		@ sp needed
+  39 0006 7047     		bx	lr
+  40              	.L3:
+  41              		.align	2
+  42              	.L2:
+  43 0008 81000F40 		.word	1074724993
+  44              		.cfi_endproc
+  45              	.LFE1:
+  46              		.size	Count1_Init, .-Count1_Init
+  47              		.section	.text.Count1_Enable,"ax",%progbits
+  48              		.align	2
+  49              		.global	Count1_Enable
+  50              		.code	16
+  51              		.thumb_func
+  52              		.type	Count1_Enable, %function
+  53              	Count1_Enable:
+  54              	.LFB2:
+  47:Generated_Source\PSoC4/Count1.c **** 
+  48:Generated_Source\PSoC4/Count1.c **** 
+  49:Generated_Source\PSoC4/Count1.c **** /*******************************************************************************
+  50:Generated_Source\PSoC4/Count1.c **** * Function Name: Count1_Enable
+  51:Generated_Source\PSoC4/Count1.c **** ********************************************************************************
+  52:Generated_Source\PSoC4/Count1.c **** *
+  53:Generated_Source\PSoC4/Count1.c **** * Summary:
+  54:Generated_Source\PSoC4/Count1.c **** *  Enables the software enable of the counter.
+  55:Generated_Source\PSoC4/Count1.c **** *
+  56:Generated_Source\PSoC4/Count1.c **** * Parameters:
+  57:Generated_Source\PSoC4/Count1.c **** *  None
+  58:Generated_Source\PSoC4/Count1.c **** *
+  59:Generated_Source\PSoC4/Count1.c **** * Return:
+  60:Generated_Source\PSoC4/Count1.c **** *  None
+ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccfkNUHS.s 			page 3
+
+
+  61:Generated_Source\PSoC4/Count1.c **** *
+  62:Generated_Source\PSoC4/Count1.c **** * Theory:
+  63:Generated_Source\PSoC4/Count1.c **** *  It is not necessary to call Count7_Enable() because the Count7_Start() API
+  64:Generated_Source\PSoC4/Count1.c **** *  calls this function, which is the preferred method to begin component
+  65:Generated_Source\PSoC4/Count1.c **** *  operation.
+  66:Generated_Source\PSoC4/Count1.c **** *  This API performs modification of auxiliary control register which is a
+  67:Generated_Source\PSoC4/Count1.c **** *  shared resource so it is required to disable interrupts until the
+  68:Generated_Source\PSoC4/Count1.c **** *  modification will complete.
+  69:Generated_Source\PSoC4/Count1.c **** *
+  70:Generated_Source\PSoC4/Count1.c **** *******************************************************************************/
+  71:Generated_Source\PSoC4/Count1.c **** void Count1_Enable(void) 
+  72:Generated_Source\PSoC4/Count1.c **** {
+  55              		.loc 1 72 0
+  56              		.cfi_startproc
+  57              		@ args = 0, pretend = 0, frame = 0
+  58              		@ frame_needed = 0, uses_anonymous_args = 0
+  59 0000 10B5     		push	{r4, lr}
+  60              		.cfi_def_cfa_offset 8
+  61              		.cfi_offset 4, -8
+  62              		.cfi_offset 14, -4
+  73:Generated_Source\PSoC4/Count1.c ****     uint8 interruptState;
+  74:Generated_Source\PSoC4/Count1.c **** 
+  75:Generated_Source\PSoC4/Count1.c ****     interruptState = CyEnterCriticalSection();
+  63              		.loc 1 75 0
+  64 0002 FFF7FEFF 		bl	CyEnterCriticalSection
+  65              	.LVL0:
+  76:Generated_Source\PSoC4/Count1.c ****     /* Set the counter start bit in auxiliary control. If routed enable
+  77:Generated_Source\PSoC4/Count1.c ****     * isn't used then this will immediately star the Count7 operation.
+  78:Generated_Source\PSoC4/Count1.c ****     */
+  79:Generated_Source\PSoC4/Count1.c ****     Count1_AUX_CONTROL_REG |= Count1_COUNTER_START;
+  66              		.loc 1 79 0
+  67 0006 044A     		ldr	r2, .L5
+  68 0008 1178     		ldrb	r1, [r2]
+  69 000a 2023     		movs	r3, #32
+  70 000c 0B43     		orrs	r3, r1
+  71 000e DBB2     		uxtb	r3, r3
+  72 0010 1370     		strb	r3, [r2]
+  80:Generated_Source\PSoC4/Count1.c **** 
+  81:Generated_Source\PSoC4/Count1.c ****     CyExitCriticalSection(interruptState);
+  73              		.loc 1 81 0
+  74 0012 FFF7FEFF 		bl	CyExitCriticalSection
+  75              	.LVL1:
+  82:Generated_Source\PSoC4/Count1.c **** }
+  76              		.loc 1 82 0
+  77              		@ sp needed
+  78 0016 10BD     		pop	{r4, pc}
+  79              	.L6:
+  80              		.align	2
+  81              	.L5:
+  82 0018 91000F40 		.word	1074725009
+  83              		.cfi_endproc
+  84              	.LFE2:
+  85              		.size	Count1_Enable, .-Count1_Enable
+  86              		.section	.text.Count1_Start,"ax",%progbits
+  87              		.align	2
+  88              		.global	Count1_Start
+  89              		.code	16
+ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccfkNUHS.s 			page 4
+
+
+  90              		.thumb_func
+  91              		.type	Count1_Start, %function
+  92              	Count1_Start:
+  93              	.LFB3:
+  83:Generated_Source\PSoC4/Count1.c **** 
+  84:Generated_Source\PSoC4/Count1.c **** 
+  85:Generated_Source\PSoC4/Count1.c **** /*******************************************************************************
+  86:Generated_Source\PSoC4/Count1.c **** * Function Name: Count1_Start
+  87:Generated_Source\PSoC4/Count1.c **** ********************************************************************************
+  88:Generated_Source\PSoC4/Count1.c **** *
+  89:Generated_Source\PSoC4/Count1.c **** * Summary:
+  90:Generated_Source\PSoC4/Count1.c **** *  Performs all of the required initialization for the component and enables
+  91:Generated_Source\PSoC4/Count1.c **** *  the counter. The first time the routine is executed, the period is set as
+  92:Generated_Source\PSoC4/Count1.c **** *  configured in the customizer. When called to restart the counter following a
+  93:Generated_Source\PSoC4/Count1.c **** *  Count7_Stop() call, the current period value is retained.
+  94:Generated_Source\PSoC4/Count1.c **** *
+  95:Generated_Source\PSoC4/Count1.c **** * Parameters:
+  96:Generated_Source\PSoC4/Count1.c **** *  None.
+  97:Generated_Source\PSoC4/Count1.c **** *
+  98:Generated_Source\PSoC4/Count1.c **** * Global Variables:
+  99:Generated_Source\PSoC4/Count1.c **** *  Count1_initVar - global variable.
+ 100:Generated_Source\PSoC4/Count1.c **** *
+ 101:Generated_Source\PSoC4/Count1.c **** * Return:
+ 102:Generated_Source\PSoC4/Count1.c **** *  None.
+ 103:Generated_Source\PSoC4/Count1.c **** *
+ 104:Generated_Source\PSoC4/Count1.c **** *******************************************************************************/
+ 105:Generated_Source\PSoC4/Count1.c **** void Count1_Start(void) 
+ 106:Generated_Source\PSoC4/Count1.c **** {
+  94              		.loc 1 106 0
+  95              		.cfi_startproc
+  96              		@ args = 0, pretend = 0, frame = 0
+  97              		@ frame_needed = 0, uses_anonymous_args = 0
+  98 0000 10B5     		push	{r4, lr}
+  99              		.cfi_def_cfa_offset 8
+ 100              		.cfi_offset 4, -8
+ 101              		.cfi_offset 14, -4
+ 107:Generated_Source\PSoC4/Count1.c ****     /* If not initialized then perform initialization */
+ 108:Generated_Source\PSoC4/Count1.c ****     if(Count1_initVar == 0u)
+ 102              		.loc 1 108 0
+ 103 0002 064B     		ldr	r3, .L9
+ 104 0004 1B78     		ldrb	r3, [r3]
+ 105 0006 002B     		cmp	r3, #0
+ 106 0008 04D1     		bne	.L8
+ 109:Generated_Source\PSoC4/Count1.c ****     {
+ 110:Generated_Source\PSoC4/Count1.c ****         Count1_Init();
+ 107              		.loc 1 110 0
+ 108 000a FFF7FEFF 		bl	Count1_Init
+ 109              	.LVL2:
+ 111:Generated_Source\PSoC4/Count1.c ****         Count1_initVar = 1u;
+ 110              		.loc 1 111 0
+ 111 000e 0122     		movs	r2, #1
+ 112 0010 024B     		ldr	r3, .L9
+ 113 0012 1A70     		strb	r2, [r3]
+ 114              	.L8:
+ 112:Generated_Source\PSoC4/Count1.c ****     }
+ 113:Generated_Source\PSoC4/Count1.c **** 
+ 114:Generated_Source\PSoC4/Count1.c ****     /* Enable Count7 */
+ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccfkNUHS.s 			page 5
+
+
+ 115:Generated_Source\PSoC4/Count1.c ****     Count1_Enable();
+ 115              		.loc 1 115 0
+ 116 0014 FFF7FEFF 		bl	Count1_Enable
+ 117              	.LVL3:
+ 116:Generated_Source\PSoC4/Count1.c **** }
+ 118              		.loc 1 116 0
+ 119              		@ sp needed
+ 120 0018 10BD     		pop	{r4, pc}
+ 121              	.L10:
+ 122 001a C046     		.align	2
+ 123              	.L9:
+ 124 001c 00000000 		.word	.LANCHOR0
+ 125              		.cfi_endproc
+ 126              	.LFE3:
+ 127              		.size	Count1_Start, .-Count1_Start
+ 128              		.section	.text.Count1_Stop,"ax",%progbits
+ 129              		.align	2
+ 130              		.global	Count1_Stop
+ 131              		.code	16
+ 132              		.thumb_func
+ 133              		.type	Count1_Stop, %function
+ 134              	Count1_Stop:
+ 135              	.LFB4:
+ 117:Generated_Source\PSoC4/Count1.c **** 
+ 118:Generated_Source\PSoC4/Count1.c **** 
+ 119:Generated_Source\PSoC4/Count1.c **** /*******************************************************************************
+ 120:Generated_Source\PSoC4/Count1.c **** * Function Name: Count1_Stop
+ 121:Generated_Source\PSoC4/Count1.c **** ********************************************************************************
+ 122:Generated_Source\PSoC4/Count1.c **** *
+ 123:Generated_Source\PSoC4/Count1.c **** * Summary:
+ 124:Generated_Source\PSoC4/Count1.c **** *  Disables the software enable of the counter.
+ 125:Generated_Source\PSoC4/Count1.c **** *
+ 126:Generated_Source\PSoC4/Count1.c **** * Parameters:
+ 127:Generated_Source\PSoC4/Count1.c **** *  None
+ 128:Generated_Source\PSoC4/Count1.c **** *
+ 129:Generated_Source\PSoC4/Count1.c **** * Return:
+ 130:Generated_Source\PSoC4/Count1.c **** *  None
+ 131:Generated_Source\PSoC4/Count1.c **** *
+ 132:Generated_Source\PSoC4/Count1.c **** *******************************************************************************/
+ 133:Generated_Source\PSoC4/Count1.c **** void Count1_Stop(void) 
+ 134:Generated_Source\PSoC4/Count1.c **** {
+ 136              		.loc 1 134 0
+ 137              		.cfi_startproc
+ 138              		@ args = 0, pretend = 0, frame = 0
+ 139              		@ frame_needed = 0, uses_anonymous_args = 0
+ 140 0000 10B5     		push	{r4, lr}
+ 141              		.cfi_def_cfa_offset 8
+ 142              		.cfi_offset 4, -8
+ 143              		.cfi_offset 14, -4
+ 135:Generated_Source\PSoC4/Count1.c ****     uint8 interruptState;
+ 136:Generated_Source\PSoC4/Count1.c **** 
+ 137:Generated_Source\PSoC4/Count1.c ****     interruptState = CyEnterCriticalSection();
+ 144              		.loc 1 137 0
+ 145 0002 FFF7FEFF 		bl	CyEnterCriticalSection
+ 146              	.LVL4:
+ 138:Generated_Source\PSoC4/Count1.c ****     /* Clear the counter start bit in auxiliary control. */
+ 139:Generated_Source\PSoC4/Count1.c ****     Count1_AUX_CONTROL_REG &= (uint8) ~((uint8) Count1_COUNTER_START);
+ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccfkNUHS.s 			page 6
+
+
+ 147              		.loc 1 139 0
+ 148 0006 044A     		ldr	r2, .L12
+ 149 0008 1378     		ldrb	r3, [r2]
+ 150 000a 2021     		movs	r1, #32
+ 151 000c 8B43     		bics	r3, r1
+ 152 000e 1370     		strb	r3, [r2]
+ 140:Generated_Source\PSoC4/Count1.c **** 
+ 141:Generated_Source\PSoC4/Count1.c ****     CyExitCriticalSection(interruptState);
+ 153              		.loc 1 141 0
+ 154 0010 FFF7FEFF 		bl	CyExitCriticalSection
+ 155              	.LVL5:
+ 142:Generated_Source\PSoC4/Count1.c **** }
+ 156              		.loc 1 142 0
+ 157              		@ sp needed
+ 158 0014 10BD     		pop	{r4, pc}
+ 159              	.L13:
+ 160 0016 C046     		.align	2
+ 161              	.L12:
+ 162 0018 91000F40 		.word	1074725009
+ 163              		.cfi_endproc
+ 164              	.LFE4:
+ 165              		.size	Count1_Stop, .-Count1_Stop
+ 166              		.section	.text.Count1_WriteCounter,"ax",%progbits
+ 167              		.align	2
+ 168              		.global	Count1_WriteCounter
+ 169              		.code	16
+ 170              		.thumb_func
+ 171              		.type	Count1_WriteCounter, %function
+ 172              	Count1_WriteCounter:
+ 173              	.LFB5:
+ 143:Generated_Source\PSoC4/Count1.c **** 
+ 144:Generated_Source\PSoC4/Count1.c **** 
+ 145:Generated_Source\PSoC4/Count1.c **** /*******************************************************************************
+ 146:Generated_Source\PSoC4/Count1.c **** * Function Name: Count1_WriteCounter
+ 147:Generated_Source\PSoC4/Count1.c **** ********************************************************************************
+ 148:Generated_Source\PSoC4/Count1.c **** *
+ 149:Generated_Source\PSoC4/Count1.c **** * Summary:
+ 150:Generated_Source\PSoC4/Count1.c **** *  This function writes the counter directly. The counter should be disabled
+ 151:Generated_Source\PSoC4/Count1.c **** *  before calling this function.
+ 152:Generated_Source\PSoC4/Count1.c **** *
+ 153:Generated_Source\PSoC4/Count1.c **** * Parameters:
+ 154:Generated_Source\PSoC4/Count1.c **** *  count - Value to be written to counter.
+ 155:Generated_Source\PSoC4/Count1.c **** *
+ 156:Generated_Source\PSoC4/Count1.c **** * Return:
+ 157:Generated_Source\PSoC4/Count1.c **** *  None
+ 158:Generated_Source\PSoC4/Count1.c **** *
+ 159:Generated_Source\PSoC4/Count1.c **** *******************************************************************************/
+ 160:Generated_Source\PSoC4/Count1.c **** void Count1_WriteCounter(uint8 count) 
+ 161:Generated_Source\PSoC4/Count1.c **** {
+ 174              		.loc 1 161 0
+ 175              		.cfi_startproc
+ 176              		@ args = 0, pretend = 0, frame = 0
+ 177              		@ frame_needed = 0, uses_anonymous_args = 0
+ 178              		@ link register save eliminated.
+ 179              	.LVL6:
+ 162:Generated_Source\PSoC4/Count1.c ****     Count1_COUNT_REG = (count & Count1_COUNT_7BIT_MASK);
+ 180              		.loc 1 162 0
+ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccfkNUHS.s 			page 7
+
+
+ 181 0000 7F23     		movs	r3, #127
+ 182 0002 1840     		ands	r0, r3
+ 183              	.LVL7:
+ 184 0004 014B     		ldr	r3, .L15
+ 185 0006 1870     		strb	r0, [r3]
+ 163:Generated_Source\PSoC4/Count1.c **** }
+ 186              		.loc 1 163 0
+ 187              		@ sp needed
+ 188 0008 7047     		bx	lr
+ 189              	.L16:
+ 190 000a C046     		.align	2
+ 191              	.L15:
+ 192 000c 71000F40 		.word	1074724977
+ 193              		.cfi_endproc
+ 194              	.LFE5:
+ 195              		.size	Count1_WriteCounter, .-Count1_WriteCounter
+ 196              		.section	.text.Count1_ReadCounter,"ax",%progbits
+ 197              		.align	2
+ 198              		.global	Count1_ReadCounter
+ 199              		.code	16
+ 200              		.thumb_func
+ 201              		.type	Count1_ReadCounter, %function
+ 202              	Count1_ReadCounter:
+ 203              	.LFB6:
+ 164:Generated_Source\PSoC4/Count1.c **** 
+ 165:Generated_Source\PSoC4/Count1.c **** 
+ 166:Generated_Source\PSoC4/Count1.c **** /*******************************************************************************
+ 167:Generated_Source\PSoC4/Count1.c **** * Function Name: Count1_ReadCounter
+ 168:Generated_Source\PSoC4/Count1.c **** ********************************************************************************
+ 169:Generated_Source\PSoC4/Count1.c **** *
+ 170:Generated_Source\PSoC4/Count1.c **** * Summary:
+ 171:Generated_Source\PSoC4/Count1.c **** *  This function reads the counter value.
+ 172:Generated_Source\PSoC4/Count1.c **** *
+ 173:Generated_Source\PSoC4/Count1.c **** * Parameters:
+ 174:Generated_Source\PSoC4/Count1.c **** *  None
+ 175:Generated_Source\PSoC4/Count1.c **** *
+ 176:Generated_Source\PSoC4/Count1.c **** * Return:
+ 177:Generated_Source\PSoC4/Count1.c **** *  None
+ 178:Generated_Source\PSoC4/Count1.c **** *
+ 179:Generated_Source\PSoC4/Count1.c **** *******************************************************************************/
+ 180:Generated_Source\PSoC4/Count1.c **** uint8 Count1_ReadCounter(void) 
+ 181:Generated_Source\PSoC4/Count1.c **** {
+ 204              		.loc 1 181 0
+ 205              		.cfi_startproc
+ 206              		@ args = 0, pretend = 0, frame = 0
+ 207              		@ frame_needed = 0, uses_anonymous_args = 0
+ 208              		@ link register save eliminated.
+ 182:Generated_Source\PSoC4/Count1.c ****     return(Count1_COUNT_REG & Count1_COUNT_7BIT_MASK);
+ 209              		.loc 1 182 0
+ 210 0000 024B     		ldr	r3, .L18
+ 211 0002 1878     		ldrb	r0, [r3]
+ 212 0004 7F23     		movs	r3, #127
+ 213 0006 1840     		ands	r0, r3
+ 183:Generated_Source\PSoC4/Count1.c **** }
+ 214              		.loc 1 183 0
+ 215              		@ sp needed
+ 216 0008 7047     		bx	lr
+ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccfkNUHS.s 			page 8
+
+
+ 217              	.L19:
+ 218 000a C046     		.align	2
+ 219              	.L18:
+ 220 000c 71000F40 		.word	1074724977
+ 221              		.cfi_endproc
+ 222              	.LFE6:
+ 223              		.size	Count1_ReadCounter, .-Count1_ReadCounter
+ 224              		.section	.text.Count1_WritePeriod,"ax",%progbits
+ 225              		.align	2
+ 226              		.global	Count1_WritePeriod
+ 227              		.code	16
+ 228              		.thumb_func
+ 229              		.type	Count1_WritePeriod, %function
+ 230              	Count1_WritePeriod:
+ 231              	.LFB7:
+ 184:Generated_Source\PSoC4/Count1.c **** 
+ 185:Generated_Source\PSoC4/Count1.c **** 
+ 186:Generated_Source\PSoC4/Count1.c **** /*******************************************************************************
+ 187:Generated_Source\PSoC4/Count1.c **** * Function Name: Count1_WritePeriod
+ 188:Generated_Source\PSoC4/Count1.c **** ********************************************************************************
+ 189:Generated_Source\PSoC4/Count1.c **** *
+ 190:Generated_Source\PSoC4/Count1.c **** * Summary:
+ 191:Generated_Source\PSoC4/Count1.c **** *  This function writes the period register. The actual period is one greater
+ 192:Generated_Source\PSoC4/Count1.c **** *  than the value in the period register since the counting sequence starts
+ 193:Generated_Source\PSoC4/Count1.c **** *  with the period register and counts down to 0 inclusive. The period of the
+ 194:Generated_Source\PSoC4/Count1.c **** *  counter output does not change until the counter is reloaded following the
+ 195:Generated_Source\PSoC4/Count1.c **** *  terminal count value of 0 or due to a hardware load signal.
+ 196:Generated_Source\PSoC4/Count1.c **** *
+ 197:Generated_Source\PSoC4/Count1.c **** * Parameters:
+ 198:Generated_Source\PSoC4/Count1.c **** *  period - Period value to be written.
+ 199:Generated_Source\PSoC4/Count1.c **** *
+ 200:Generated_Source\PSoC4/Count1.c **** * Return:
+ 201:Generated_Source\PSoC4/Count1.c **** *  None
+ 202:Generated_Source\PSoC4/Count1.c **** *
+ 203:Generated_Source\PSoC4/Count1.c **** *******************************************************************************/
+ 204:Generated_Source\PSoC4/Count1.c **** void Count1_WritePeriod(uint8 period) 
+ 205:Generated_Source\PSoC4/Count1.c **** {
+ 232              		.loc 1 205 0
+ 233              		.cfi_startproc
+ 234              		@ args = 0, pretend = 0, frame = 0
+ 235              		@ frame_needed = 0, uses_anonymous_args = 0
+ 236              		@ link register save eliminated.
+ 237              	.LVL8:
+ 206:Generated_Source\PSoC4/Count1.c ****     Count1_PERIOD_REG = period;
+ 238              		.loc 1 206 0
+ 239 0000 014B     		ldr	r3, .L21
+ 240 0002 1870     		strb	r0, [r3]
+ 207:Generated_Source\PSoC4/Count1.c **** }
+ 241              		.loc 1 207 0
+ 242              		@ sp needed
+ 243 0004 7047     		bx	lr
+ 244              	.L22:
+ 245 0006 C046     		.align	2
+ 246              	.L21:
+ 247 0008 81000F40 		.word	1074724993
+ 248              		.cfi_endproc
+ 249              	.LFE7:
+ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccfkNUHS.s 			page 9
+
+
+ 250              		.size	Count1_WritePeriod, .-Count1_WritePeriod
+ 251              		.section	.text.Count1_ReadPeriod,"ax",%progbits
+ 252              		.align	2
+ 253              		.global	Count1_ReadPeriod
+ 254              		.code	16
+ 255              		.thumb_func
+ 256              		.type	Count1_ReadPeriod, %function
+ 257              	Count1_ReadPeriod:
+ 258              	.LFB8:
+ 208:Generated_Source\PSoC4/Count1.c **** 
+ 209:Generated_Source\PSoC4/Count1.c **** 
+ 210:Generated_Source\PSoC4/Count1.c **** /*******************************************************************************
+ 211:Generated_Source\PSoC4/Count1.c **** * Function Name: Count1_ReadPeriod
+ 212:Generated_Source\PSoC4/Count1.c **** ********************************************************************************
+ 213:Generated_Source\PSoC4/Count1.c **** *
+ 214:Generated_Source\PSoC4/Count1.c **** * Summary:
+ 215:Generated_Source\PSoC4/Count1.c **** *  This function reads the period register.
+ 216:Generated_Source\PSoC4/Count1.c **** *
+ 217:Generated_Source\PSoC4/Count1.c **** * Parameters:
+ 218:Generated_Source\PSoC4/Count1.c **** *  None
+ 219:Generated_Source\PSoC4/Count1.c **** *
+ 220:Generated_Source\PSoC4/Count1.c **** * Return:
+ 221:Generated_Source\PSoC4/Count1.c **** *  uint8 - Current period value.
+ 222:Generated_Source\PSoC4/Count1.c **** *
+ 223:Generated_Source\PSoC4/Count1.c **** *******************************************************************************/
+ 224:Generated_Source\PSoC4/Count1.c **** uint8 Count1_ReadPeriod(void) 
+ 225:Generated_Source\PSoC4/Count1.c **** {
+ 259              		.loc 1 225 0
+ 260              		.cfi_startproc
+ 261              		@ args = 0, pretend = 0, frame = 0
+ 262              		@ frame_needed = 0, uses_anonymous_args = 0
+ 263              		@ link register save eliminated.
+ 226:Generated_Source\PSoC4/Count1.c ****     return(Count1_PERIOD_REG);
+ 264              		.loc 1 226 0
+ 265 0000 014B     		ldr	r3, .L24
+ 266 0002 1878     		ldrb	r0, [r3]
+ 267 0004 C0B2     		uxtb	r0, r0
+ 227:Generated_Source\PSoC4/Count1.c **** }
+ 268              		.loc 1 227 0
+ 269              		@ sp needed
+ 270 0006 7047     		bx	lr
+ 271              	.L25:
+ 272              		.align	2
+ 273              	.L24:
+ 274 0008 81000F40 		.word	1074724993
+ 275              		.cfi_endproc
+ 276              	.LFE8:
+ 277              		.size	Count1_ReadPeriod, .-Count1_ReadPeriod
+ 278              		.global	Count1_initVar
+ 279              		.bss
+ 280              		.set	.LANCHOR0,. + 0
+ 281              		.type	Count1_initVar, %object
+ 282              		.size	Count1_initVar, 1
+ 283              	Count1_initVar:
+ 284 0000 00       		.space	1
+ 285              		.text
+ 286              	.Letext0:
+ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccfkNUHS.s 			page 10
+
+
+ 287              		.file 2 "Generated_Source\\PSoC4\\cytypes.h"
+ 288              		.file 3 "Generated_Source\\PSoC4\\CyLib.h"
+ 289              		.section	.debug_info,"",%progbits
+ 290              	.Ldebug_info0:
+ 291 0000 E8010000 		.4byte	0x1e8
+ 292 0004 0400     		.2byte	0x4
+ 293 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 294 000a 04       		.byte	0x4
+ 295 000b 01       		.uleb128 0x1
+ 296 000c 3D010000 		.4byte	.LASF28
+ 297 0010 0C       		.byte	0xc
+ 298 0011 42020000 		.4byte	.LASF29
+ 299 0015 FE000000 		.4byte	.LASF30
+ 300 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 301 001d 00000000 		.4byte	0
+ 302 0021 00000000 		.4byte	.Ldebug_line0
+ 303 0025 02       		.uleb128 0x2
+ 304 0026 01       		.byte	0x1
+ 305 0027 06       		.byte	0x6
+ 306 0028 6E020000 		.4byte	.LASF0
+ 307 002c 02       		.uleb128 0x2
+ 308 002d 01       		.byte	0x1
+ 309 002e 08       		.byte	0x8
+ 310 002f 63000000 		.4byte	.LASF1
+ 311 0033 02       		.uleb128 0x2
+ 312 0034 02       		.byte	0x2
+ 313 0035 05       		.byte	0x5
+ 314 0036 19020000 		.4byte	.LASF2
+ 315 003a 02       		.uleb128 0x2
+ 316 003b 02       		.byte	0x2
+ 317 003c 07       		.byte	0x7
+ 318 003d 3B000000 		.4byte	.LASF3
+ 319 0041 02       		.uleb128 0x2
+ 320 0042 04       		.byte	0x4
+ 321 0043 05       		.byte	0x5
+ 322 0044 39020000 		.4byte	.LASF4
+ 323 0048 02       		.uleb128 0x2
+ 324 0049 04       		.byte	0x4
+ 325 004a 07       		.byte	0x7
+ 326 004b 85000000 		.4byte	.LASF5
+ 327 004f 02       		.uleb128 0x2
+ 328 0050 08       		.byte	0x8
+ 329 0051 05       		.byte	0x5
+ 330 0052 E0010000 		.4byte	.LASF6
+ 331 0056 02       		.uleb128 0x2
+ 332 0057 08       		.byte	0x8
+ 333 0058 07       		.byte	0x7
+ 334 0059 E7000000 		.4byte	.LASF7
+ 335 005d 03       		.uleb128 0x3
+ 336 005e 04       		.byte	0x4
+ 337 005f 05       		.byte	0x5
+ 338 0060 696E7400 		.ascii	"int\000"
+ 339 0064 02       		.uleb128 0x2
+ 340 0065 04       		.byte	0x4
+ 341 0066 07       		.byte	0x7
+ 342 0067 DA000000 		.4byte	.LASF8
+ 343 006b 04       		.uleb128 0x4
+ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccfkNUHS.s 			page 11
+
+
+ 344 006c 97000000 		.4byte	.LASF12
+ 345 0070 02       		.byte	0x2
+ 346 0071 F701     		.2byte	0x1f7
+ 347 0073 2C000000 		.4byte	0x2c
+ 348 0077 02       		.uleb128 0x2
+ 349 0078 04       		.byte	0x4
+ 350 0079 04       		.byte	0x4
+ 351 007a 5D000000 		.4byte	.LASF9
+ 352 007e 02       		.uleb128 0x2
+ 353 007f 08       		.byte	0x8
+ 354 0080 04       		.byte	0x4
+ 355 0081 B0000000 		.4byte	.LASF10
+ 356 0085 02       		.uleb128 0x2
+ 357 0086 01       		.byte	0x1
+ 358 0087 08       		.byte	0x8
+ 359 0088 EE010000 		.4byte	.LASF11
+ 360 008c 04       		.uleb128 0x4
+ 361 008d 71000000 		.4byte	.LASF13
+ 362 0091 02       		.byte	0x2
+ 363 0092 A102     		.2byte	0x2a1
+ 364 0094 98000000 		.4byte	0x98
+ 365 0098 05       		.uleb128 0x5
+ 366 0099 6B000000 		.4byte	0x6b
+ 367 009d 02       		.uleb128 0x2
+ 368 009e 08       		.byte	0x8
+ 369 009f 04       		.byte	0x4
+ 370 00a0 CB010000 		.4byte	.LASF14
+ 371 00a4 02       		.uleb128 0x2
+ 372 00a5 04       		.byte	0x4
+ 373 00a6 07       		.byte	0x7
+ 374 00a7 D7010000 		.4byte	.LASF15
+ 375 00ab 06       		.uleb128 0x6
+ 376 00ac CE000000 		.4byte	.LASF31
+ 377 00b0 01       		.byte	0x1
+ 378 00b1 2A       		.byte	0x2a
+ 379 00b2 00000000 		.4byte	.LFB1
+ 380 00b6 0C000000 		.4byte	.LFE1-.LFB1
+ 381 00ba 01       		.uleb128 0x1
+ 382 00bb 9C       		.byte	0x9c
+ 383 00bc 07       		.uleb128 0x7
+ 384 00bd 26000000 		.4byte	.LASF16
+ 385 00c1 01       		.byte	0x1
+ 386 00c2 47       		.byte	0x47
+ 387 00c3 00000000 		.4byte	.LFB2
+ 388 00c7 1C000000 		.4byte	.LFE2-.LFB2
+ 389 00cb 01       		.uleb128 0x1
+ 390 00cc 9C       		.byte	0x9c
+ 391 00cd F3000000 		.4byte	0xf3
+ 392 00d1 08       		.uleb128 0x8
+ 393 00d2 76000000 		.4byte	.LASF19
+ 394 00d6 01       		.byte	0x1
+ 395 00d7 49       		.byte	0x49
+ 396 00d8 6B000000 		.4byte	0x6b
+ 397 00dc 00000000 		.4byte	.LLST0
+ 398 00e0 09       		.uleb128 0x9
+ 399 00e1 06000000 		.4byte	.LVL0
+ 400 00e5 D5010000 		.4byte	0x1d5
+ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccfkNUHS.s 			page 12
+
+
+ 401 00e9 09       		.uleb128 0x9
+ 402 00ea 16000000 		.4byte	.LVL1
+ 403 00ee E0010000 		.4byte	0x1e0
+ 404 00f2 00       		.byte	0
+ 405 00f3 07       		.uleb128 0x7
+ 406 00f4 00000000 		.4byte	.LASF17
+ 407 00f8 01       		.byte	0x1
+ 408 00f9 69       		.byte	0x69
+ 409 00fa 00000000 		.4byte	.LFB3
+ 410 00fe 20000000 		.4byte	.LFE3-.LFB3
+ 411 0102 01       		.uleb128 0x1
+ 412 0103 9C       		.byte	0x9c
+ 413 0104 1B010000 		.4byte	0x11b
+ 414 0108 09       		.uleb128 0x9
+ 415 0109 0E000000 		.4byte	.LVL2
+ 416 010d AB000000 		.4byte	0xab
+ 417 0111 09       		.uleb128 0x9
+ 418 0112 18000000 		.4byte	.LVL3
+ 419 0116 BC000000 		.4byte	0xbc
+ 420 011a 00       		.byte	0
+ 421 011b 07       		.uleb128 0x7
+ 422 011c 62020000 		.4byte	.LASF18
+ 423 0120 01       		.byte	0x1
+ 424 0121 85       		.byte	0x85
+ 425 0122 00000000 		.4byte	.LFB4
+ 426 0126 1C000000 		.4byte	.LFE4-.LFB4
+ 427 012a 01       		.uleb128 0x1
+ 428 012b 9C       		.byte	0x9c
+ 429 012c 52010000 		.4byte	0x152
+ 430 0130 08       		.uleb128 0x8
+ 431 0131 76000000 		.4byte	.LASF19
+ 432 0135 01       		.byte	0x1
+ 433 0136 87       		.byte	0x87
+ 434 0137 6B000000 		.4byte	0x6b
+ 435 013b 13000000 		.4byte	.LLST1
+ 436 013f 09       		.uleb128 0x9
+ 437 0140 06000000 		.4byte	.LVL4
+ 438 0144 D5010000 		.4byte	0x1d5
+ 439 0148 09       		.uleb128 0x9
+ 440 0149 14000000 		.4byte	.LVL5
+ 441 014d E0010000 		.4byte	0x1e0
+ 442 0151 00       		.byte	0
+ 443 0152 07       		.uleb128 0x7
+ 444 0153 05020000 		.4byte	.LASF20
+ 445 0157 01       		.byte	0x1
+ 446 0158 A0       		.byte	0xa0
+ 447 0159 00000000 		.4byte	.LFB5
+ 448 015d 10000000 		.4byte	.LFE5-.LFB5
+ 449 0161 01       		.uleb128 0x1
+ 450 0162 9C       		.byte	0x9c
+ 451 0163 77010000 		.4byte	0x177
+ 452 0167 0A       		.uleb128 0xa
+ 453 0168 20000000 		.4byte	.LASF22
+ 454 016c 01       		.byte	0x1
+ 455 016d A0       		.byte	0xa0
+ 456 016e 6B000000 		.4byte	0x6b
+ 457 0172 26000000 		.4byte	.LLST2
+ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccfkNUHS.s 			page 13
+
+
+ 458 0176 00       		.byte	0
+ 459 0177 0B       		.uleb128 0xb
+ 460 0178 0D000000 		.4byte	.LASF24
+ 461 017c 01       		.byte	0x1
+ 462 017d B4       		.byte	0xb4
+ 463 017e 6B000000 		.4byte	0x6b
+ 464 0182 00000000 		.4byte	.LFB6
+ 465 0186 10000000 		.4byte	.LFE6-.LFB6
+ 466 018a 01       		.uleb128 0x1
+ 467 018b 9C       		.byte	0x9c
+ 468 018c 07       		.uleb128 0x7
+ 469 018d 9D000000 		.4byte	.LASF21
+ 470 0191 01       		.byte	0x1
+ 471 0192 CC       		.byte	0xcc
+ 472 0193 00000000 		.4byte	.LFB7
+ 473 0197 0C000000 		.4byte	.LFE7-.LFB7
+ 474 019b 01       		.uleb128 0x1
+ 475 019c 9C       		.byte	0x9c
+ 476 019d AF010000 		.4byte	0x1af
+ 477 01a1 0C       		.uleb128 0xc
+ 478 01a2 34000000 		.4byte	.LASF23
+ 479 01a6 01       		.byte	0x1
+ 480 01a7 CC       		.byte	0xcc
+ 481 01a8 6B000000 		.4byte	0x6b
+ 482 01ac 01       		.uleb128 0x1
+ 483 01ad 50       		.byte	0x50
+ 484 01ae 00       		.byte	0
+ 485 01af 0B       		.uleb128 0xb
+ 486 01b0 F3010000 		.4byte	.LASF25
+ 487 01b4 01       		.byte	0x1
+ 488 01b5 E0       		.byte	0xe0
+ 489 01b6 6B000000 		.4byte	0x6b
+ 490 01ba 00000000 		.4byte	.LFB8
+ 491 01be 0C000000 		.4byte	.LFE8-.LFB8
+ 492 01c2 01       		.uleb128 0x1
+ 493 01c3 9C       		.byte	0x9c
+ 494 01c4 0D       		.uleb128 0xd
+ 495 01c5 4E000000 		.4byte	.LASF32
+ 496 01c9 01       		.byte	0x1
+ 497 01ca 13       		.byte	0x13
+ 498 01cb 6B000000 		.4byte	0x6b
+ 499 01cf 05       		.uleb128 0x5
+ 500 01d0 03       		.byte	0x3
+ 501 01d1 00000000 		.4byte	Count1_initVar
+ 502 01d5 0E       		.uleb128 0xe
+ 503 01d6 B7000000 		.4byte	.LASF26
+ 504 01da B7000000 		.4byte	.LASF26
+ 505 01de 03       		.byte	0x3
+ 506 01df F8       		.byte	0xf8
+ 507 01e0 0E       		.uleb128 0xe
+ 508 01e1 23020000 		.4byte	.LASF27
+ 509 01e5 23020000 		.4byte	.LASF27
+ 510 01e9 03       		.byte	0x3
+ 511 01ea F9       		.byte	0xf9
+ 512 01eb 00       		.byte	0
+ 513              		.section	.debug_abbrev,"",%progbits
+ 514              	.Ldebug_abbrev0:
+ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccfkNUHS.s 			page 14
+
+
+ 515 0000 01       		.uleb128 0x1
+ 516 0001 11       		.uleb128 0x11
+ 517 0002 01       		.byte	0x1
+ 518 0003 25       		.uleb128 0x25
+ 519 0004 0E       		.uleb128 0xe
+ 520 0005 13       		.uleb128 0x13
+ 521 0006 0B       		.uleb128 0xb
+ 522 0007 03       		.uleb128 0x3
+ 523 0008 0E       		.uleb128 0xe
+ 524 0009 1B       		.uleb128 0x1b
+ 525 000a 0E       		.uleb128 0xe
+ 526 000b 55       		.uleb128 0x55
+ 527 000c 17       		.uleb128 0x17
+ 528 000d 11       		.uleb128 0x11
+ 529 000e 01       		.uleb128 0x1
+ 530 000f 10       		.uleb128 0x10
+ 531 0010 17       		.uleb128 0x17
+ 532 0011 00       		.byte	0
+ 533 0012 00       		.byte	0
+ 534 0013 02       		.uleb128 0x2
+ 535 0014 24       		.uleb128 0x24
+ 536 0015 00       		.byte	0
+ 537 0016 0B       		.uleb128 0xb
+ 538 0017 0B       		.uleb128 0xb
+ 539 0018 3E       		.uleb128 0x3e
+ 540 0019 0B       		.uleb128 0xb
+ 541 001a 03       		.uleb128 0x3
+ 542 001b 0E       		.uleb128 0xe
+ 543 001c 00       		.byte	0
+ 544 001d 00       		.byte	0
+ 545 001e 03       		.uleb128 0x3
+ 546 001f 24       		.uleb128 0x24
+ 547 0020 00       		.byte	0
+ 548 0021 0B       		.uleb128 0xb
+ 549 0022 0B       		.uleb128 0xb
+ 550 0023 3E       		.uleb128 0x3e
+ 551 0024 0B       		.uleb128 0xb
+ 552 0025 03       		.uleb128 0x3
+ 553 0026 08       		.uleb128 0x8
+ 554 0027 00       		.byte	0
+ 555 0028 00       		.byte	0
+ 556 0029 04       		.uleb128 0x4
+ 557 002a 16       		.uleb128 0x16
+ 558 002b 00       		.byte	0
+ 559 002c 03       		.uleb128 0x3
+ 560 002d 0E       		.uleb128 0xe
+ 561 002e 3A       		.uleb128 0x3a
+ 562 002f 0B       		.uleb128 0xb
+ 563 0030 3B       		.uleb128 0x3b
+ 564 0031 05       		.uleb128 0x5
+ 565 0032 49       		.uleb128 0x49
+ 566 0033 13       		.uleb128 0x13
+ 567 0034 00       		.byte	0
+ 568 0035 00       		.byte	0
+ 569 0036 05       		.uleb128 0x5
+ 570 0037 35       		.uleb128 0x35
+ 571 0038 00       		.byte	0
+ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccfkNUHS.s 			page 15
+
+
+ 572 0039 49       		.uleb128 0x49
+ 573 003a 13       		.uleb128 0x13
+ 574 003b 00       		.byte	0
+ 575 003c 00       		.byte	0
+ 576 003d 06       		.uleb128 0x6
+ 577 003e 2E       		.uleb128 0x2e
+ 578 003f 00       		.byte	0
+ 579 0040 3F       		.uleb128 0x3f
+ 580 0041 19       		.uleb128 0x19
+ 581 0042 03       		.uleb128 0x3
+ 582 0043 0E       		.uleb128 0xe
+ 583 0044 3A       		.uleb128 0x3a
+ 584 0045 0B       		.uleb128 0xb
+ 585 0046 3B       		.uleb128 0x3b
+ 586 0047 0B       		.uleb128 0xb
+ 587 0048 27       		.uleb128 0x27
+ 588 0049 19       		.uleb128 0x19
+ 589 004a 11       		.uleb128 0x11
+ 590 004b 01       		.uleb128 0x1
+ 591 004c 12       		.uleb128 0x12
+ 592 004d 06       		.uleb128 0x6
+ 593 004e 40       		.uleb128 0x40
+ 594 004f 18       		.uleb128 0x18
+ 595 0050 9742     		.uleb128 0x2117
+ 596 0052 19       		.uleb128 0x19
+ 597 0053 00       		.byte	0
+ 598 0054 00       		.byte	0
+ 599 0055 07       		.uleb128 0x7
+ 600 0056 2E       		.uleb128 0x2e
+ 601 0057 01       		.byte	0x1
+ 602 0058 3F       		.uleb128 0x3f
+ 603 0059 19       		.uleb128 0x19
+ 604 005a 03       		.uleb128 0x3
+ 605 005b 0E       		.uleb128 0xe
+ 606 005c 3A       		.uleb128 0x3a
+ 607 005d 0B       		.uleb128 0xb
+ 608 005e 3B       		.uleb128 0x3b
+ 609 005f 0B       		.uleb128 0xb
+ 610 0060 27       		.uleb128 0x27
+ 611 0061 19       		.uleb128 0x19
+ 612 0062 11       		.uleb128 0x11
+ 613 0063 01       		.uleb128 0x1
+ 614 0064 12       		.uleb128 0x12
+ 615 0065 06       		.uleb128 0x6
+ 616 0066 40       		.uleb128 0x40
+ 617 0067 18       		.uleb128 0x18
+ 618 0068 9742     		.uleb128 0x2117
+ 619 006a 19       		.uleb128 0x19
+ 620 006b 01       		.uleb128 0x1
+ 621 006c 13       		.uleb128 0x13
+ 622 006d 00       		.byte	0
+ 623 006e 00       		.byte	0
+ 624 006f 08       		.uleb128 0x8
+ 625 0070 34       		.uleb128 0x34
+ 626 0071 00       		.byte	0
+ 627 0072 03       		.uleb128 0x3
+ 628 0073 0E       		.uleb128 0xe
+ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccfkNUHS.s 			page 16
+
+
+ 629 0074 3A       		.uleb128 0x3a
+ 630 0075 0B       		.uleb128 0xb
+ 631 0076 3B       		.uleb128 0x3b
+ 632 0077 0B       		.uleb128 0xb
+ 633 0078 49       		.uleb128 0x49
+ 634 0079 13       		.uleb128 0x13
+ 635 007a 02       		.uleb128 0x2
+ 636 007b 17       		.uleb128 0x17
+ 637 007c 00       		.byte	0
+ 638 007d 00       		.byte	0
+ 639 007e 09       		.uleb128 0x9
+ 640 007f 898201   		.uleb128 0x4109
+ 641 0082 00       		.byte	0
+ 642 0083 11       		.uleb128 0x11
+ 643 0084 01       		.uleb128 0x1
+ 644 0085 31       		.uleb128 0x31
+ 645 0086 13       		.uleb128 0x13
+ 646 0087 00       		.byte	0
+ 647 0088 00       		.byte	0
+ 648 0089 0A       		.uleb128 0xa
+ 649 008a 05       		.uleb128 0x5
+ 650 008b 00       		.byte	0
+ 651 008c 03       		.uleb128 0x3
+ 652 008d 0E       		.uleb128 0xe
+ 653 008e 3A       		.uleb128 0x3a
+ 654 008f 0B       		.uleb128 0xb
+ 655 0090 3B       		.uleb128 0x3b
+ 656 0091 0B       		.uleb128 0xb
+ 657 0092 49       		.uleb128 0x49
+ 658 0093 13       		.uleb128 0x13
+ 659 0094 02       		.uleb128 0x2
+ 660 0095 17       		.uleb128 0x17
+ 661 0096 00       		.byte	0
+ 662 0097 00       		.byte	0
+ 663 0098 0B       		.uleb128 0xb
+ 664 0099 2E       		.uleb128 0x2e
+ 665 009a 00       		.byte	0
+ 666 009b 3F       		.uleb128 0x3f
+ 667 009c 19       		.uleb128 0x19
+ 668 009d 03       		.uleb128 0x3
+ 669 009e 0E       		.uleb128 0xe
+ 670 009f 3A       		.uleb128 0x3a
+ 671 00a0 0B       		.uleb128 0xb
+ 672 00a1 3B       		.uleb128 0x3b
+ 673 00a2 0B       		.uleb128 0xb
+ 674 00a3 27       		.uleb128 0x27
+ 675 00a4 19       		.uleb128 0x19
+ 676 00a5 49       		.uleb128 0x49
+ 677 00a6 13       		.uleb128 0x13
+ 678 00a7 11       		.uleb128 0x11
+ 679 00a8 01       		.uleb128 0x1
+ 680 00a9 12       		.uleb128 0x12
+ 681 00aa 06       		.uleb128 0x6
+ 682 00ab 40       		.uleb128 0x40
+ 683 00ac 18       		.uleb128 0x18
+ 684 00ad 9742     		.uleb128 0x2117
+ 685 00af 19       		.uleb128 0x19
+ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccfkNUHS.s 			page 17
+
+
+ 686 00b0 00       		.byte	0
+ 687 00b1 00       		.byte	0
+ 688 00b2 0C       		.uleb128 0xc
+ 689 00b3 05       		.uleb128 0x5
+ 690 00b4 00       		.byte	0
+ 691 00b5 03       		.uleb128 0x3
+ 692 00b6 0E       		.uleb128 0xe
+ 693 00b7 3A       		.uleb128 0x3a
+ 694 00b8 0B       		.uleb128 0xb
+ 695 00b9 3B       		.uleb128 0x3b
+ 696 00ba 0B       		.uleb128 0xb
+ 697 00bb 49       		.uleb128 0x49
+ 698 00bc 13       		.uleb128 0x13
+ 699 00bd 02       		.uleb128 0x2
+ 700 00be 18       		.uleb128 0x18
+ 701 00bf 00       		.byte	0
+ 702 00c0 00       		.byte	0
+ 703 00c1 0D       		.uleb128 0xd
+ 704 00c2 34       		.uleb128 0x34
+ 705 00c3 00       		.byte	0
+ 706 00c4 03       		.uleb128 0x3
+ 707 00c5 0E       		.uleb128 0xe
+ 708 00c6 3A       		.uleb128 0x3a
+ 709 00c7 0B       		.uleb128 0xb
+ 710 00c8 3B       		.uleb128 0x3b
+ 711 00c9 0B       		.uleb128 0xb
+ 712 00ca 49       		.uleb128 0x49
+ 713 00cb 13       		.uleb128 0x13
+ 714 00cc 3F       		.uleb128 0x3f
+ 715 00cd 19       		.uleb128 0x19
+ 716 00ce 02       		.uleb128 0x2
+ 717 00cf 18       		.uleb128 0x18
+ 718 00d0 00       		.byte	0
+ 719 00d1 00       		.byte	0
+ 720 00d2 0E       		.uleb128 0xe
+ 721 00d3 2E       		.uleb128 0x2e
+ 722 00d4 00       		.byte	0
+ 723 00d5 3F       		.uleb128 0x3f
+ 724 00d6 19       		.uleb128 0x19
+ 725 00d7 3C       		.uleb128 0x3c
+ 726 00d8 19       		.uleb128 0x19
+ 727 00d9 6E       		.uleb128 0x6e
+ 728 00da 0E       		.uleb128 0xe
+ 729 00db 03       		.uleb128 0x3
+ 730 00dc 0E       		.uleb128 0xe
+ 731 00dd 3A       		.uleb128 0x3a
+ 732 00de 0B       		.uleb128 0xb
+ 733 00df 3B       		.uleb128 0x3b
+ 734 00e0 0B       		.uleb128 0xb
+ 735 00e1 00       		.byte	0
+ 736 00e2 00       		.byte	0
+ 737 00e3 00       		.byte	0
+ 738              		.section	.debug_loc,"",%progbits
+ 739              	.Ldebug_loc0:
+ 740              	.LLST0:
+ 741 0000 06000000 		.4byte	.LVL0
+ 742 0004 15000000 		.4byte	.LVL1-1
+ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccfkNUHS.s 			page 18
+
+
+ 743 0008 0100     		.2byte	0x1
+ 744 000a 50       		.byte	0x50
+ 745 000b 00000000 		.4byte	0
+ 746 000f 00000000 		.4byte	0
+ 747              	.LLST1:
+ 748 0013 06000000 		.4byte	.LVL4
+ 749 0017 13000000 		.4byte	.LVL5-1
+ 750 001b 0100     		.2byte	0x1
+ 751 001d 50       		.byte	0x50
+ 752 001e 00000000 		.4byte	0
+ 753 0022 00000000 		.4byte	0
+ 754              	.LLST2:
+ 755 0026 00000000 		.4byte	.LVL6
+ 756 002a 04000000 		.4byte	.LVL7
+ 757 002e 0100     		.2byte	0x1
+ 758 0030 50       		.byte	0x50
+ 759 0031 04000000 		.4byte	.LVL7
+ 760 0035 10000000 		.4byte	.LFE5
+ 761 0039 0400     		.2byte	0x4
+ 762 003b F3       		.byte	0xf3
+ 763 003c 01       		.uleb128 0x1
+ 764 003d 50       		.byte	0x50
+ 765 003e 9F       		.byte	0x9f
+ 766 003f 00000000 		.4byte	0
+ 767 0043 00000000 		.4byte	0
+ 768              		.section	.debug_aranges,"",%progbits
+ 769 0000 54000000 		.4byte	0x54
+ 770 0004 0200     		.2byte	0x2
+ 771 0006 00000000 		.4byte	.Ldebug_info0
+ 772 000a 04       		.byte	0x4
+ 773 000b 00       		.byte	0
+ 774 000c 0000     		.2byte	0
+ 775 000e 0000     		.2byte	0
+ 776 0010 00000000 		.4byte	.LFB1
+ 777 0014 0C000000 		.4byte	.LFE1-.LFB1
+ 778 0018 00000000 		.4byte	.LFB2
+ 779 001c 1C000000 		.4byte	.LFE2-.LFB2
+ 780 0020 00000000 		.4byte	.LFB3
+ 781 0024 20000000 		.4byte	.LFE3-.LFB3
+ 782 0028 00000000 		.4byte	.LFB4
+ 783 002c 1C000000 		.4byte	.LFE4-.LFB4
+ 784 0030 00000000 		.4byte	.LFB5
+ 785 0034 10000000 		.4byte	.LFE5-.LFB5
+ 786 0038 00000000 		.4byte	.LFB6
+ 787 003c 10000000 		.4byte	.LFE6-.LFB6
+ 788 0040 00000000 		.4byte	.LFB7
+ 789 0044 0C000000 		.4byte	.LFE7-.LFB7
+ 790 0048 00000000 		.4byte	.LFB8
+ 791 004c 0C000000 		.4byte	.LFE8-.LFB8
+ 792 0050 00000000 		.4byte	0
+ 793 0054 00000000 		.4byte	0
+ 794              		.section	.debug_ranges,"",%progbits
+ 795              	.Ldebug_ranges0:
+ 796 0000 00000000 		.4byte	.LFB1
+ 797 0004 0C000000 		.4byte	.LFE1
+ 798 0008 00000000 		.4byte	.LFB2
+ 799 000c 1C000000 		.4byte	.LFE2
+ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccfkNUHS.s 			page 19
+
+
+ 800 0010 00000000 		.4byte	.LFB3
+ 801 0014 20000000 		.4byte	.LFE3
+ 802 0018 00000000 		.4byte	.LFB4
+ 803 001c 1C000000 		.4byte	.LFE4
+ 804 0020 00000000 		.4byte	.LFB5
+ 805 0024 10000000 		.4byte	.LFE5
+ 806 0028 00000000 		.4byte	.LFB6
+ 807 002c 10000000 		.4byte	.LFE6
+ 808 0030 00000000 		.4byte	.LFB7
+ 809 0034 0C000000 		.4byte	.LFE7
+ 810 0038 00000000 		.4byte	.LFB8
+ 811 003c 0C000000 		.4byte	.LFE8
+ 812 0040 00000000 		.4byte	0
+ 813 0044 00000000 		.4byte	0
+ 814              		.section	.debug_line,"",%progbits
+ 815              	.Ldebug_line0:
+ 816 0000 EA000000 		.section	.debug_str,"MS",%progbits,1
+ 816      02004E00 
+ 816      00000201 
+ 816      FB0E0D00 
+ 816      01010101 
+ 817              	.LASF17:
+ 818 0000 436F756E 		.ascii	"Count1_Start\000"
+ 818      74315F53 
+ 818      74617274 
+ 818      00
+ 819              	.LASF24:
+ 820 000d 436F756E 		.ascii	"Count1_ReadCounter\000"
+ 820      74315F52 
+ 820      65616443 
+ 820      6F756E74 
+ 820      657200
+ 821              	.LASF22:
+ 822 0020 636F756E 		.ascii	"count\000"
+ 822      7400
+ 823              	.LASF16:
+ 824 0026 436F756E 		.ascii	"Count1_Enable\000"
+ 824      74315F45 
+ 824      6E61626C 
+ 824      6500
+ 825              	.LASF23:
+ 826 0034 70657269 		.ascii	"period\000"
+ 826      6F6400
+ 827              	.LASF3:
+ 828 003b 73686F72 		.ascii	"short unsigned int\000"
+ 828      7420756E 
+ 828      7369676E 
+ 828      65642069 
+ 828      6E7400
+ 829              	.LASF32:
+ 830 004e 436F756E 		.ascii	"Count1_initVar\000"
+ 830      74315F69 
+ 830      6E697456 
+ 830      617200
+ 831              	.LASF9:
+ 832 005d 666C6F61 		.ascii	"float\000"
+ 832      7400
+ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccfkNUHS.s 			page 20
+
+
+ 833              	.LASF1:
+ 834 0063 756E7369 		.ascii	"unsigned char\000"
+ 834      676E6564 
+ 834      20636861 
+ 834      7200
+ 835              	.LASF13:
+ 836 0071 72656738 		.ascii	"reg8\000"
+ 836      00
+ 837              	.LASF19:
+ 838 0076 696E7465 		.ascii	"interruptState\000"
+ 838      72727570 
+ 838      74537461 
+ 838      746500
+ 839              	.LASF5:
+ 840 0085 6C6F6E67 		.ascii	"long unsigned int\000"
+ 840      20756E73 
+ 840      69676E65 
+ 840      6420696E 
+ 840      7400
+ 841              	.LASF12:
+ 842 0097 75696E74 		.ascii	"uint8\000"
+ 842      3800
+ 843              	.LASF21:
+ 844 009d 436F756E 		.ascii	"Count1_WritePeriod\000"
+ 844      74315F57 
+ 844      72697465 
+ 844      50657269 
+ 844      6F6400
+ 845              	.LASF10:
+ 846 00b0 646F7562 		.ascii	"double\000"
+ 846      6C6500
+ 847              	.LASF26:
+ 848 00b7 4379456E 		.ascii	"CyEnterCriticalSection\000"
+ 848      74657243 
+ 848      72697469 
+ 848      63616C53 
+ 848      65637469 
+ 849              	.LASF31:
+ 850 00ce 436F756E 		.ascii	"Count1_Init\000"
+ 850      74315F49 
+ 850      6E697400 
+ 851              	.LASF8:
+ 852 00da 756E7369 		.ascii	"unsigned int\000"
+ 852      676E6564 
+ 852      20696E74 
+ 852      00
+ 853              	.LASF7:
+ 854 00e7 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 854      206C6F6E 
+ 854      6720756E 
+ 854      7369676E 
+ 854      65642069 
+ 855              	.LASF30:
+ 856 00fe 433A5C55 		.ascii	"C:\\Users\\mac_000\\Documents\\Git_IR_REMO\\PSoC\\I"
+ 856      73657273 
+ 856      5C6D6163 
+ 856      5F303030 
+ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccfkNUHS.s 			page 21
+
+
+ 856      5C446F63 
+ 857 012b 525F5245 		.ascii	"R_REMO4200M.cydsn\000"
+ 857      4D4F3432 
+ 857      30304D2E 
+ 857      63796473 
+ 857      6E00
+ 858              	.LASF28:
+ 859 013d 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 859      43313120 
+ 859      352E342E 
+ 859      31203230 
+ 859      31363036 
+ 860 0170 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 860      20726576 
+ 860      6973696F 
+ 860      6E203233 
+ 860      37373135 
+ 861 01a3 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 861      66756E63 
+ 861      74696F6E 
+ 861      2D736563 
+ 861      74696F6E 
+ 862              	.LASF14:
+ 863 01cb 6C6F6E67 		.ascii	"long double\000"
+ 863      20646F75 
+ 863      626C6500 
+ 864              	.LASF15:
+ 865 01d7 73697A65 		.ascii	"sizetype\000"
+ 865      74797065 
+ 865      00
+ 866              	.LASF6:
+ 867 01e0 6C6F6E67 		.ascii	"long long int\000"
+ 867      206C6F6E 
+ 867      6720696E 
+ 867      7400
+ 868              	.LASF11:
+ 869 01ee 63686172 		.ascii	"char\000"
+ 869      00
+ 870              	.LASF25:
+ 871 01f3 436F756E 		.ascii	"Count1_ReadPeriod\000"
+ 871      74315F52 
+ 871      65616450 
+ 871      6572696F 
+ 871      6400
+ 872              	.LASF20:
+ 873 0205 436F756E 		.ascii	"Count1_WriteCounter\000"
+ 873      74315F57 
+ 873      72697465 
+ 873      436F756E 
+ 873      74657200 
+ 874              	.LASF2:
+ 875 0219 73686F72 		.ascii	"short int\000"
+ 875      7420696E 
+ 875      7400
+ 876              	.LASF27:
+ 877 0223 43794578 		.ascii	"CyExitCriticalSection\000"
+ 877      69744372 
+ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccfkNUHS.s 			page 22
+
+
+ 877      69746963 
+ 877      616C5365 
+ 877      6374696F 
+ 878              	.LASF4:
+ 879 0239 6C6F6E67 		.ascii	"long int\000"
+ 879      20696E74 
+ 879      00
+ 880              	.LASF29:
+ 881 0242 47656E65 		.ascii	"Generated_Source\\PSoC4\\Count1.c\000"
+ 881      72617465 
+ 881      645F536F 
+ 881      75726365 
+ 881      5C50536F 
+ 882              	.LASF18:
+ 883 0262 436F756E 		.ascii	"Count1_Stop\000"
+ 883      74315F53 
+ 883      746F7000 
+ 884              	.LASF0:
+ 885 026e 7369676E 		.ascii	"signed char\000"
+ 885      65642063 
+ 885      68617200 
+ 886              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

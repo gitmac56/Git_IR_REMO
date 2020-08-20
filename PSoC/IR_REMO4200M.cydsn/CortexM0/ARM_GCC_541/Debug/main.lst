@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccwS2uRN.s 			page 1
+ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccTF0n2y.s 			page 1
 
 
    1              		.syntax unified
@@ -39,11 +39,32 @@ ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccwS2uRN.s 			page 1
    9:main.c        **** #include "project.h"
   10:main.c        **** #include <stdio.h>
   11:main.c        **** 
-  12:main.c        **** static short Capture[100];
-  13:main.c        **** static int NCapture = 0;
+  12:main.c        **** #define T1Period 26000
+  13:main.c        **** #define CodeL 34
   14:main.c        **** 
-  15:main.c        **** CY_ISR(do_capture) {
-  28              		.loc 1 15 0
+  15:main.c        **** enum { FR = 1, FL = 2, BR = 4, BL = 8} M_Stat;
+  16:main.c        **** 
+  17:main.c        **** const struct KEY {
+  18:main.c        ****     short code; char motor; } key[] = {
+  19:main.c        ****         {0x10b1,(FL)},
+  20:main.c        ****         {0x10a0,(FR|FL)},
+  21:main.c        ****         {0x1021,(FR)},
+  22:main.c        ****         {0x1010,(FL|BR)},
+  23:main.c        ****         {0x1020,0},
+  24:main.c        ****         {0x1080,(BL|FR)},
+  25:main.c        ****         {0x1011,(BL)},
+  26:main.c        ****         {0x1000,(BL|BR)},
+  27:main.c        ****         {0x1081,(BR)},
+  28:main.c        ****         {0,0}
+  29:main.c        ****     };
+  30:main.c        **** static short Capture[100];
+ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccTF0n2y.s 			page 2
+
+
+  31:main.c        **** static int NCapture = 0;
+  32:main.c        **** 
+  33:main.c        **** CY_ISR(do_capture) {
+  28              		.loc 1 33 0
   29              		.cfi_startproc
   30              		@ args = 0, pretend = 0, frame = 0
   31              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -53,15 +74,12 @@ ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccwS2uRN.s 			page 1
   35              		.cfi_offset 5, -12
   36              		.cfi_offset 6, -8
   37              		.cfi_offset 14, -4
-  16:main.c        ****     Timer1_STATUS;
-  38              		.loc 1 16 0
+  34:main.c        ****     Timer1_STATUS;
+  38              		.loc 1 34 0
   39 0002 064B     		ldr	r3, .L2
   40 0004 1B78     		ldrb	r3, [r3]
-  17:main.c        ****     Capture[NCapture++] = Timer1_ReadCapture();
-ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccwS2uRN.s 			page 2
-
-
-  41              		.loc 1 17 0
+  35:main.c        ****     Capture[NCapture++] = Timer1_ReadCapture();
+  41              		.loc 1 35 0
   42 0006 064D     		ldr	r5, .L2+4
   43 0008 2C68     		ldr	r4, [r5]
   44 000a 631C     		adds	r3, r4, #1
@@ -71,8 +89,8 @@ ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccwS2uRN.s 			page 1
   48 0012 6400     		lsls	r4, r4, #1
   49 0014 2C19     		adds	r4, r5, r4
   50 0016 A080     		strh	r0, [r4, #4]
-  18:main.c        **** }
-  51              		.loc 1 18 0
+  36:main.c        **** }
+  51              		.loc 1 36 0
   52              		@ sp needed
   53 0018 70BD     		pop	{r4, r5, r6, pc}
   54              	.L3:
@@ -83,1750 +101,2343 @@ ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccwS2uRN.s 			page 1
   59              		.cfi_endproc
   60              	.LFE35:
   61              		.size	do_capture, .-do_capture
-  62              		.section	.text.Puts,"ax",%progbits
+  62              		.section	.text.do_stop,"ax",%progbits
   63              		.align	2
-  64              		.global	Puts
+  64              		.global	do_stop
   65              		.code	16
   66              		.thumb_func
-  67              		.type	Puts, %function
-  68              	Puts:
+  67              		.type	do_stop, %function
+  68              	do_stop:
   69              	.LFB36:
-  19:main.c        **** 
-  20:main.c        **** void Puts(const char *s) {
-  70              		.loc 1 20 0
+  37:main.c        **** 
+  38:main.c        **** CY_ISR(do_stop) {
+  70              		.loc 1 38 0
   71              		.cfi_startproc
   72              		@ args = 0, pretend = 0, frame = 0
   73              		@ frame_needed = 0, uses_anonymous_args = 0
-  74              	.LVL1:
-  75 0000 10B5     		push	{r4, lr}
-  76              		.cfi_def_cfa_offset 8
-  77              		.cfi_offset 4, -8
-  78              		.cfi_offset 14, -4
-  21:main.c        ****     UART1_UartPutString(s);
-  79              		.loc 1 21 0
-  80 0002 FFF7FEFF 		bl	UART1_UartPutString
-  81              	.LVL2:
-  22:main.c        **** }
-  82              		.loc 1 22 0
-  83              		@ sp needed
-  84 0006 10BD     		pop	{r4, pc}
-  85              		.cfi_endproc
-  86              	.LFE36:
-  87              		.size	Puts, .-Puts
-  88              		.section	.text.main,"ax",%progbits
-  89              		.align	2
-  90              		.global	main
-  91              		.code	16
-  92              		.thumb_func
-ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccwS2uRN.s 			page 3
+  74 0000 10B5     		push	{r4, lr}
+  75              		.cfi_def_cfa_offset 8
+  76              		.cfi_offset 4, -8
+ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccTF0n2y.s 			page 3
 
 
-  93              		.type	main, %function
-  94              	main:
-  95              	.LFB37:
-  23:main.c        **** 
-  24:main.c        **** int main(void)
-  25:main.c        **** {
-  96              		.loc 1 25 0
-  97              		.cfi_startproc
-  98              		@ args = 0, pretend = 0, frame = 80
-  99              		@ frame_needed = 0, uses_anonymous_args = 0
- 100 0000 F0B5     		push	{r4, r5, r6, r7, lr}
- 101              		.cfi_def_cfa_offset 20
- 102              		.cfi_offset 4, -20
- 103              		.cfi_offset 5, -16
- 104              		.cfi_offset 6, -12
- 105              		.cfi_offset 7, -8
- 106              		.cfi_offset 14, -4
- 107 0002 97B0     		sub	sp, sp, #92
- 108              		.cfi_def_cfa_offset 112
- 109              	.LVL3:
-  26:main.c        ****     char buf[80];
-  27:main.c        ****     unsigned rep, code = 0;
-  28:main.c        ****     unsigned char b0, b1, b2, b3;
-  29:main.c        ****     
-  30:main.c        ****     int i;
-  31:main.c        **** 
-  32:main.c        ****     UART1_Start();
- 110              		.loc 1 32 0
- 111 0004 FFF7FEFF 		bl	UART1_Start
- 112              	.LVL4:
-  33:main.c        ****     Timer1_Start();
- 113              		.loc 1 33 0
- 114 0008 FFF7FEFF 		bl	Timer1_Start
- 115              	.LVL5:
-  34:main.c        ****     Timer2_Start();
- 116              		.loc 1 34 0
- 117 000c FFF7FEFF 		bl	Timer2_Start
- 118              	.LVL6:
-  35:main.c        ****     
-  36:main.c        ****     ISR1_StartEx(do_capture);
- 119              		.loc 1 36 0
- 120 0010 4148     		ldr	r0, .L19
- 121 0012 FFF7FEFF 		bl	ISR1_StartEx
- 122              	.LVL7:
-  37:main.c        ****     CyGlobalIntEnable;
- 123              		.loc 1 37 0
- 124              		.syntax divided
- 125              	@ 37 "main.c" 1
- 126 0016 62B6     		CPSIE   i
- 127              	@ 0 "" 2
-  27:main.c        ****     unsigned char b0, b1, b2, b3;
- 128              		.loc 1 27 0
- 129              		.thumb
- 130              		.syntax unified
- 131 0018 0024     		movs	r4, #0
- 132              	.LVL8:
- 133              	.L15:
-ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccwS2uRN.s 			page 4
+  77              		.cfi_offset 14, -4
+  39:main.c        ****     Timer2_STATUS;
+  78              		.loc 1 39 0
+  79 0002 074B     		ldr	r3, .L5
+  80 0004 1B78     		ldrb	r3, [r3]
+  40:main.c        ****     M_BL_Write(0);
+  81              		.loc 1 40 0
+  82 0006 0020     		movs	r0, #0
+  83 0008 FFF7FEFF 		bl	M_BL_Write
+  84              	.LVL1:
+  41:main.c        ****     M_BR_Write(0);
+  85              		.loc 1 41 0
+  86 000c 0020     		movs	r0, #0
+  87 000e FFF7FEFF 		bl	M_BR_Write
+  88              	.LVL2:
+  42:main.c        ****     M_FL_Write(0);
+  89              		.loc 1 42 0
+  90 0012 0020     		movs	r0, #0
+  91 0014 FFF7FEFF 		bl	M_FL_Write
+  92              	.LVL3:
+  43:main.c        ****     M_FR_Write(0);
+  93              		.loc 1 43 0
+  94 0018 0020     		movs	r0, #0
+  95 001a FFF7FEFF 		bl	M_FR_Write
+  96              	.LVL4:
+  44:main.c        **** }
+  97              		.loc 1 44 0
+  98              		@ sp needed
+  99 001e 10BD     		pop	{r4, pc}
+ 100              	.L6:
+ 101              		.align	2
+ 102              	.L5:
+ 103 0020 62000F40 		.word	1074724962
+ 104              		.cfi_endproc
+ 105              	.LFE36:
+ 106              		.size	do_stop, .-do_stop
+ 107              		.section	.text.Puts,"ax",%progbits
+ 108              		.align	2
+ 109              		.global	Puts
+ 110              		.code	16
+ 111              		.thumb_func
+ 112              		.type	Puts, %function
+ 113              	Puts:
+ 114              	.LFB37:
+  45:main.c        **** 
+  46:main.c        **** void Puts(const char *s) {
+ 115              		.loc 1 46 0
+ 116              		.cfi_startproc
+ 117              		@ args = 0, pretend = 0, frame = 0
+ 118              		@ frame_needed = 0, uses_anonymous_args = 0
+ 119              	.LVL5:
+ 120 0000 10B5     		push	{r4, lr}
+ 121              		.cfi_def_cfa_offset 8
+ 122              		.cfi_offset 4, -8
+ 123              		.cfi_offset 14, -4
+  47:main.c        ****     UART1_UartPutString(s);
+ 124              		.loc 1 47 0
+ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccTF0n2y.s 			page 4
 
 
- 134              	.LBB2:
-  38:main.c        ****     
-  39:main.c        ****     for(;;)
-  40:main.c        ****     {  
-  41:main.c        ****         ISR1_Disable();
- 135              		.loc 1 41 0
- 136 001a FFF7FEFF 		bl	ISR1_Disable
- 137              	.LVL9:
-  42:main.c        ****         ISR1_ClearPending();
- 138              		.loc 1 42 0
- 139 001e FFF7FEFF 		bl	ISR1_ClearPending
- 140              	.LVL10:
- 141              	.L6:
-  43:main.c        ****         while ((Timer2_ReadStatusRegister() & Timer2_STATUS_TC) == 0);
- 142              		.loc 1 43 0 discriminator 1
- 143 0022 FFF7FEFF 		bl	Timer2_ReadStatusRegister
- 144              	.LVL11:
- 145 0026 C307     		lsls	r3, r0, #31
- 146 0028 FBD5     		bpl	.L6
-  44:main.c        ****         NCapture=0;
- 147              		.loc 1 44 0
- 148 002a 0022     		movs	r2, #0
- 149 002c 3B4B     		ldr	r3, .L19+4
- 150 002e 1A60     		str	r2, [r3]
-  45:main.c        ****         Timer1_ClearFIFO();
- 151              		.loc 1 45 0
- 152 0030 FFF7FEFF 		bl	Timer1_ClearFIFO
- 153              	.LVL12:
-  46:main.c        ****         Timer1_Init();
- 154              		.loc 1 46 0
- 155 0034 FFF7FEFF 		bl	Timer1_Init
- 156              	.LVL13:
-  47:main.c        ****         Timer1_Enable();
- 157              		.loc 1 47 0
- 158 0038 FFF7FEFF 		bl	Timer1_Enable
- 159              	.LVL14:
-  48:main.c        ****         Timer1_WriteCounter(25000);
- 160              		.loc 1 48 0
- 161 003c 384D     		ldr	r5, .L19+8
- 162 003e 2800     		movs	r0, r5
- 163 0040 FFF7FEFF 		bl	Timer1_WriteCounter
- 164              	.LVL15:
-  49:main.c        ****         Timer1_WritePeriod(25000);
- 165              		.loc 1 49 0
- 166 0044 2800     		movs	r0, r5
- 167 0046 FFF7FEFF 		bl	Timer1_WritePeriod
- 168              	.LVL16:
- 169              	.L7:
-  50:main.c        ****         while (IR_Read() != 0);
- 170              		.loc 1 50 0 discriminator 1
- 171 004a FFF7FEFF 		bl	IR_Read
- 172              	.LVL17:
- 173 004e 0028     		cmp	r0, #0
- 174 0050 FBD1     		bne	.L7
-  51:main.c        ****         ISR1_Enable();
- 175              		.loc 1 51 0
- 176 0052 FFF7FEFF 		bl	ISR1_Enable
-ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccwS2uRN.s 			page 5
+ 125 0002 FFF7FEFF 		bl	UART1_UartPutString
+ 126              	.LVL6:
+  48:main.c        **** }
+ 127              		.loc 1 48 0
+ 128              		@ sp needed
+ 129 0006 10BD     		pop	{r4, pc}
+ 130              		.cfi_endproc
+ 131              	.LFE37:
+ 132              		.size	Puts, .-Puts
+ 133              		.section	.text.main,"ax",%progbits
+ 134              		.align	2
+ 135              		.global	main
+ 136              		.code	16
+ 137              		.thumb_func
+ 138              		.type	main, %function
+ 139              	main:
+ 140              	.LFB38:
+  49:main.c        **** 
+  50:main.c        **** int main(void)
+  51:main.c        **** {
+ 141              		.loc 1 51 0
+ 142              		.cfi_startproc
+ 143              		@ args = 0, pretend = 0, frame = 80
+ 144              		@ frame_needed = 0, uses_anonymous_args = 0
+ 145 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+ 146              		.cfi_def_cfa_offset 20
+ 147              		.cfi_offset 4, -20
+ 148              		.cfi_offset 5, -16
+ 149              		.cfi_offset 6, -12
+ 150              		.cfi_offset 7, -8
+ 151              		.cfi_offset 14, -4
+ 152 0002 95B0     		sub	sp, sp, #84
+ 153              		.cfi_def_cfa_offset 104
+ 154              	.LVL7:
+  52:main.c        ****     char buf[80];
+  53:main.c        ****     unsigned rep, code = 0;
+  54:main.c        ****     unsigned char b0, b1, b2, b3;
+  55:main.c        ****     
+  56:main.c        ****     int i;
+  57:main.c        **** 
+  58:main.c        ****     UART1_Start();
+ 155              		.loc 1 58 0
+ 156 0004 FFF7FEFF 		bl	UART1_Start
+ 157              	.LVL8:
+  59:main.c        ****     Timer1_Start();
+ 158              		.loc 1 59 0
+ 159 0008 FFF7FEFF 		bl	Timer1_Start
+ 160              	.LVL9:
+  60:main.c        ****     Timer2_Start();
+ 161              		.loc 1 60 0
+ 162 000c FFF7FEFF 		bl	Timer2_Start
+ 163              	.LVL10:
+  61:main.c        ****     
+  62:main.c        ****     ISR1_StartEx(do_capture);
+ 164              		.loc 1 62 0
+ 165 0010 5848     		ldr	r0, .L30
+ 166 0012 FFF7FEFF 		bl	ISR1_StartEx
+ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccTF0n2y.s 			page 5
 
 
- 177              	.LVL18:
-  52:main.c        ****         LED_Write(1);
- 178              		.loc 1 52 0
- 179 0056 0120     		movs	r0, #1
- 180 0058 FFF7FEFF 		bl	LED_Write
- 181              	.LVL19:
- 182              	.L8:
-  53:main.c        ****         while (Timer1_ReadCounter() > 10);
- 183              		.loc 1 53 0 discriminator 1
- 184 005c FFF7FEFF 		bl	Timer1_ReadCounter
- 185              	.LVL20:
- 186 0060 0A28     		cmp	r0, #10
- 187 0062 FBD8     		bhi	.L8
-  54:main.c        ****         ISR1_Disable();
- 188              		.loc 1 54 0
- 189 0064 FFF7FEFF 		bl	ISR1_Disable
- 190              	.LVL21:
-  55:main.c        ****         LED_Write(0);
- 191              		.loc 1 55 0
- 192 0068 0020     		movs	r0, #0
- 193 006a FFF7FEFF 		bl	LED_Write
- 194              	.LVL22:
-  56:main.c        ****         snprintf(buf, 80, "interrupt %d\r\n", NCapture);
- 195              		.loc 1 56 0
- 196 006e 2B4B     		ldr	r3, .L19+4
- 197 0070 1B68     		ldr	r3, [r3]
- 198 0072 2C4A     		ldr	r2, .L19+12
- 199 0074 5021     		movs	r1, #80
- 200 0076 02A8     		add	r0, sp, #8
- 201 0078 FFF7FEFF 		bl	snprintf
- 202              	.LVL23:
-  57:main.c        ****         Puts(buf);
- 203              		.loc 1 57 0
- 204 007c 02A8     		add	r0, sp, #8
- 205 007e FFF7FEFF 		bl	Puts
- 206              	.LVL24:
-  58:main.c        ****         unsigned L = 0;
- 207              		.loc 1 58 0
- 208 0082 0021     		movs	r1, #0
-  59:main.c        ****         for (i = 1; i < NCapture; i++) {
- 209              		.loc 1 59 0
- 210 0084 0122     		movs	r2, #1
- 211 0086 15E0     		b	.L9
- 212              	.LVL25:
- 213              	.L11:
- 214              	.LBB3:
-  60:main.c        ****             unsigned long bit;
-  61:main.c        ****             int diff;
-  62:main.c        ****             
-  63:main.c        ****             diff = Capture[i-1] -Capture[i];
- 215              		.loc 1 63 0
- 216 0088 531E     		subs	r3, r2, #1
- 217 008a 244D     		ldr	r5, .L19+4
- 218 008c 5B00     		lsls	r3, r3, #1
- 219 008e EB18     		adds	r3, r5, r3
- 220 0090 0420     		movs	r0, #4
- 221 0092 1B5E     		ldrsh	r3, [r3, r0]
-ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccwS2uRN.s 			page 6
+ 167              	.LVL11:
+  63:main.c        ****     CyGlobalIntEnable;
+ 168              		.loc 1 63 0
+ 169              		.syntax divided
+ 170              	@ 63 "main.c" 1
+ 171 0016 62B6     		CPSIE   i
+ 172              	@ 0 "" 2
+  53:main.c        ****     unsigned char b0, b1, b2, b3;
+ 173              		.loc 1 53 0
+ 174              		.thumb
+ 175              		.syntax unified
+ 176 0018 0024     		movs	r4, #0
+ 177              	.LVL12:
+ 178              	.L9:
+ 179              	.LBB2:
+  64:main.c        ****     
+  65:main.c        ****     for(;;)
+  66:main.c        ****     {  
+  67:main.c        ****         ISR1_Disable();
+ 180              		.loc 1 67 0
+ 181 001a FFF7FEFF 		bl	ISR1_Disable
+ 182              	.LVL13:
+  68:main.c        ****         ISR1_ClearPending();
+ 183              		.loc 1 68 0
+ 184 001e FFF7FEFF 		bl	ISR1_ClearPending
+ 185              	.LVL14:
+  69:main.c        ****         Timer2_WriteCounter(255);
+ 186              		.loc 1 69 0
+ 187 0022 FF20     		movs	r0, #255
+ 188 0024 FFF7FEFF 		bl	Timer2_WriteCounter
+ 189              	.LVL15:
+ 190              	.L10:
+  70:main.c        ****         while (Timer2_ReadCounter() > (255-8));
+ 191              		.loc 1 70 0 discriminator 1
+ 192 0028 FFF7FEFF 		bl	Timer2_ReadCounter
+ 193              	.LVL16:
+ 194 002c F728     		cmp	r0, #247
+ 195 002e FBD8     		bhi	.L10
+  71:main.c        ****         NCapture=0;
+ 196              		.loc 1 71 0
+ 197 0030 0022     		movs	r2, #0
+ 198 0032 514B     		ldr	r3, .L30+4
+ 199 0034 1A60     		str	r2, [r3]
+  72:main.c        ****         Timer1_ClearFIFO();
+ 200              		.loc 1 72 0
+ 201 0036 FFF7FEFF 		bl	Timer1_ClearFIFO
+ 202              	.LVL17:
+  73:main.c        ****         Timer1_Init();
+ 203              		.loc 1 73 0
+ 204 003a FFF7FEFF 		bl	Timer1_Init
+ 205              	.LVL18:
+  74:main.c        ****         Timer1_Enable();
+ 206              		.loc 1 74 0
+ 207 003e FFF7FEFF 		bl	Timer1_Enable
+ 208              	.LVL19:
+  75:main.c        ****         Timer1_WriteCounter(T1Period);
+ 209              		.loc 1 75 0
+ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccTF0n2y.s 			page 6
 
 
- 222 0094 5000     		lsls	r0, r2, #1
- 223 0096 2818     		adds	r0, r5, r0
- 224 0098 0425     		movs	r5, #4
- 225 009a 405F     		ldrsh	r0, [r0, r5]
- 226 009c 1B1A     		subs	r3, r3, r0
- 227              	.LVL26:
-  64:main.c        ****  
-  65:main.c        ****             if (diff < 450) {
- 228              		.loc 1 65 0
- 229 009e C220     		movs	r0, #194
- 230 00a0 FF30     		adds	r0, r0, #255
- 231 00a2 8342     		cmp	r3, r0
- 232 00a4 01DC     		bgt	.L16
-  66:main.c        ****                 bit = 0;
- 233              		.loc 1 66 0
- 234 00a6 0023     		movs	r3, #0
- 235              	.LVL27:
- 236 00a8 01E0     		b	.L10
- 237              	.LVL28:
- 238              	.L16:
-  67:main.c        ****             }
-  68:main.c        ****             else {
-  69:main.c        ****                 bit = 0x80000000u;
- 239              		.loc 1 69 0
- 240 00aa 8023     		movs	r3, #128
- 241              	.LVL29:
- 242 00ac 1B06     		lsls	r3, r3, #24
- 243              	.L10:
- 244              	.LVL30:
-  70:main.c        ****             }
-  71:main.c        ****             L >>= 1;
- 245              		.loc 1 71 0 discriminator 2
- 246 00ae 4908     		lsrs	r1, r1, #1
- 247              	.LVL31:
-  72:main.c        ****             L = L | bit;                       
- 248              		.loc 1 72 0 discriminator 2
- 249 00b0 1943     		orrs	r1, r3
- 250              	.LVL32:
- 251              	.LBE3:
-  59:main.c        ****             unsigned long bit;
- 252              		.loc 1 59 0 discriminator 2
- 253 00b2 0132     		adds	r2, r2, #1
- 254              	.LVL33:
- 255              	.L9:
-  59:main.c        ****             unsigned long bit;
- 256              		.loc 1 59 0 is_stmt 0 discriminator 1
- 257 00b4 194B     		ldr	r3, .L19+4
- 258 00b6 1B68     		ldr	r3, [r3]
- 259 00b8 9A42     		cmp	r2, r3
- 260 00ba E5DB     		blt	.L11
-  73:main.c        ****         }
-  74:main.c        ****         if (NCapture <= 2) {
- 261              		.loc 1 74 0 is_stmt 1
- 262 00bc 022B     		cmp	r3, #2
- 263 00be 01DC     		bgt	.L17
-  75:main.c        ****             rep = 1;
- 264              		.loc 1 75 0
-ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccwS2uRN.s 			page 7
+ 210 0042 4E4D     		ldr	r5, .L30+8
+ 211 0044 2800     		movs	r0, r5
+ 212 0046 FFF7FEFF 		bl	Timer1_WriteCounter
+ 213              	.LVL20:
+  76:main.c        ****         Timer1_WritePeriod(T1Period);        
+ 214              		.loc 1 76 0
+ 215 004a 2800     		movs	r0, r5
+ 216 004c FFF7FEFF 		bl	Timer1_WritePeriod
+ 217              	.LVL21:
+  77:main.c        ****         LED_Write(1);
+ 218              		.loc 1 77 0
+ 219 0050 0120     		movs	r0, #1
+ 220 0052 FFF7FEFF 		bl	LED_Write
+ 221              	.LVL22:
+  78:main.c        ****         ISR1_Enable();
+ 222              		.loc 1 78 0
+ 223 0056 FFF7FEFF 		bl	ISR1_Enable
+ 224              	.LVL23:
+ 225              	.L11:
+  79:main.c        ****         
+  80:main.c        ****         while (Timer1_ReadCounter() > 10);
+ 226              		.loc 1 80 0 discriminator 1
+ 227 005a FFF7FEFF 		bl	Timer1_ReadCounter
+ 228              	.LVL24:
+ 229 005e 0A28     		cmp	r0, #10
+ 230 0060 FBD8     		bhi	.L11
+  81:main.c        ****         LED_Write(0);
+ 231              		.loc 1 81 0
+ 232 0062 0020     		movs	r0, #0
+ 233 0064 FFF7FEFF 		bl	LED_Write
+ 234              	.LVL25:
+  82:main.c        ****         snprintf(buf, 80, "interrupt %d\r\n", NCapture);
+ 235              		.loc 1 82 0
+ 236 0068 434B     		ldr	r3, .L30+4
+ 237 006a 1B68     		ldr	r3, [r3]
+ 238 006c 444A     		ldr	r2, .L30+12
+ 239 006e 5021     		movs	r1, #80
+ 240 0070 6846     		mov	r0, sp
+ 241 0072 FFF7FEFF 		bl	snprintf
+ 242              	.LVL26:
+  83:main.c        ****         Puts(buf);
+ 243              		.loc 1 83 0
+ 244 0076 6846     		mov	r0, sp
+ 245 0078 FFF7FEFF 		bl	Puts
+ 246              	.LVL27:
+  84:main.c        ****         unsigned L = 0;
+ 247              		.loc 1 84 0
+ 248 007c 0023     		movs	r3, #0
+  85:main.c        ****         for (i = 1; i < NCapture; i++) {
+ 249              		.loc 1 85 0
+ 250 007e 0121     		movs	r1, #1
+ 251 0080 17E0     		b	.L12
+ 252              	.LVL28:
+ 253              	.L15:
+ 254              	.LBB3:
+  86:main.c        ****             unsigned long bit;
+  87:main.c        ****             int diff;
+ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccTF0n2y.s 			page 7
 
 
- 265 00c0 0126     		movs	r6, #1
- 266 00c2 02E0     		b	.L12
- 267              	.L17:
-  76:main.c        ****         }
-  77:main.c        ****         else {
-  78:main.c        ****             rep = 0;
-  79:main.c        ****             code = -1;
- 268              		.loc 1 79 0
- 269 00c4 0124     		movs	r4, #1
- 270              	.LVL34:
- 271 00c6 6442     		rsbs	r4, r4, #0
-  78:main.c        ****             code = -1;
- 272              		.loc 1 78 0
- 273 00c8 0026     		movs	r6, #0
- 274              	.L12:
- 275              	.LVL35:
-  80:main.c        ****         }
-  81:main.c        ****         
-  82:main.c        **** 
-  83:main.c        ****         if (NCapture >=34) {
- 276              		.loc 1 83 0
- 277 00ca 212B     		cmp	r3, #33
- 278 00cc 18DD     		ble	.L13
- 279              	.LVL36:
-  84:main.c        ****             b0 = L & 0xff;
-  85:main.c        ****             b1 = (L & 0xff00) >> 8;
- 280              		.loc 1 85 0
- 281 00ce 080A     		lsrs	r0, r1, #8
-  86:main.c        ****             b2 = (L & 0xff0000) >> 16;
- 282              		.loc 1 86 0
- 283 00d0 0A0C     		lsrs	r2, r1, #16
- 284              	.LVL37:
-  87:main.c        ****             b3 = (L & 0xff000000) >> 24;
- 285              		.loc 1 87 0
- 286 00d2 0D0E     		lsrs	r5, r1, #24
-  88:main.c        ****             if (((b0 ^ (~b1 & 0xff)) | (b2 ^ (~b3 & 0xff))) == 0) {
- 287              		.loc 1 88 0
- 288 00d4 FF23     		movs	r3, #255
- 289 00d6 1F00     		movs	r7, r3
- 290 00d8 8743     		bics	r7, r0
- 291 00da 3800     		movs	r0, r7
- 292 00dc 1F00     		movs	r7, r3
- 293 00de 0F40     		ands	r7, r1
- 294 00e0 7840     		eors	r0, r7
- 295 00e2 1A40     		ands	r2, r3
- 296              	.LVL38:
- 297 00e4 AB43     		bics	r3, r5
- 298 00e6 5340     		eors	r3, r2
- 299 00e8 0343     		orrs	r3, r0
- 300 00ea 05D1     		bne	.L14
-  89:main.c        ****                 code = ((b0 & 0xff) << 8) | (b2 & 0xff);
- 301              		.loc 1 89 0
- 302 00ec 0C02     		lsls	r4, r1, #8
- 303              	.LVL39:
- 304 00ee FF23     		movs	r3, #255
- 305 00f0 1B02     		lsls	r3, r3, #8
- 306 00f2 1C40     		ands	r4, r3
-ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccwS2uRN.s 			page 8
-
-
- 307 00f4 1443     		orrs	r4, r2
- 308              	.LVL40:
- 309 00f6 03E0     		b	.L13
- 310              	.L14:
-  90:main.c        ****             }
-  91:main.c        ****             else if (rep == 0) {
- 311              		.loc 1 91 0
- 312 00f8 002E     		cmp	r6, #0
- 313 00fa 01D1     		bne	.L13
-  92:main.c        ****                 code = -1;
- 314              		.loc 1 92 0
- 315 00fc 0124     		movs	r4, #1
- 316              	.LVL41:
- 317 00fe 6442     		rsbs	r4, r4, #0
- 318              	.LVL42:
- 319              	.L13:
+  88:main.c        ****             
+  89:main.c        ****             diff = Capture[i-1] -Capture[i];
+ 255              		.loc 1 89 0
+ 256 0082 4A1E     		subs	r2, r1, #1
+ 257 0084 3C4D     		ldr	r5, .L30+4
+ 258 0086 5200     		lsls	r2, r2, #1
+ 259 0088 AA18     		adds	r2, r5, r2
+ 260 008a 0420     		movs	r0, #4
+ 261 008c 125E     		ldrsh	r2, [r2, r0]
+ 262 008e 4800     		lsls	r0, r1, #1
+ 263 0090 2818     		adds	r0, r5, r0
+ 264 0092 0425     		movs	r5, #4
+ 265 0094 405F     		ldrsh	r0, [r0, r5]
+ 266 0096 121A     		subs	r2, r2, r0
+ 267              	.LVL29:
+  90:main.c        ****  
+  91:main.c        ****             if (diff < 450) {
+ 268              		.loc 1 91 0
+ 269 0098 C220     		movs	r0, #194
+ 270 009a FF30     		adds	r0, r0, #255
+ 271 009c 8242     		cmp	r2, r0
+ 272 009e 01DC     		bgt	.L27
+  92:main.c        ****                 bit = 0;
+ 273              		.loc 1 92 0
+ 274 00a0 0022     		movs	r2, #0
+ 275              	.LVL30:
+ 276 00a2 01E0     		b	.L13
+ 277              	.LVL31:
+ 278              	.L27:
   93:main.c        ****             }
-  94:main.c        ****         }      
-  95:main.c        ****         snprintf(buf, 80, "%x, %x\r\n", code, L);
- 320              		.loc 1 95 0
- 321 0100 0091     		str	r1, [sp]
- 322 0102 2300     		movs	r3, r4
- 323 0104 084A     		ldr	r2, .L19+16
- 324 0106 5021     		movs	r1, #80
- 325              	.LVL43:
- 326 0108 02A8     		add	r0, sp, #8
- 327 010a FFF7FEFF 		bl	snprintf
- 328              	.LVL44:
-  96:main.c        ****         Puts(buf);
- 329              		.loc 1 96 0
- 330 010e 02A8     		add	r0, sp, #8
- 331 0110 FFF7FEFF 		bl	Puts
- 332              	.LVL45:
- 333              	.LBE2:
-  97:main.c        ****     }
- 334              		.loc 1 97 0
- 335 0114 81E7     		b	.L15
- 336              	.L20:
- 337 0116 C046     		.align	2
- 338              	.L19:
- 339 0118 00000000 		.word	do_capture
- 340 011c 00000000 		.word	.LANCHOR0
- 341 0120 A8610000 		.word	25000
- 342 0124 00000000 		.word	.LC3
- 343 0128 10000000 		.word	.LC5
- 344              		.cfi_endproc
- 345              	.LFE37:
- 346              		.size	main, .-main
- 347              		.section	.rodata.str1.4,"aMS",%progbits,1
- 348              		.align	2
- 349              	.LC3:
- 350 0000 696E7465 		.ascii	"interrupt %d\015\012\000"
- 350      72727570 
- 350      74202564 
- 350      0D0A00
- 351 000f 00       		.space	1
- 352              	.LC5:
-ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccwS2uRN.s 			page 9
+  94:main.c        ****             else {
+  95:main.c        ****                 bit = 0x80000000u;
+ 279              		.loc 1 95 0
+ 280 00a4 8022     		movs	r2, #128
+ 281              	.LVL32:
+ 282 00a6 1206     		lsls	r2, r2, #24
+ 283              	.L13:
+ 284              	.LVL33:
+  96:main.c        ****             }
+  97:main.c        ****             L >>= 1;
+ 285              		.loc 1 97 0
+ 286 00a8 5B08     		lsrs	r3, r3, #1
+ 287              	.LVL34:
+  98:main.c        ****             L = L | bit;
+ 288              		.loc 1 98 0
+ 289 00aa 1343     		orrs	r3, r2
+ 290              	.LVL35:
+  99:main.c        ****             if (i >= CodeL) break;
+ 291              		.loc 1 99 0
+ 292 00ac 2129     		cmp	r1, #33
+ 293 00ae 04DC     		bgt	.L14
+ 294              	.LBE3:
+  85:main.c        ****             unsigned long bit;
+ 295              		.loc 1 85 0 discriminator 2
+ 296 00b0 0131     		adds	r1, r1, #1
+ 297              	.LVL36:
+ 298              	.L12:
+ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccTF0n2y.s 			page 8
 
 
- 353 0010 25782C20 		.ascii	"%x, %x\015\012\000"
- 353      25780D0A 
- 353      00
- 354              		.bss
- 355              		.align	2
- 356              		.set	.LANCHOR0,. + 0
- 357              		.type	NCapture, %object
- 358              		.size	NCapture, 4
- 359              	NCapture:
- 360 0000 00000000 		.space	4
- 361              		.type	Capture, %object
- 362              		.size	Capture, 200
- 363              	Capture:
- 364 0004 00000000 		.space	200
- 364      00000000 
- 364      00000000 
- 364      00000000 
- 364      00000000 
- 365              		.text
- 366              	.Letext0:
- 367              		.file 2 "Generated_Source\\PSoC4/cytypes.h"
- 368              		.file 3 "Generated_Source\\PSoC4/Timer1.h"
- 369              		.file 4 "Generated_Source\\PSoC4/UART1_SPI_UART.h"
- 370              		.file 5 "Generated_Source\\PSoC4/ISR1.h"
- 371              		.file 6 "Generated_Source\\PSoC4/Timer2.h"
- 372              		.file 7 "Generated_Source\\PSoC4/IR.h"
- 373              		.file 8 "Generated_Source\\PSoC4/LED.h"
- 374              		.file 9 "c:\\program files (x86)\\cypress\\psoc creator\\4.3\\psoc creator\\import\\gnu\\arm\\5.4.
- 375              		.file 10 "Generated_Source\\PSoC4/UART1.h"
- 376              		.section	.debug_info,"",%progbits
- 377              	.Ldebug_info0:
- 378 0000 2D040000 		.4byte	0x42d
- 379 0004 0400     		.2byte	0x4
- 380 0006 00000000 		.4byte	.Ldebug_abbrev0
- 381 000a 04       		.byte	0x4
- 382 000b 01       		.uleb128 0x1
- 383 000c BD010000 		.4byte	.LASF41
- 384 0010 0C       		.byte	0xc
- 385 0011 68020000 		.4byte	.LASF42
- 386 0015 2A000000 		.4byte	.LASF43
- 387 0019 00000000 		.4byte	.Ldebug_ranges0+0
- 388 001d 00000000 		.4byte	0
- 389 0021 00000000 		.4byte	.Ldebug_line0
- 390 0025 02       		.uleb128 0x2
- 391 0026 01       		.byte	0x1
- 392 0027 06       		.byte	0x6
- 393 0028 C4020000 		.4byte	.LASF0
- 394 002c 02       		.uleb128 0x2
- 395 002d 01       		.byte	0x1
- 396 002e 08       		.byte	0x8
- 397 002f FA000000 		.4byte	.LASF1
- 398 0033 02       		.uleb128 0x2
- 399 0034 02       		.byte	0x2
- 400 0035 05       		.byte	0x5
- 401 0036 82020000 		.4byte	.LASF2
- 402 003a 02       		.uleb128 0x2
- 403 003b 02       		.byte	0x2
-ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccwS2uRN.s 			page 10
+  85:main.c        ****             unsigned long bit;
+ 299              		.loc 1 85 0 is_stmt 0 discriminator 1
+ 300 00b2 314A     		ldr	r2, .L30+4
+ 301 00b4 1668     		ldr	r6, [r2]
+ 302 00b6 B142     		cmp	r1, r6
+ 303 00b8 E3DB     		blt	.L15
+ 304              	.L14:
+ 100:main.c        ****         }
+ 101:main.c        ****         if (NCapture <= 3) {
+ 305              		.loc 1 101 0 is_stmt 1
+ 306 00ba 032E     		cmp	r6, #3
+ 307 00bc 01DC     		bgt	.L28
+ 102:main.c        ****             rep = 1;
+ 308              		.loc 1 102 0
+ 309 00be 0127     		movs	r7, #1
+ 310 00c0 02E0     		b	.L16
+ 311              	.L28:
+ 103:main.c        ****         }
+ 104:main.c        ****         else {
+ 105:main.c        ****             rep = 0;
+ 106:main.c        ****             code = -1;
+ 312              		.loc 1 106 0
+ 313 00c2 0124     		movs	r4, #1
+ 314              	.LVL37:
+ 315 00c4 6442     		rsbs	r4, r4, #0
+ 105:main.c        ****             code = -1;
+ 316              		.loc 1 105 0
+ 317 00c6 0027     		movs	r7, #0
+ 318              	.L16:
+ 319              	.LVL38:
+ 107:main.c        ****         }
+ 108:main.c        ****         
+ 109:main.c        **** 
+ 110:main.c        ****         if (NCapture >= CodeL) {
+ 320              		.loc 1 110 0
+ 321 00c8 212E     		cmp	r6, #33
+ 322 00ca 18DD     		ble	.L17
+ 323              	.LVL39:
+ 111:main.c        ****             b0 = L & 0xff;
+ 112:main.c        ****             b1 = (L & 0xff00) >> 8;
+ 324              		.loc 1 112 0
+ 325 00cc 180A     		lsrs	r0, r3, #8
+ 113:main.c        ****             b2 = (L & 0xff0000) >> 16;
+ 326              		.loc 1 113 0
+ 327 00ce 190C     		lsrs	r1, r3, #16
+ 328              	.LVL40:
+ 114:main.c        ****             b3 = (L & 0xff000000) >> 24;
+ 329              		.loc 1 114 0
+ 330 00d0 1D0E     		lsrs	r5, r3, #24
+ 115:main.c        ****             if (((b0 ^ (~b1 & 0xff)) | (b2 ^ (~b3 & 0xff))) == 0) {
+ 331              		.loc 1 115 0
+ 332 00d2 FF22     		movs	r2, #255
+ 333 00d4 1600     		movs	r6, r2
+ 334 00d6 8643     		bics	r6, r0
+ 335 00d8 3000     		movs	r0, r6
+ 336 00da 1600     		movs	r6, r2
+ 337 00dc 1E40     		ands	r6, r3
+ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccTF0n2y.s 			page 9
 
 
- 404 003c 07       		.byte	0x7
- 405 003d 1F010000 		.4byte	.LASF3
- 406 0041 02       		.uleb128 0x2
- 407 0042 04       		.byte	0x4
- 408 0043 05       		.byte	0x5
- 409 0044 92020000 		.4byte	.LASF4
- 410 0048 02       		.uleb128 0x2
- 411 0049 04       		.byte	0x4
- 412 004a 07       		.byte	0x7
- 413 004b 0D010000 		.4byte	.LASF5
- 414 004f 02       		.uleb128 0x2
- 415 0050 08       		.byte	0x8
- 416 0051 05       		.byte	0x5
- 417 0052 00000000 		.4byte	.LASF6
- 418 0056 02       		.uleb128 0x2
- 419 0057 08       		.byte	0x8
- 420 0058 07       		.byte	0x7
- 421 0059 81010000 		.4byte	.LASF7
- 422 005d 03       		.uleb128 0x3
- 423 005e 04       		.byte	0x4
- 424 005f 05       		.byte	0x5
- 425 0060 696E7400 		.ascii	"int\000"
- 426 0064 02       		.uleb128 0x2
- 427 0065 04       		.byte	0x4
- 428 0066 07       		.byte	0x7
- 429 0067 67010000 		.4byte	.LASF8
- 430 006b 04       		.uleb128 0x4
- 431 006c 8C020000 		.4byte	.LASF12
- 432 0070 02       		.byte	0x2
- 433 0071 F701     		.2byte	0x1f7
- 434 0073 2C000000 		.4byte	0x2c
- 435 0077 02       		.uleb128 0x2
- 436 0078 04       		.byte	0x4
- 437 0079 04       		.byte	0x4
- 438 007a E1000000 		.4byte	.LASF9
- 439 007e 02       		.uleb128 0x2
- 440 007f 08       		.byte	0x8
- 441 0080 04       		.byte	0x4
- 442 0081 3D010000 		.4byte	.LASF10
- 443 0085 02       		.uleb128 0x2
- 444 0086 01       		.byte	0x1
- 445 0087 08       		.byte	0x8
- 446 0088 6F020000 		.4byte	.LASF11
- 447 008c 04       		.uleb128 0x4
- 448 008d 08010000 		.4byte	.LASF13
- 449 0091 02       		.byte	0x2
- 450 0092 A102     		.2byte	0x2a1
- 451 0094 98000000 		.4byte	0x98
- 452 0098 05       		.uleb128 0x5
- 453 0099 6B000000 		.4byte	0x6b
- 454 009d 02       		.uleb128 0x2
- 455 009e 08       		.byte	0x8
- 456 009f 04       		.byte	0x4
- 457 00a0 AC020000 		.4byte	.LASF14
- 458 00a4 02       		.uleb128 0x2
- 459 00a5 04       		.byte	0x4
- 460 00a6 07       		.byte	0x7
-ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccwS2uRN.s 			page 11
+ 338 00de 7040     		eors	r0, r6
+ 339 00e0 1140     		ands	r1, r2
+ 340              	.LVL41:
+ 341 00e2 AA43     		bics	r2, r5
+ 342 00e4 4A40     		eors	r2, r1
+ 343 00e6 0243     		orrs	r2, r0
+ 344 00e8 05D1     		bne	.L18
+ 116:main.c        ****                 code = ((b0 & 0xff) << 8) | (b2 & 0xff);
+ 345              		.loc 1 116 0
+ 346 00ea 1C02     		lsls	r4, r3, #8
+ 347              	.LVL42:
+ 348 00ec FF22     		movs	r2, #255
+ 349 00ee 1202     		lsls	r2, r2, #8
+ 350 00f0 1440     		ands	r4, r2
+ 351 00f2 0C43     		orrs	r4, r1
+ 352              	.LVL43:
+ 353 00f4 03E0     		b	.L17
+ 354              	.L18:
+ 117:main.c        ****             }
+ 118:main.c        ****             else if (rep == 0) {
+ 355              		.loc 1 118 0
+ 356 00f6 002F     		cmp	r7, #0
+ 357 00f8 01D1     		bne	.L17
+ 119:main.c        ****                 code = -1;
+ 358              		.loc 1 119 0
+ 359 00fa 0124     		movs	r4, #1
+ 360              	.LVL44:
+ 361 00fc 6442     		rsbs	r4, r4, #0
+ 362              	.LVL45:
+ 363              	.L17:
+ 120:main.c        ****             }
+ 121:main.c        ****         }      
+ 122:main.c        ****         snprintf(buf, 80, "%x\r\n", L);
+ 364              		.loc 1 122 0
+ 365 00fe 214A     		ldr	r2, .L30+16
+ 366 0100 5021     		movs	r1, #80
+ 367 0102 6846     		mov	r0, sp
+ 368 0104 FFF7FEFF 		bl	snprintf
+ 369              	.LVL46:
+ 123:main.c        ****         Puts(buf);
+ 370              		.loc 1 123 0
+ 371 0108 6846     		mov	r0, sp
+ 372 010a FFF7FEFF 		bl	Puts
+ 373              	.LVL47:
+ 124:main.c        ****         
+ 125:main.c        ****         struct KEY const *p;
+ 126:main.c        ****         for (p = &key[0]; p->code != 0; p++) {
+ 374              		.loc 1 126 0
+ 375 010e 1E4D     		ldr	r5, .L30+20
+ 376 0110 2BE0     		b	.L19
+ 377              	.LVL48:
+ 378              	.L26:
+ 127:main.c        ****             if ((short)code == p->code) {
+ 379              		.loc 1 127 0
+ 380 0112 22B2     		sxth	r2, r4
+ 381 0114 9342     		cmp	r3, r2
+ 382 0116 27D1     		bne	.L20
+ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccTF0n2y.s 			page 10
 
 
- 461 00a7 5F020000 		.4byte	.LASF15
- 462 00ab 06       		.uleb128 0x6
- 463 00ac 04       		.byte	0x4
- 464 00ad B1000000 		.4byte	0xb1
- 465 00b1 07       		.uleb128 0x7
- 466 00b2 85000000 		.4byte	0x85
- 467 00b6 08       		.uleb128 0x8
- 468 00b7 32010000 		.4byte	.LASF16
- 469 00bb 01       		.byte	0x1
- 470 00bc 0F       		.byte	0xf
- 471 00bd 00000000 		.4byte	.LFB35
- 472 00c1 24000000 		.4byte	.LFE35-.LFB35
- 473 00c5 01       		.uleb128 0x1
- 474 00c6 9C       		.byte	0x9c
- 475 00c7 D5000000 		.4byte	0xd5
- 476 00cb 09       		.uleb128 0x9
- 477 00cc 12000000 		.4byte	.LVL0
- 478 00d0 5E030000 		.4byte	0x35e
- 479 00d4 00       		.byte	0
- 480 00d5 08       		.uleb128 0x8
- 481 00d6 25000000 		.4byte	.LASF17
- 482 00da 01       		.byte	0x1
- 483 00db 14       		.byte	0x14
- 484 00dc 00000000 		.4byte	.LFB36
- 485 00e0 08000000 		.4byte	.LFE36-.LFB36
- 486 00e4 01       		.uleb128 0x1
- 487 00e5 9C       		.byte	0x9c
- 488 00e6 09010000 		.4byte	0x109
- 489 00ea 0A       		.uleb128 0xa
- 490 00eb 7300     		.ascii	"s\000"
- 491 00ed 01       		.byte	0x1
- 492 00ee 14       		.byte	0x14
- 493 00ef AB000000 		.4byte	0xab
- 494 00f3 00000000 		.4byte	.LLST0
- 495 00f7 0B       		.uleb128 0xb
- 496 00f8 06000000 		.4byte	.LVL2
- 497 00fc 69030000 		.4byte	0x369
- 498 0100 0C       		.uleb128 0xc
- 499 0101 01       		.uleb128 0x1
- 500 0102 50       		.byte	0x50
- 501 0103 03       		.uleb128 0x3
- 502 0104 F3       		.byte	0xf3
- 503 0105 01       		.uleb128 0x1
- 504 0106 50       		.byte	0x50
- 505 0107 00       		.byte	0
- 506 0108 00       		.byte	0
- 507 0109 0D       		.uleb128 0xd
- 508 010a 56010000 		.4byte	.LASF44
- 509 010e 01       		.byte	0x1
- 510 010f 18       		.byte	0x18
- 511 0110 5D000000 		.4byte	0x5d
- 512 0114 00000000 		.4byte	.LFB37
- 513 0118 2C010000 		.4byte	.LFE37-.LFB37
- 514 011c 01       		.uleb128 0x1
- 515 011d 9C       		.byte	0x9c
- 516 011e 1C030000 		.4byte	0x31c
- 517 0122 0E       		.uleb128 0xe
-ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccwS2uRN.s 			page 12
+ 128:main.c        ****                 if (p->motor & BL) {
+ 383              		.loc 1 128 0
+ 384 0118 AB78     		ldrb	r3, [r5, #2]
+ 385 011a 1B07     		lsls	r3, r3, #28
+ 386 011c 05D5     		bpl	.L21
+ 129:main.c        ****                     M_BL_Write(1); Puts("BL ");
+ 387              		.loc 1 129 0
+ 388 011e 0120     		movs	r0, #1
+ 389 0120 FFF7FEFF 		bl	M_BL_Write
+ 390              	.LVL49:
+ 391 0124 1948     		ldr	r0, .L30+24
+ 392 0126 FFF7FEFF 		bl	Puts
+ 393              	.LVL50:
+ 394              	.L21:
+ 130:main.c        ****                 };
+ 131:main.c        ****                 if (p->motor & BR) {
+ 395              		.loc 1 131 0
+ 396 012a AB78     		ldrb	r3, [r5, #2]
+ 397 012c 5B07     		lsls	r3, r3, #29
+ 398 012e 05D5     		bpl	.L22
+ 132:main.c        ****                     M_BR_Write(1); Puts("BR ");
+ 399              		.loc 1 132 0
+ 400 0130 0120     		movs	r0, #1
+ 401 0132 FFF7FEFF 		bl	M_BR_Write
+ 402              	.LVL51:
+ 403 0136 1648     		ldr	r0, .L30+28
+ 404 0138 FFF7FEFF 		bl	Puts
+ 405              	.LVL52:
+ 406              	.L22:
+ 133:main.c        ****                 };
+ 134:main.c        ****                 if (p->motor & FL) {
+ 407              		.loc 1 134 0
+ 408 013c AB78     		ldrb	r3, [r5, #2]
+ 409 013e 9B07     		lsls	r3, r3, #30
+ 410 0140 05D5     		bpl	.L23
+ 135:main.c        ****                     M_FL_Write(1); Puts("FL ");
+ 411              		.loc 1 135 0
+ 412 0142 0120     		movs	r0, #1
+ 413 0144 FFF7FEFF 		bl	M_FL_Write
+ 414              	.LVL53:
+ 415 0148 1248     		ldr	r0, .L30+32
+ 416 014a FFF7FEFF 		bl	Puts
+ 417              	.LVL54:
+ 418              	.L23:
+ 136:main.c        ****                 };
+ 137:main.c        ****                 if (p->motor & FR) {
+ 419              		.loc 1 137 0
+ 420 014e AB78     		ldrb	r3, [r5, #2]
+ 421 0150 DB07     		lsls	r3, r3, #31
+ 422 0152 05D5     		bpl	.L24
+ 138:main.c        ****                     M_FR_Write(1); Puts("FR ");
+ 423              		.loc 1 138 0
+ 424 0154 0120     		movs	r0, #1
+ 425 0156 FFF7FEFF 		bl	M_FR_Write
+ 426              	.LVL55:
+ 427 015a 0F48     		ldr	r0, .L30+36
+ 428 015c FFF7FEFF 		bl	Puts
+ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccTF0n2y.s 			page 11
 
 
- 518 0123 62756600 		.ascii	"buf\000"
- 519 0127 01       		.byte	0x1
- 520 0128 1A       		.byte	0x1a
- 521 0129 1C030000 		.4byte	0x31c
- 522 012d 03       		.uleb128 0x3
- 523 012e 91       		.byte	0x91
- 524 012f 987F     		.sleb128 -104
- 525 0131 0E       		.uleb128 0xe
- 526 0132 72657000 		.ascii	"rep\000"
- 527 0136 01       		.byte	0x1
- 528 0137 1B       		.byte	0x1b
- 529 0138 64000000 		.4byte	0x64
- 530 013c 01       		.uleb128 0x1
- 531 013d 56       		.byte	0x56
- 532 013e 0F       		.uleb128 0xf
- 533 013f 51010000 		.4byte	.LASF18
- 534 0143 01       		.byte	0x1
- 535 0144 1B       		.byte	0x1b
- 536 0145 64000000 		.4byte	0x64
- 537 0149 21000000 		.4byte	.LLST1
- 538 014d 10       		.uleb128 0x10
- 539 014e 623000   		.ascii	"b0\000"
- 540 0151 01       		.byte	0x1
- 541 0152 1C       		.byte	0x1c
- 542 0153 2C000000 		.4byte	0x2c
- 543 0157 61000000 		.4byte	.LLST2
- 544 015b 11       		.uleb128 0x11
- 545 015c 623100   		.ascii	"b1\000"
- 546 015f 01       		.byte	0x1
- 547 0160 1C       		.byte	0x1c
- 548 0161 2C000000 		.4byte	0x2c
- 549 0165 10       		.uleb128 0x10
- 550 0166 623200   		.ascii	"b2\000"
- 551 0169 01       		.byte	0x1
- 552 016a 1C       		.byte	0x1c
- 553 016b 2C000000 		.4byte	0x2c
- 554 016f 74000000 		.4byte	.LLST3
- 555 0173 11       		.uleb128 0x11
- 556 0174 623300   		.ascii	"b3\000"
- 557 0177 01       		.byte	0x1
- 558 0178 1C       		.byte	0x1c
- 559 0179 2C000000 		.4byte	0x2c
- 560 017d 10       		.uleb128 0x10
- 561 017e 6900     		.ascii	"i\000"
- 562 0180 01       		.byte	0x1
- 563 0181 1E       		.byte	0x1e
- 564 0182 5D000000 		.4byte	0x5d
- 565 0186 96000000 		.4byte	.LLST4
- 566 018a 12       		.uleb128 0x12
- 567 018b 1A000000 		.4byte	.LBB2
- 568 018f FA000000 		.4byte	.LBE2-.LBB2
- 569 0193 ED020000 		.4byte	0x2ed
- 570 0197 10       		.uleb128 0x10
- 571 0198 4C00     		.ascii	"L\000"
- 572 019a 01       		.byte	0x1
- 573 019b 3A       		.byte	0x3a
- 574 019c 64000000 		.4byte	0x64
-ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccwS2uRN.s 			page 13
+ 429              	.LVL56:
+ 430              	.L24:
+ 139:main.c        ****                 };
+ 140:main.c        ****                 Puts("\r\n");
+ 431              		.loc 1 140 0
+ 432 0160 0E48     		ldr	r0, .L30+40
+ 433 0162 FFF7FEFF 		bl	Puts
+ 434              	.LVL57:
+ 141:main.c        ****                 break;
+ 435              		.loc 1 141 0
+ 436 0166 58E7     		b	.L9
+ 437              	.L20:
+ 126:main.c        ****             if ((short)code == p->code) {
+ 438              		.loc 1 126 0 discriminator 2
+ 439 0168 0435     		adds	r5, r5, #4
+ 440              	.LVL58:
+ 441              	.L19:
+ 126:main.c        ****             if ((short)code == p->code) {
+ 442              		.loc 1 126 0 is_stmt 0 discriminator 1
+ 443 016a 0022     		movs	r2, #0
+ 444 016c AB5E     		ldrsh	r3, [r5, r2]
+ 445 016e 002B     		cmp	r3, #0
+ 446 0170 CFD1     		bne	.L26
+ 447 0172 52E7     		b	.L9
+ 448              	.L31:
+ 449              		.align	2
+ 450              	.L30:
+ 451 0174 00000000 		.word	do_capture
+ 452 0178 00000000 		.word	.LANCHOR0
+ 453 017c 90650000 		.word	26000
+ 454 0180 00000000 		.word	.LC4
+ 455 0184 10000000 		.word	.LC6
+ 456 0188 00000000 		.word	.LANCHOR1
+ 457 018c 18000000 		.word	.LC8
+ 458 0190 1C000000 		.word	.LC10
+ 459 0194 20000000 		.word	.LC12
+ 460 0198 24000000 		.word	.LC14
+ 461 019c 28000000 		.word	.LC16
+ 462              	.LBE2:
+ 463              		.cfi_endproc
+ 464              	.LFE38:
+ 465              		.size	main, .-main
+ 466              		.global	key
+ 467              		.comm	M_Stat,1,1
+ 468              		.section	.rodata
+ 469              		.align	2
+ 470              		.set	.LANCHOR1,. + 0
+ 471              		.type	key, %object
+ 472              		.size	key, 40
+ 473              	key:
+ 474 0000 B110     		.short	4273
+ 475 0002 02       		.byte	2
+ 476 0003 00       		.space	1
+ 477 0004 A010     		.short	4256
+ 478 0006 03       		.byte	3
+ 479 0007 00       		.space	1
+ 480 0008 2110     		.short	4129
+ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccTF0n2y.s 			page 12
 
 
- 575 01a0 B5000000 		.4byte	.LLST5
- 576 01a4 12       		.uleb128 0x12
- 577 01a5 88000000 		.4byte	.LBB3
- 578 01a9 2A000000 		.4byte	.LBE3-.LBB3
- 579 01ad D0010000 		.4byte	0x1d0
- 580 01b1 10       		.uleb128 0x10
- 581 01b2 62697400 		.ascii	"bit\000"
- 582 01b6 01       		.byte	0x1
- 583 01b7 3C       		.byte	0x3c
- 584 01b8 48000000 		.4byte	0x48
- 585 01bc E0000000 		.4byte	.LLST6
- 586 01c0 0F       		.uleb128 0xf
- 587 01c1 A5000000 		.4byte	.LASF19
- 588 01c5 01       		.byte	0x1
- 589 01c6 3D       		.byte	0x3d
- 590 01c7 5D000000 		.4byte	0x5d
- 591 01cb F3000000 		.4byte	.LLST7
- 592 01cf 00       		.byte	0
- 593 01d0 09       		.uleb128 0x9
- 594 01d1 1E000000 		.4byte	.LVL9
- 595 01d5 75030000 		.4byte	0x375
- 596 01d9 09       		.uleb128 0x9
- 597 01da 22000000 		.4byte	.LVL10
- 598 01de 80030000 		.4byte	0x380
- 599 01e2 09       		.uleb128 0x9
- 600 01e3 26000000 		.4byte	.LVL11
- 601 01e7 8B030000 		.4byte	0x38b
- 602 01eb 09       		.uleb128 0x9
- 603 01ec 34000000 		.4byte	.LVL12
- 604 01f0 96030000 		.4byte	0x396
- 605 01f4 09       		.uleb128 0x9
- 606 01f5 38000000 		.4byte	.LVL13
- 607 01f9 A1030000 		.4byte	0x3a1
- 608 01fd 09       		.uleb128 0x9
- 609 01fe 3C000000 		.4byte	.LVL14
- 610 0202 AC030000 		.4byte	0x3ac
- 611 0206 13       		.uleb128 0x13
- 612 0207 44000000 		.4byte	.LVL15
- 613 020b B7030000 		.4byte	0x3b7
- 614 020f 1A020000 		.4byte	0x21a
- 615 0213 0C       		.uleb128 0xc
- 616 0214 01       		.uleb128 0x1
- 617 0215 50       		.byte	0x50
- 618 0216 02       		.uleb128 0x2
- 619 0217 75       		.byte	0x75
- 620 0218 00       		.sleb128 0
- 621 0219 00       		.byte	0
- 622 021a 13       		.uleb128 0x13
- 623 021b 4A000000 		.4byte	.LVL16
- 624 021f C2030000 		.4byte	0x3c2
- 625 0223 2E020000 		.4byte	0x22e
- 626 0227 0C       		.uleb128 0xc
- 627 0228 01       		.uleb128 0x1
- 628 0229 50       		.byte	0x50
- 629 022a 02       		.uleb128 0x2
- 630 022b 75       		.byte	0x75
- 631 022c 00       		.sleb128 0
-ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccwS2uRN.s 			page 14
+ 481 000a 01       		.byte	1
+ 482 000b 00       		.space	1
+ 483 000c 1010     		.short	4112
+ 484 000e 06       		.byte	6
+ 485 000f 00       		.space	1
+ 486 0010 2010     		.short	4128
+ 487 0012 00       		.byte	0
+ 488 0013 00       		.space	1
+ 489 0014 8010     		.short	4224
+ 490 0016 09       		.byte	9
+ 491 0017 00       		.space	1
+ 492 0018 1110     		.short	4113
+ 493 001a 08       		.byte	8
+ 494 001b 00       		.space	1
+ 495 001c 0010     		.short	4096
+ 496 001e 0C       		.byte	12
+ 497 001f 00       		.space	1
+ 498 0020 8110     		.short	4225
+ 499 0022 04       		.byte	4
+ 500 0023 00       		.space	1
+ 501 0024 0000     		.short	0
+ 502 0026 00       		.byte	0
+ 503 0027 00       		.space	1
+ 504              		.section	.rodata.str1.4,"aMS",%progbits,1
+ 505              		.align	2
+ 506              	.LC4:
+ 507 0000 696E7465 		.ascii	"interrupt %d\015\012\000"
+ 507      72727570 
+ 507      74202564 
+ 507      0D0A00
+ 508 000f 00       		.space	1
+ 509              	.LC6:
+ 510 0010 25780D0A 		.ascii	"%x\015\012\000"
+ 510      00
+ 511 0015 000000   		.space	3
+ 512              	.LC8:
+ 513 0018 424C2000 		.ascii	"BL \000"
+ 514              	.LC10:
+ 515 001c 42522000 		.ascii	"BR \000"
+ 516              	.LC12:
+ 517 0020 464C2000 		.ascii	"FL \000"
+ 518              	.LC14:
+ 519 0024 46522000 		.ascii	"FR \000"
+ 520              	.LC16:
+ 521 0028 0D0A00   		.ascii	"\015\012\000"
+ 522              		.bss
+ 523              		.align	2
+ 524              		.set	.LANCHOR0,. + 0
+ 525              		.type	NCapture, %object
+ 526              		.size	NCapture, 4
+ 527              	NCapture:
+ 528 0000 00000000 		.space	4
+ 529              		.type	Capture, %object
+ 530              		.size	Capture, 200
+ 531              	Capture:
+ 532 0004 00000000 		.space	200
+ 532      00000000 
+ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccTF0n2y.s 			page 13
 
 
- 632 022d 00       		.byte	0
- 633 022e 09       		.uleb128 0x9
- 634 022f 4E000000 		.4byte	.LVL17
- 635 0233 CD030000 		.4byte	0x3cd
- 636 0237 09       		.uleb128 0x9
- 637 0238 56000000 		.4byte	.LVL18
- 638 023c D8030000 		.4byte	0x3d8
- 639 0240 13       		.uleb128 0x13
- 640 0241 5C000000 		.4byte	.LVL19
- 641 0245 E3030000 		.4byte	0x3e3
- 642 0249 53020000 		.4byte	0x253
- 643 024d 0C       		.uleb128 0xc
- 644 024e 01       		.uleb128 0x1
- 645 024f 50       		.byte	0x50
- 646 0250 01       		.uleb128 0x1
- 647 0251 31       		.byte	0x31
- 648 0252 00       		.byte	0
- 649 0253 09       		.uleb128 0x9
- 650 0254 60000000 		.4byte	.LVL20
- 651 0258 EE030000 		.4byte	0x3ee
- 652 025c 09       		.uleb128 0x9
- 653 025d 68000000 		.4byte	.LVL21
- 654 0261 75030000 		.4byte	0x375
- 655 0265 13       		.uleb128 0x13
- 656 0266 6E000000 		.4byte	.LVL22
- 657 026a E3030000 		.4byte	0x3e3
- 658 026e 78020000 		.4byte	0x278
- 659 0272 0C       		.uleb128 0xc
- 660 0273 01       		.uleb128 0x1
- 661 0274 50       		.byte	0x50
- 662 0275 01       		.uleb128 0x1
- 663 0276 30       		.byte	0x30
- 664 0277 00       		.byte	0
- 665 0278 13       		.uleb128 0x13
- 666 0279 7C000000 		.4byte	.LVL23
- 667 027d F9030000 		.4byte	0x3f9
- 668 0281 9C020000 		.4byte	0x29c
- 669 0285 0C       		.uleb128 0xc
- 670 0286 01       		.uleb128 0x1
- 671 0287 50       		.byte	0x50
- 672 0288 03       		.uleb128 0x3
- 673 0289 91       		.byte	0x91
- 674 028a 987F     		.sleb128 -104
- 675 028c 0C       		.uleb128 0xc
- 676 028d 01       		.uleb128 0x1
- 677 028e 51       		.byte	0x51
- 678 028f 02       		.uleb128 0x2
- 679 0290 08       		.byte	0x8
- 680 0291 50       		.byte	0x50
- 681 0292 0C       		.uleb128 0xc
- 682 0293 01       		.uleb128 0x1
- 683 0294 52       		.byte	0x52
- 684 0295 05       		.uleb128 0x5
- 685 0296 03       		.byte	0x3
- 686 0297 00000000 		.4byte	.LC3
- 687 029b 00       		.byte	0
- 688 029c 13       		.uleb128 0x13
-ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccwS2uRN.s 			page 15
+ 532      00000000 
+ 532      00000000 
+ 532      00000000 
+ 533              		.text
+ 534              	.Letext0:
+ 535              		.file 2 "Generated_Source\\PSoC4/cytypes.h"
+ 536              		.file 3 "Generated_Source\\PSoC4/Timer1.h"
+ 537              		.file 4 "Generated_Source\\PSoC4/M_BL.h"
+ 538              		.file 5 "Generated_Source\\PSoC4/M_BR.h"
+ 539              		.file 6 "Generated_Source\\PSoC4/M_FL.h"
+ 540              		.file 7 "Generated_Source\\PSoC4/M_FR.h"
+ 541              		.file 8 "Generated_Source\\PSoC4/UART1_SPI_UART.h"
+ 542              		.file 9 "Generated_Source\\PSoC4/ISR1.h"
+ 543              		.file 10 "Generated_Source\\PSoC4/Timer2.h"
+ 544              		.file 11 "Generated_Source\\PSoC4/LED.h"
+ 545              		.file 12 "c:\\program files (x86)\\cypress\\psoc creator\\4.3\\psoc creator\\import\\gnu\\arm\\5.4
+ 546              		.file 13 "Generated_Source\\PSoC4/UART1.h"
+ 547              		.section	.debug_info,"",%progbits
+ 548              	.Ldebug_info0:
+ 549 0000 03060000 		.4byte	0x603
+ 550 0004 0400     		.2byte	0x4
+ 551 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 552 000a 04       		.byte	0x4
+ 553 000b 01       		.uleb128 0x1
+ 554 000c 85000000 		.4byte	.LASF48
+ 555 0010 0C       		.byte	0xc
+ 556 0011 B4020000 		.4byte	.LASF49
+ 557 0015 75020000 		.4byte	.LASF50
+ 558 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 559 001d 00000000 		.4byte	0
+ 560 0021 00000000 		.4byte	.Ldebug_line0
+ 561 0025 02       		.uleb128 0x2
+ 562 0026 01       		.byte	0x1
+ 563 0027 06       		.byte	0x6
+ 564 0028 EA010000 		.4byte	.LASF0
+ 565 002c 02       		.uleb128 0x2
+ 566 002d 01       		.byte	0x1
+ 567 002e 08       		.byte	0x8
+ 568 002f C5010000 		.4byte	.LASF1
+ 569 0033 02       		.uleb128 0x2
+ 570 0034 02       		.byte	0x2
+ 571 0035 05       		.byte	0x5
+ 572 0036 23000000 		.4byte	.LASF2
+ 573 003a 02       		.uleb128 0x2
+ 574 003b 02       		.byte	0x2
+ 575 003c 07       		.byte	0x7
+ 576 003d 26020000 		.4byte	.LASF3
+ 577 0041 02       		.uleb128 0x2
+ 578 0042 04       		.byte	0x4
+ 579 0043 05       		.byte	0x5
+ 580 0044 68010000 		.4byte	.LASF4
+ 581 0048 02       		.uleb128 0x2
+ 582 0049 04       		.byte	0x4
+ 583 004a 07       		.byte	0x7
+ 584 004b C0020000 		.4byte	.LASF5
+ 585 004f 02       		.uleb128 0x2
+ 586 0050 08       		.byte	0x8
+ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccTF0n2y.s 			page 14
 
 
- 689 029d 82000000 		.4byte	.LVL24
- 690 02a1 D5000000 		.4byte	0xd5
- 691 02a5 B1020000 		.4byte	0x2b1
- 692 02a9 0C       		.uleb128 0xc
- 693 02aa 01       		.uleb128 0x1
- 694 02ab 50       		.byte	0x50
- 695 02ac 03       		.uleb128 0x3
- 696 02ad 91       		.byte	0x91
- 697 02ae 987F     		.sleb128 -104
- 698 02b0 00       		.byte	0
- 699 02b1 13       		.uleb128 0x13
- 700 02b2 0E010000 		.4byte	.LVL44
- 701 02b6 F9030000 		.4byte	0x3f9
- 702 02ba DB020000 		.4byte	0x2db
- 703 02be 0C       		.uleb128 0xc
- 704 02bf 01       		.uleb128 0x1
- 705 02c0 50       		.byte	0x50
- 706 02c1 03       		.uleb128 0x3
- 707 02c2 91       		.byte	0x91
- 708 02c3 987F     		.sleb128 -104
- 709 02c5 0C       		.uleb128 0xc
- 710 02c6 01       		.uleb128 0x1
- 711 02c7 51       		.byte	0x51
- 712 02c8 02       		.uleb128 0x2
- 713 02c9 08       		.byte	0x8
- 714 02ca 50       		.byte	0x50
- 715 02cb 0C       		.uleb128 0xc
- 716 02cc 01       		.uleb128 0x1
- 717 02cd 52       		.byte	0x52
- 718 02ce 05       		.uleb128 0x5
- 719 02cf 03       		.byte	0x3
- 720 02d0 10000000 		.4byte	.LC5
- 721 02d4 0C       		.uleb128 0xc
- 722 02d5 01       		.uleb128 0x1
- 723 02d6 53       		.byte	0x53
- 724 02d7 02       		.uleb128 0x2
- 725 02d8 74       		.byte	0x74
- 726 02d9 00       		.sleb128 0
- 727 02da 00       		.byte	0
- 728 02db 0B       		.uleb128 0xb
- 729 02dc 14010000 		.4byte	.LVL45
- 730 02e0 D5000000 		.4byte	0xd5
- 731 02e4 0C       		.uleb128 0xc
- 732 02e5 01       		.uleb128 0x1
- 733 02e6 50       		.byte	0x50
- 734 02e7 03       		.uleb128 0x3
- 735 02e8 91       		.byte	0x91
- 736 02e9 987F     		.sleb128 -104
- 737 02eb 00       		.byte	0
- 738 02ec 00       		.byte	0
- 739 02ed 09       		.uleb128 0x9
- 740 02ee 08000000 		.4byte	.LVL4
- 741 02f2 04040000 		.4byte	0x404
- 742 02f6 09       		.uleb128 0x9
- 743 02f7 0C000000 		.4byte	.LVL5
- 744 02fb 0F040000 		.4byte	0x40f
- 745 02ff 09       		.uleb128 0x9
-ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccwS2uRN.s 			page 16
+ 587 0051 05       		.byte	0x5
+ 588 0052 47010000 		.4byte	.LASF6
+ 589 0056 02       		.uleb128 0x2
+ 590 0057 08       		.byte	0x8
+ 591 0058 07       		.byte	0x7
+ 592 0059 F6010000 		.4byte	.LASF7
+ 593 005d 03       		.uleb128 0x3
+ 594 005e 04       		.byte	0x4
+ 595 005f 05       		.byte	0x5
+ 596 0060 696E7400 		.ascii	"int\000"
+ 597 0064 02       		.uleb128 0x2
+ 598 0065 04       		.byte	0x4
+ 599 0066 07       		.byte	0x7
+ 600 0067 0D020000 		.4byte	.LASF8
+ 601 006b 04       		.uleb128 0x4
+ 602 006c 13010000 		.4byte	.LASF12
+ 603 0070 02       		.byte	0x2
+ 604 0071 F701     		.2byte	0x1f7
+ 605 0073 2C000000 		.4byte	0x2c
+ 606 0077 02       		.uleb128 0x2
+ 607 0078 04       		.byte	0x4
+ 608 0079 04       		.byte	0x4
+ 609 007a 34010000 		.4byte	.LASF9
+ 610 007e 02       		.uleb128 0x2
+ 611 007f 08       		.byte	0x8
+ 612 0080 04       		.byte	0x4
+ 613 0081 D2020000 		.4byte	.LASF10
+ 614 0085 02       		.uleb128 0x2
+ 615 0086 01       		.byte	0x1
+ 616 0087 08       		.byte	0x8
+ 617 0088 5A020000 		.4byte	.LASF11
+ 618 008c 04       		.uleb128 0x4
+ 619 008d BB020000 		.4byte	.LASF13
+ 620 0091 02       		.byte	0x2
+ 621 0092 A102     		.2byte	0x2a1
+ 622 0094 98000000 		.4byte	0x98
+ 623 0098 05       		.uleb128 0x5
+ 624 0099 6B000000 		.4byte	0x6b
+ 625 009d 02       		.uleb128 0x2
+ 626 009e 08       		.byte	0x8
+ 627 009f 04       		.byte	0x4
+ 628 00a0 D3010000 		.4byte	.LASF14
+ 629 00a4 02       		.uleb128 0x2
+ 630 00a5 04       		.byte	0x4
+ 631 00a6 07       		.byte	0x7
+ 632 00a7 38000000 		.4byte	.LASF15
+ 633 00ab 06       		.uleb128 0x6
+ 634 00ac 04       		.byte	0x4
+ 635 00ad B1000000 		.4byte	0xb1
+ 636 00b1 07       		.uleb128 0x7
+ 637 00b2 85000000 		.4byte	0x85
+ 638 00b6 08       		.uleb128 0x8
+ 639 00b7 01       		.byte	0x1
+ 640 00b8 2C000000 		.4byte	0x2c
+ 641 00bc 01       		.byte	0x1
+ 642 00bd 0F       		.byte	0xf
+ 643 00be D7000000 		.4byte	0xd7
+ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccTF0n2y.s 			page 15
 
 
- 746 0300 10000000 		.4byte	.LVL6
- 747 0304 1A040000 		.4byte	0x41a
- 748 0308 0B       		.uleb128 0xb
- 749 0309 16000000 		.4byte	.LVL7
- 750 030d 25040000 		.4byte	0x425
- 751 0311 0C       		.uleb128 0xc
- 752 0312 01       		.uleb128 0x1
- 753 0313 50       		.byte	0x50
- 754 0314 05       		.uleb128 0x5
- 755 0315 03       		.byte	0x3
- 756 0316 00000000 		.4byte	do_capture
- 757 031a 00       		.byte	0
- 758 031b 00       		.byte	0
- 759 031c 14       		.uleb128 0x14
- 760 031d 85000000 		.4byte	0x85
- 761 0321 2C030000 		.4byte	0x32c
- 762 0325 15       		.uleb128 0x15
- 763 0326 A4000000 		.4byte	0xa4
- 764 032a 4F       		.byte	0x4f
- 765 032b 00       		.byte	0
- 766 032c 14       		.uleb128 0x14
- 767 032d 33000000 		.4byte	0x33
- 768 0331 3C030000 		.4byte	0x33c
- 769 0335 15       		.uleb128 0x15
- 770 0336 A4000000 		.4byte	0xa4
- 771 033a 63       		.byte	0x63
- 772 033b 00       		.byte	0
- 773 033c 16       		.uleb128 0x16
- 774 033d B2000000 		.4byte	.LASF20
- 775 0341 01       		.byte	0x1
- 776 0342 0C       		.byte	0xc
- 777 0343 2C030000 		.4byte	0x32c
- 778 0347 05       		.uleb128 0x5
- 779 0348 03       		.byte	0x3
- 780 0349 04000000 		.4byte	Capture
- 781 034d 16       		.uleb128 0x16
- 782 034e D0020000 		.4byte	.LASF21
- 783 0352 01       		.byte	0x1
- 784 0353 0D       		.byte	0xd
- 785 0354 5D000000 		.4byte	0x5d
- 786 0358 05       		.uleb128 0x5
- 787 0359 03       		.byte	0x3
- 788 035a 00000000 		.4byte	NCapture
- 789 035e 17       		.uleb128 0x17
- 790 035f 69000000 		.4byte	.LASF22
- 791 0363 69000000 		.4byte	.LASF22
- 792 0367 03       		.byte	0x3
- 793 0368 6B       		.byte	0x6b
- 794 0369 18       		.uleb128 0x18
- 795 036a 91000000 		.4byte	.LASF23
- 796 036e 91000000 		.4byte	.LASF23
- 797 0372 04       		.byte	0x4
- 798 0373 2A03     		.2byte	0x32a
- 799 0375 17       		.uleb128 0x17
- 800 0376 BA000000 		.4byte	.LASF24
- 801 037a BA000000 		.4byte	.LASF24
- 802 037e 05       		.byte	0x5
-ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccwS2uRN.s 			page 17
+ 644 00c2 09       		.uleb128 0x9
+ 645 00c3 465200   		.ascii	"FR\000"
+ 646 00c6 01       		.byte	0x1
+ 647 00c7 09       		.uleb128 0x9
+ 648 00c8 464C00   		.ascii	"FL\000"
+ 649 00cb 02       		.byte	0x2
+ 650 00cc 09       		.uleb128 0x9
+ 651 00cd 425200   		.ascii	"BR\000"
+ 652 00d0 04       		.byte	0x4
+ 653 00d1 09       		.uleb128 0x9
+ 654 00d2 424C00   		.ascii	"BL\000"
+ 655 00d5 08       		.byte	0x8
+ 656 00d6 00       		.byte	0
+ 657 00d7 0A       		.uleb128 0xa
+ 658 00d8 4B455900 		.ascii	"KEY\000"
+ 659 00dc 04       		.byte	0x4
+ 660 00dd 01       		.byte	0x1
+ 661 00de 11       		.byte	0x11
+ 662 00df FC000000 		.4byte	0xfc
+ 663 00e3 0B       		.uleb128 0xb
+ 664 00e4 21020000 		.4byte	.LASF16
+ 665 00e8 01       		.byte	0x1
+ 666 00e9 12       		.byte	0x12
+ 667 00ea 33000000 		.4byte	0x33
+ 668 00ee 00       		.byte	0
+ 669 00ef 0B       		.uleb128 0xb
+ 670 00f0 64020000 		.4byte	.LASF17
+ 671 00f4 01       		.byte	0x1
+ 672 00f5 12       		.byte	0x12
+ 673 00f6 85000000 		.4byte	0x85
+ 674 00fa 02       		.byte	0x2
+ 675 00fb 00       		.byte	0
+ 676 00fc 0C       		.uleb128 0xc
+ 677 00fd 6A020000 		.4byte	.LASF18
+ 678 0101 01       		.byte	0x1
+ 679 0102 21       		.byte	0x21
+ 680 0103 00000000 		.4byte	.LFB35
+ 681 0107 24000000 		.4byte	.LFE35-.LFB35
+ 682 010b 01       		.uleb128 0x1
+ 683 010c 9C       		.byte	0x9c
+ 684 010d 1B010000 		.4byte	0x11b
+ 685 0111 0D       		.uleb128 0xd
+ 686 0112 12000000 		.4byte	.LVL0
+ 687 0116 08050000 		.4byte	0x508
+ 688 011a 00       		.byte	0
+ 689 011b 0C       		.uleb128 0xc
+ 690 011c 19010000 		.4byte	.LASF19
+ 691 0120 01       		.byte	0x1
+ 692 0121 26       		.byte	0x26
+ 693 0122 00000000 		.4byte	.LFB36
+ 694 0126 24000000 		.4byte	.LFE36-.LFB36
+ 695 012a 01       		.uleb128 0x1
+ 696 012b 9C       		.byte	0x9c
+ 697 012c 79010000 		.4byte	0x179
+ 698 0130 0E       		.uleb128 0xe
+ 699 0131 0C000000 		.4byte	.LVL1
+ 700 0135 13050000 		.4byte	0x513
+ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccTF0n2y.s 			page 16
 
 
- 803 037f 25       		.byte	0x25
- 804 0380 17       		.uleb128 0x17
- 805 0381 AB010000 		.4byte	.LASF25
- 806 0385 AB010000 		.4byte	.LASF25
- 807 0389 05       		.byte	0x5
- 808 038a 28       		.byte	0x28
- 809 038b 17       		.uleb128 0x17
- 810 038c C7000000 		.4byte	.LASF26
- 811 0390 C7000000 		.4byte	.LASF26
- 812 0394 06       		.byte	0x6
- 813 0395 5E       		.byte	0x5e
- 814 0396 17       		.uleb128 0x17
- 815 0397 9B020000 		.4byte	.LASF27
- 816 039b 9B020000 		.4byte	.LASF27
- 817 039f 03       		.byte	0x3
- 818 03a0 86       		.byte	0x86
- 819 03a1 17       		.uleb128 0x17
- 820 03a2 5B010000 		.4byte	.LASF28
- 821 03a6 5B010000 		.4byte	.LASF28
- 822 03aa 03       		.byte	0x3
- 823 03ab 8A       		.byte	0x8a
- 824 03ac 17       		.uleb128 0x17
- 825 03ad 74020000 		.4byte	.LASF29
- 826 03b1 74020000 		.4byte	.LASF29
- 827 03b5 03       		.byte	0x3
- 828 03b6 8B       		.byte	0x8b
- 829 03b7 17       		.uleb128 0x17
- 830 03b8 4B020000 		.4byte	.LASF30
- 831 03bc 4B020000 		.4byte	.LASF30
- 832 03c0 03       		.byte	0x3
- 833 03c1 6A       		.byte	0x6a
- 834 03c2 17       		.uleb128 0x17
- 835 03c3 98010000 		.4byte	.LASF31
- 836 03c7 98010000 		.4byte	.LASF31
- 837 03cb 03       		.byte	0x3
- 838 03cc 68       		.byte	0x68
- 839 03cd 17       		.uleb128 0x17
- 840 03ce AA000000 		.4byte	.LASF32
- 841 03d2 AA000000 		.4byte	.LASF32
- 842 03d6 07       		.byte	0x7
- 843 03d7 32       		.byte	0x32
- 844 03d8 17       		.uleb128 0x17
- 845 03d9 7C000000 		.4byte	.LASF33
- 846 03dd 7C000000 		.4byte	.LASF33
- 847 03e1 05       		.byte	0x5
- 848 03e2 23       		.byte	0x23
- 849 03e3 17       		.uleb128 0x17
- 850 03e4 1B000000 		.4byte	.LASF34
- 851 03e8 1B000000 		.4byte	.LASF34
- 852 03ec 08       		.byte	0x8
- 853 03ed 33       		.byte	0x33
- 854 03ee 17       		.uleb128 0x17
- 855 03ef E7000000 		.4byte	.LASF35
- 856 03f3 E7000000 		.4byte	.LASF35
- 857 03f7 03       		.byte	0x3
- 858 03f8 69       		.byte	0x69
- 859 03f9 17       		.uleb128 0x17
-ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccwS2uRN.s 			page 18
+ 701 0139 43010000 		.4byte	0x143
+ 702 013d 0F       		.uleb128 0xf
+ 703 013e 01       		.uleb128 0x1
+ 704 013f 50       		.byte	0x50
+ 705 0140 01       		.uleb128 0x1
+ 706 0141 30       		.byte	0x30
+ 707 0142 00       		.byte	0
+ 708 0143 0E       		.uleb128 0xe
+ 709 0144 12000000 		.4byte	.LVL2
+ 710 0148 1E050000 		.4byte	0x51e
+ 711 014c 56010000 		.4byte	0x156
+ 712 0150 0F       		.uleb128 0xf
+ 713 0151 01       		.uleb128 0x1
+ 714 0152 50       		.byte	0x50
+ 715 0153 01       		.uleb128 0x1
+ 716 0154 30       		.byte	0x30
+ 717 0155 00       		.byte	0
+ 718 0156 0E       		.uleb128 0xe
+ 719 0157 18000000 		.4byte	.LVL3
+ 720 015b 29050000 		.4byte	0x529
+ 721 015f 69010000 		.4byte	0x169
+ 722 0163 0F       		.uleb128 0xf
+ 723 0164 01       		.uleb128 0x1
+ 724 0165 50       		.byte	0x50
+ 725 0166 01       		.uleb128 0x1
+ 726 0167 30       		.byte	0x30
+ 727 0168 00       		.byte	0
+ 728 0169 10       		.uleb128 0x10
+ 729 016a 1E000000 		.4byte	.LVL4
+ 730 016e 34050000 		.4byte	0x534
+ 731 0172 0F       		.uleb128 0xf
+ 732 0173 01       		.uleb128 0x1
+ 733 0174 50       		.byte	0x50
+ 734 0175 01       		.uleb128 0x1
+ 735 0176 30       		.byte	0x30
+ 736 0177 00       		.byte	0
+ 737 0178 00       		.byte	0
+ 738 0179 0C       		.uleb128 0xc
+ 739 017a 2F010000 		.4byte	.LASF20
+ 740 017e 01       		.byte	0x1
+ 741 017f 2E       		.byte	0x2e
+ 742 0180 00000000 		.4byte	.LFB37
+ 743 0184 08000000 		.4byte	.LFE37-.LFB37
+ 744 0188 01       		.uleb128 0x1
+ 745 0189 9C       		.byte	0x9c
+ 746 018a AD010000 		.4byte	0x1ad
+ 747 018e 11       		.uleb128 0x11
+ 748 018f 7300     		.ascii	"s\000"
+ 749 0191 01       		.byte	0x1
+ 750 0192 2E       		.byte	0x2e
+ 751 0193 AB000000 		.4byte	0xab
+ 752 0197 00000000 		.4byte	.LLST0
+ 753 019b 10       		.uleb128 0x10
+ 754 019c 06000000 		.4byte	.LVL6
+ 755 01a0 3F050000 		.4byte	0x53f
+ 756 01a4 0F       		.uleb128 0xf
+ 757 01a5 01       		.uleb128 0x1
+ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccTF0n2y.s 			page 17
 
 
- 860 03fa 88000000 		.4byte	.LASF36
- 861 03fe 88000000 		.4byte	.LASF36
- 862 0402 09       		.byte	0x9
- 863 0403 FD       		.byte	0xfd
- 864 0404 17       		.uleb128 0x17
- 865 0405 B8020000 		.4byte	.LASF37
- 866 0409 B8020000 		.4byte	.LASF37
- 867 040d 0A       		.byte	0xa
- 868 040e 72       		.byte	0x72
- 869 040f 17       		.uleb128 0x17
- 870 0410 44010000 		.4byte	.LASF38
- 871 0414 44010000 		.4byte	.LASF38
- 872 0418 03       		.byte	0x3
- 873 0419 5A       		.byte	0x5a
- 874 041a 17       		.uleb128 0x17
- 875 041b 74010000 		.4byte	.LASF39
- 876 041f 74010000 		.4byte	.LASF39
- 877 0423 06       		.byte	0x6
- 878 0424 5A       		.byte	0x5a
- 879 0425 17       		.uleb128 0x17
- 880 0426 0E000000 		.4byte	.LASF40
- 881 042a 0E000000 		.4byte	.LASF40
- 882 042e 05       		.byte	0x5
- 883 042f 18       		.byte	0x18
- 884 0430 00       		.byte	0
- 885              		.section	.debug_abbrev,"",%progbits
- 886              	.Ldebug_abbrev0:
- 887 0000 01       		.uleb128 0x1
- 888 0001 11       		.uleb128 0x11
- 889 0002 01       		.byte	0x1
- 890 0003 25       		.uleb128 0x25
- 891 0004 0E       		.uleb128 0xe
- 892 0005 13       		.uleb128 0x13
- 893 0006 0B       		.uleb128 0xb
- 894 0007 03       		.uleb128 0x3
- 895 0008 0E       		.uleb128 0xe
- 896 0009 1B       		.uleb128 0x1b
- 897 000a 0E       		.uleb128 0xe
- 898 000b 55       		.uleb128 0x55
- 899 000c 17       		.uleb128 0x17
- 900 000d 11       		.uleb128 0x11
- 901 000e 01       		.uleb128 0x1
- 902 000f 10       		.uleb128 0x10
- 903 0010 17       		.uleb128 0x17
- 904 0011 00       		.byte	0
- 905 0012 00       		.byte	0
- 906 0013 02       		.uleb128 0x2
- 907 0014 24       		.uleb128 0x24
- 908 0015 00       		.byte	0
- 909 0016 0B       		.uleb128 0xb
- 910 0017 0B       		.uleb128 0xb
- 911 0018 3E       		.uleb128 0x3e
- 912 0019 0B       		.uleb128 0xb
- 913 001a 03       		.uleb128 0x3
- 914 001b 0E       		.uleb128 0xe
- 915 001c 00       		.byte	0
- 916 001d 00       		.byte	0
-ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccwS2uRN.s 			page 19
+ 758 01a6 50       		.byte	0x50
+ 759 01a7 03       		.uleb128 0x3
+ 760 01a8 F3       		.byte	0xf3
+ 761 01a9 01       		.uleb128 0x1
+ 762 01aa 50       		.byte	0x50
+ 763 01ab 00       		.byte	0
+ 764 01ac 00       		.byte	0
+ 765 01ad 12       		.uleb128 0x12
+ 766 01ae 5F020000 		.4byte	.LASF51
+ 767 01b2 01       		.byte	0x1
+ 768 01b3 32       		.byte	0x32
+ 769 01b4 5D000000 		.4byte	0x5d
+ 770 01b8 00000000 		.4byte	.LFB38
+ 771 01bc A0010000 		.4byte	.LFE38-.LFB38
+ 772 01c0 01       		.uleb128 0x1
+ 773 01c1 9C       		.byte	0x9c
+ 774 01c2 84040000 		.4byte	0x484
+ 775 01c6 13       		.uleb128 0x13
+ 776 01c7 62756600 		.ascii	"buf\000"
+ 777 01cb 01       		.byte	0x1
+ 778 01cc 34       		.byte	0x34
+ 779 01cd 84040000 		.4byte	0x484
+ 780 01d1 03       		.uleb128 0x3
+ 781 01d2 91       		.byte	0x91
+ 782 01d3 987F     		.sleb128 -104
+ 783 01d5 13       		.uleb128 0x13
+ 784 01d6 72657000 		.ascii	"rep\000"
+ 785 01da 01       		.byte	0x1
+ 786 01db 35       		.byte	0x35
+ 787 01dc 64000000 		.4byte	0x64
+ 788 01e0 01       		.uleb128 0x1
+ 789 01e1 57       		.byte	0x57
+ 790 01e2 14       		.uleb128 0x14
+ 791 01e3 21020000 		.4byte	.LASF16
+ 792 01e7 01       		.byte	0x1
+ 793 01e8 35       		.byte	0x35
+ 794 01e9 64000000 		.4byte	0x64
+ 795 01ed 21000000 		.4byte	.LLST1
+ 796 01f1 15       		.uleb128 0x15
+ 797 01f2 623000   		.ascii	"b0\000"
+ 798 01f5 01       		.byte	0x1
+ 799 01f6 36       		.byte	0x36
+ 800 01f7 2C000000 		.4byte	0x2c
+ 801 01fb 61000000 		.4byte	.LLST2
+ 802 01ff 16       		.uleb128 0x16
+ 803 0200 623100   		.ascii	"b1\000"
+ 804 0203 01       		.byte	0x1
+ 805 0204 36       		.byte	0x36
+ 806 0205 2C000000 		.4byte	0x2c
+ 807 0209 15       		.uleb128 0x15
+ 808 020a 623200   		.ascii	"b2\000"
+ 809 020d 01       		.byte	0x1
+ 810 020e 36       		.byte	0x36
+ 811 020f 2C000000 		.4byte	0x2c
+ 812 0213 74000000 		.4byte	.LLST3
+ 813 0217 16       		.uleb128 0x16
+ 814 0218 623300   		.ascii	"b3\000"
+ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccTF0n2y.s 			page 18
 
 
- 917 001e 03       		.uleb128 0x3
- 918 001f 24       		.uleb128 0x24
- 919 0020 00       		.byte	0
- 920 0021 0B       		.uleb128 0xb
- 921 0022 0B       		.uleb128 0xb
- 922 0023 3E       		.uleb128 0x3e
- 923 0024 0B       		.uleb128 0xb
- 924 0025 03       		.uleb128 0x3
- 925 0026 08       		.uleb128 0x8
- 926 0027 00       		.byte	0
- 927 0028 00       		.byte	0
- 928 0029 04       		.uleb128 0x4
- 929 002a 16       		.uleb128 0x16
- 930 002b 00       		.byte	0
- 931 002c 03       		.uleb128 0x3
- 932 002d 0E       		.uleb128 0xe
- 933 002e 3A       		.uleb128 0x3a
- 934 002f 0B       		.uleb128 0xb
- 935 0030 3B       		.uleb128 0x3b
- 936 0031 05       		.uleb128 0x5
- 937 0032 49       		.uleb128 0x49
- 938 0033 13       		.uleb128 0x13
- 939 0034 00       		.byte	0
- 940 0035 00       		.byte	0
- 941 0036 05       		.uleb128 0x5
- 942 0037 35       		.uleb128 0x35
- 943 0038 00       		.byte	0
- 944 0039 49       		.uleb128 0x49
- 945 003a 13       		.uleb128 0x13
- 946 003b 00       		.byte	0
- 947 003c 00       		.byte	0
- 948 003d 06       		.uleb128 0x6
- 949 003e 0F       		.uleb128 0xf
- 950 003f 00       		.byte	0
- 951 0040 0B       		.uleb128 0xb
- 952 0041 0B       		.uleb128 0xb
- 953 0042 49       		.uleb128 0x49
- 954 0043 13       		.uleb128 0x13
- 955 0044 00       		.byte	0
- 956 0045 00       		.byte	0
- 957 0046 07       		.uleb128 0x7
- 958 0047 26       		.uleb128 0x26
- 959 0048 00       		.byte	0
- 960 0049 49       		.uleb128 0x49
- 961 004a 13       		.uleb128 0x13
- 962 004b 00       		.byte	0
- 963 004c 00       		.byte	0
- 964 004d 08       		.uleb128 0x8
- 965 004e 2E       		.uleb128 0x2e
- 966 004f 01       		.byte	0x1
- 967 0050 3F       		.uleb128 0x3f
- 968 0051 19       		.uleb128 0x19
- 969 0052 03       		.uleb128 0x3
- 970 0053 0E       		.uleb128 0xe
- 971 0054 3A       		.uleb128 0x3a
- 972 0055 0B       		.uleb128 0xb
- 973 0056 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccwS2uRN.s 			page 20
+ 815 021b 01       		.byte	0x1
+ 816 021c 36       		.byte	0x36
+ 817 021d 2C000000 		.4byte	0x2c
+ 818 0221 15       		.uleb128 0x15
+ 819 0222 6900     		.ascii	"i\000"
+ 820 0224 01       		.byte	0x1
+ 821 0225 38       		.byte	0x38
+ 822 0226 5D000000 		.4byte	0x5d
+ 823 022a 96000000 		.4byte	.LLST4
+ 824 022e 17       		.uleb128 0x17
+ 825 022f 1A000000 		.4byte	.LBB2
+ 826 0233 86010000 		.4byte	.LBE2-.LBB2
+ 827 0237 55040000 		.4byte	0x455
+ 828 023b 15       		.uleb128 0x15
+ 829 023c 4C00     		.ascii	"L\000"
+ 830 023e 01       		.byte	0x1
+ 831 023f 54       		.byte	0x54
+ 832 0240 64000000 		.4byte	0x64
+ 833 0244 B5000000 		.4byte	.LLST5
+ 834 0248 15       		.uleb128 0x15
+ 835 0249 7000     		.ascii	"p\000"
+ 836 024b 01       		.byte	0x1
+ 837 024c 7D       		.byte	0x7d
+ 838 024d 94040000 		.4byte	0x494
+ 839 0251 D4000000 		.4byte	.LLST6
+ 840 0255 17       		.uleb128 0x17
+ 841 0256 82000000 		.4byte	.LBB3
+ 842 025a 2E000000 		.4byte	.LBE3-.LBB3
+ 843 025e 81020000 		.4byte	0x281
+ 844 0262 15       		.uleb128 0x15
+ 845 0263 62697400 		.ascii	"bit\000"
+ 846 0267 01       		.byte	0x1
+ 847 0268 56       		.byte	0x56
+ 848 0269 48000000 		.4byte	0x48
+ 849 026d F7000000 		.4byte	.LLST7
+ 850 0271 14       		.uleb128 0x14
+ 851 0272 14000000 		.4byte	.LASF21
+ 852 0276 01       		.byte	0x1
+ 853 0277 57       		.byte	0x57
+ 854 0278 5D000000 		.4byte	0x5d
+ 855 027c 0A010000 		.4byte	.LLST8
+ 856 0280 00       		.byte	0
+ 857 0281 0D       		.uleb128 0xd
+ 858 0282 1E000000 		.4byte	.LVL13
+ 859 0286 4B050000 		.4byte	0x54b
+ 860 028a 0D       		.uleb128 0xd
+ 861 028b 22000000 		.4byte	.LVL14
+ 862 028f 56050000 		.4byte	0x556
+ 863 0293 0E       		.uleb128 0xe
+ 864 0294 28000000 		.4byte	.LVL15
+ 865 0298 61050000 		.4byte	0x561
+ 866 029c A7020000 		.4byte	0x2a7
+ 867 02a0 0F       		.uleb128 0xf
+ 868 02a1 01       		.uleb128 0x1
+ 869 02a2 50       		.byte	0x50
+ 870 02a3 02       		.uleb128 0x2
+ 871 02a4 09       		.byte	0x9
+ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccTF0n2y.s 			page 19
 
 
- 974 0057 0B       		.uleb128 0xb
- 975 0058 27       		.uleb128 0x27
- 976 0059 19       		.uleb128 0x19
- 977 005a 11       		.uleb128 0x11
- 978 005b 01       		.uleb128 0x1
- 979 005c 12       		.uleb128 0x12
- 980 005d 06       		.uleb128 0x6
- 981 005e 40       		.uleb128 0x40
- 982 005f 18       		.uleb128 0x18
- 983 0060 9742     		.uleb128 0x2117
- 984 0062 19       		.uleb128 0x19
- 985 0063 01       		.uleb128 0x1
- 986 0064 13       		.uleb128 0x13
- 987 0065 00       		.byte	0
- 988 0066 00       		.byte	0
- 989 0067 09       		.uleb128 0x9
- 990 0068 898201   		.uleb128 0x4109
- 991 006b 00       		.byte	0
- 992 006c 11       		.uleb128 0x11
- 993 006d 01       		.uleb128 0x1
- 994 006e 31       		.uleb128 0x31
- 995 006f 13       		.uleb128 0x13
- 996 0070 00       		.byte	0
- 997 0071 00       		.byte	0
- 998 0072 0A       		.uleb128 0xa
- 999 0073 05       		.uleb128 0x5
- 1000 0074 00       		.byte	0
- 1001 0075 03       		.uleb128 0x3
- 1002 0076 08       		.uleb128 0x8
- 1003 0077 3A       		.uleb128 0x3a
- 1004 0078 0B       		.uleb128 0xb
- 1005 0079 3B       		.uleb128 0x3b
- 1006 007a 0B       		.uleb128 0xb
- 1007 007b 49       		.uleb128 0x49
- 1008 007c 13       		.uleb128 0x13
- 1009 007d 02       		.uleb128 0x2
- 1010 007e 17       		.uleb128 0x17
- 1011 007f 00       		.byte	0
- 1012 0080 00       		.byte	0
- 1013 0081 0B       		.uleb128 0xb
- 1014 0082 898201   		.uleb128 0x4109
- 1015 0085 01       		.byte	0x1
- 1016 0086 11       		.uleb128 0x11
- 1017 0087 01       		.uleb128 0x1
- 1018 0088 31       		.uleb128 0x31
- 1019 0089 13       		.uleb128 0x13
- 1020 008a 00       		.byte	0
- 1021 008b 00       		.byte	0
- 1022 008c 0C       		.uleb128 0xc
- 1023 008d 8A8201   		.uleb128 0x410a
- 1024 0090 00       		.byte	0
- 1025 0091 02       		.uleb128 0x2
- 1026 0092 18       		.uleb128 0x18
- 1027 0093 9142     		.uleb128 0x2111
- 1028 0095 18       		.uleb128 0x18
- 1029 0096 00       		.byte	0
- 1030 0097 00       		.byte	0
-ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccwS2uRN.s 			page 21
+ 872 02a5 FF       		.byte	0xff
+ 873 02a6 00       		.byte	0
+ 874 02a7 0D       		.uleb128 0xd
+ 875 02a8 2C000000 		.4byte	.LVL16
+ 876 02ac 6C050000 		.4byte	0x56c
+ 877 02b0 0D       		.uleb128 0xd
+ 878 02b1 3A000000 		.4byte	.LVL17
+ 879 02b5 77050000 		.4byte	0x577
+ 880 02b9 0D       		.uleb128 0xd
+ 881 02ba 3E000000 		.4byte	.LVL18
+ 882 02be 82050000 		.4byte	0x582
+ 883 02c2 0D       		.uleb128 0xd
+ 884 02c3 42000000 		.4byte	.LVL19
+ 885 02c7 8D050000 		.4byte	0x58d
+ 886 02cb 0E       		.uleb128 0xe
+ 887 02cc 4A000000 		.4byte	.LVL20
+ 888 02d0 98050000 		.4byte	0x598
+ 889 02d4 DF020000 		.4byte	0x2df
+ 890 02d8 0F       		.uleb128 0xf
+ 891 02d9 01       		.uleb128 0x1
+ 892 02da 50       		.byte	0x50
+ 893 02db 02       		.uleb128 0x2
+ 894 02dc 75       		.byte	0x75
+ 895 02dd 00       		.sleb128 0
+ 896 02de 00       		.byte	0
+ 897 02df 0E       		.uleb128 0xe
+ 898 02e0 50000000 		.4byte	.LVL21
+ 899 02e4 A3050000 		.4byte	0x5a3
+ 900 02e8 F3020000 		.4byte	0x2f3
+ 901 02ec 0F       		.uleb128 0xf
+ 902 02ed 01       		.uleb128 0x1
+ 903 02ee 50       		.byte	0x50
+ 904 02ef 02       		.uleb128 0x2
+ 905 02f0 75       		.byte	0x75
+ 906 02f1 00       		.sleb128 0
+ 907 02f2 00       		.byte	0
+ 908 02f3 0E       		.uleb128 0xe
+ 909 02f4 56000000 		.4byte	.LVL22
+ 910 02f8 AE050000 		.4byte	0x5ae
+ 911 02fc 06030000 		.4byte	0x306
+ 912 0300 0F       		.uleb128 0xf
+ 913 0301 01       		.uleb128 0x1
+ 914 0302 50       		.byte	0x50
+ 915 0303 01       		.uleb128 0x1
+ 916 0304 31       		.byte	0x31
+ 917 0305 00       		.byte	0
+ 918 0306 0D       		.uleb128 0xd
+ 919 0307 5A000000 		.4byte	.LVL23
+ 920 030b B9050000 		.4byte	0x5b9
+ 921 030f 0D       		.uleb128 0xd
+ 922 0310 5E000000 		.4byte	.LVL24
+ 923 0314 C4050000 		.4byte	0x5c4
+ 924 0318 0E       		.uleb128 0xe
+ 925 0319 68000000 		.4byte	.LVL25
+ 926 031d AE050000 		.4byte	0x5ae
+ 927 0321 2B030000 		.4byte	0x32b
+ 928 0325 0F       		.uleb128 0xf
+ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccTF0n2y.s 			page 20
 
 
- 1031 0098 0D       		.uleb128 0xd
- 1032 0099 2E       		.uleb128 0x2e
- 1033 009a 01       		.byte	0x1
- 1034 009b 3F       		.uleb128 0x3f
- 1035 009c 19       		.uleb128 0x19
- 1036 009d 03       		.uleb128 0x3
- 1037 009e 0E       		.uleb128 0xe
- 1038 009f 3A       		.uleb128 0x3a
- 1039 00a0 0B       		.uleb128 0xb
- 1040 00a1 3B       		.uleb128 0x3b
- 1041 00a2 0B       		.uleb128 0xb
- 1042 00a3 27       		.uleb128 0x27
- 1043 00a4 19       		.uleb128 0x19
- 1044 00a5 49       		.uleb128 0x49
- 1045 00a6 13       		.uleb128 0x13
- 1046 00a7 8701     		.uleb128 0x87
- 1047 00a9 19       		.uleb128 0x19
- 1048 00aa 11       		.uleb128 0x11
- 1049 00ab 01       		.uleb128 0x1
- 1050 00ac 12       		.uleb128 0x12
- 1051 00ad 06       		.uleb128 0x6
- 1052 00ae 40       		.uleb128 0x40
- 1053 00af 18       		.uleb128 0x18
- 1054 00b0 9742     		.uleb128 0x2117
- 1055 00b2 19       		.uleb128 0x19
- 1056 00b3 01       		.uleb128 0x1
- 1057 00b4 13       		.uleb128 0x13
- 1058 00b5 00       		.byte	0
- 1059 00b6 00       		.byte	0
- 1060 00b7 0E       		.uleb128 0xe
- 1061 00b8 34       		.uleb128 0x34
- 1062 00b9 00       		.byte	0
- 1063 00ba 03       		.uleb128 0x3
- 1064 00bb 08       		.uleb128 0x8
- 1065 00bc 3A       		.uleb128 0x3a
- 1066 00bd 0B       		.uleb128 0xb
- 1067 00be 3B       		.uleb128 0x3b
- 1068 00bf 0B       		.uleb128 0xb
- 1069 00c0 49       		.uleb128 0x49
- 1070 00c1 13       		.uleb128 0x13
- 1071 00c2 02       		.uleb128 0x2
- 1072 00c3 18       		.uleb128 0x18
- 1073 00c4 00       		.byte	0
- 1074 00c5 00       		.byte	0
- 1075 00c6 0F       		.uleb128 0xf
- 1076 00c7 34       		.uleb128 0x34
- 1077 00c8 00       		.byte	0
- 1078 00c9 03       		.uleb128 0x3
- 1079 00ca 0E       		.uleb128 0xe
- 1080 00cb 3A       		.uleb128 0x3a
- 1081 00cc 0B       		.uleb128 0xb
- 1082 00cd 3B       		.uleb128 0x3b
- 1083 00ce 0B       		.uleb128 0xb
- 1084 00cf 49       		.uleb128 0x49
- 1085 00d0 13       		.uleb128 0x13
- 1086 00d1 02       		.uleb128 0x2
- 1087 00d2 17       		.uleb128 0x17
-ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccwS2uRN.s 			page 22
+ 929 0326 01       		.uleb128 0x1
+ 930 0327 50       		.byte	0x50
+ 931 0328 01       		.uleb128 0x1
+ 932 0329 30       		.byte	0x30
+ 933 032a 00       		.byte	0
+ 934 032b 0E       		.uleb128 0xe
+ 935 032c 76000000 		.4byte	.LVL26
+ 936 0330 CF050000 		.4byte	0x5cf
+ 937 0334 4E030000 		.4byte	0x34e
+ 938 0338 0F       		.uleb128 0xf
+ 939 0339 01       		.uleb128 0x1
+ 940 033a 50       		.byte	0x50
+ 941 033b 02       		.uleb128 0x2
+ 942 033c 7D       		.byte	0x7d
+ 943 033d 00       		.sleb128 0
+ 944 033e 0F       		.uleb128 0xf
+ 945 033f 01       		.uleb128 0x1
+ 946 0340 51       		.byte	0x51
+ 947 0341 02       		.uleb128 0x2
+ 948 0342 08       		.byte	0x8
+ 949 0343 50       		.byte	0x50
+ 950 0344 0F       		.uleb128 0xf
+ 951 0345 01       		.uleb128 0x1
+ 952 0346 52       		.byte	0x52
+ 953 0347 05       		.uleb128 0x5
+ 954 0348 03       		.byte	0x3
+ 955 0349 00000000 		.4byte	.LC4
+ 956 034d 00       		.byte	0
+ 957 034e 0E       		.uleb128 0xe
+ 958 034f 7C000000 		.4byte	.LVL27
+ 959 0353 79010000 		.4byte	0x179
+ 960 0357 62030000 		.4byte	0x362
+ 961 035b 0F       		.uleb128 0xf
+ 962 035c 01       		.uleb128 0x1
+ 963 035d 50       		.byte	0x50
+ 964 035e 02       		.uleb128 0x2
+ 965 035f 7D       		.byte	0x7d
+ 966 0360 00       		.sleb128 0
+ 967 0361 00       		.byte	0
+ 968 0362 0E       		.uleb128 0xe
+ 969 0363 08010000 		.4byte	.LVL46
+ 970 0367 CF050000 		.4byte	0x5cf
+ 971 036b 85030000 		.4byte	0x385
+ 972 036f 0F       		.uleb128 0xf
+ 973 0370 01       		.uleb128 0x1
+ 974 0371 50       		.byte	0x50
+ 975 0372 02       		.uleb128 0x2
+ 976 0373 7D       		.byte	0x7d
+ 977 0374 00       		.sleb128 0
+ 978 0375 0F       		.uleb128 0xf
+ 979 0376 01       		.uleb128 0x1
+ 980 0377 51       		.byte	0x51
+ 981 0378 02       		.uleb128 0x2
+ 982 0379 08       		.byte	0x8
+ 983 037a 50       		.byte	0x50
+ 984 037b 0F       		.uleb128 0xf
+ 985 037c 01       		.uleb128 0x1
+ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccTF0n2y.s 			page 21
 
 
- 1088 00d3 00       		.byte	0
- 1089 00d4 00       		.byte	0
- 1090 00d5 10       		.uleb128 0x10
- 1091 00d6 34       		.uleb128 0x34
- 1092 00d7 00       		.byte	0
- 1093 00d8 03       		.uleb128 0x3
- 1094 00d9 08       		.uleb128 0x8
- 1095 00da 3A       		.uleb128 0x3a
- 1096 00db 0B       		.uleb128 0xb
- 1097 00dc 3B       		.uleb128 0x3b
- 1098 00dd 0B       		.uleb128 0xb
- 1099 00de 49       		.uleb128 0x49
- 1100 00df 13       		.uleb128 0x13
- 1101 00e0 02       		.uleb128 0x2
- 1102 00e1 17       		.uleb128 0x17
- 1103 00e2 00       		.byte	0
- 1104 00e3 00       		.byte	0
- 1105 00e4 11       		.uleb128 0x11
- 1106 00e5 34       		.uleb128 0x34
- 1107 00e6 00       		.byte	0
- 1108 00e7 03       		.uleb128 0x3
- 1109 00e8 08       		.uleb128 0x8
- 1110 00e9 3A       		.uleb128 0x3a
- 1111 00ea 0B       		.uleb128 0xb
- 1112 00eb 3B       		.uleb128 0x3b
- 1113 00ec 0B       		.uleb128 0xb
- 1114 00ed 49       		.uleb128 0x49
- 1115 00ee 13       		.uleb128 0x13
- 1116 00ef 00       		.byte	0
- 1117 00f0 00       		.byte	0
- 1118 00f1 12       		.uleb128 0x12
- 1119 00f2 0B       		.uleb128 0xb
- 1120 00f3 01       		.byte	0x1
- 1121 00f4 11       		.uleb128 0x11
- 1122 00f5 01       		.uleb128 0x1
- 1123 00f6 12       		.uleb128 0x12
- 1124 00f7 06       		.uleb128 0x6
- 1125 00f8 01       		.uleb128 0x1
- 1126 00f9 13       		.uleb128 0x13
- 1127 00fa 00       		.byte	0
- 1128 00fb 00       		.byte	0
- 1129 00fc 13       		.uleb128 0x13
- 1130 00fd 898201   		.uleb128 0x4109
- 1131 0100 01       		.byte	0x1
- 1132 0101 11       		.uleb128 0x11
- 1133 0102 01       		.uleb128 0x1
- 1134 0103 31       		.uleb128 0x31
- 1135 0104 13       		.uleb128 0x13
- 1136 0105 01       		.uleb128 0x1
- 1137 0106 13       		.uleb128 0x13
- 1138 0107 00       		.byte	0
- 1139 0108 00       		.byte	0
- 1140 0109 14       		.uleb128 0x14
- 1141 010a 01       		.uleb128 0x1
- 1142 010b 01       		.byte	0x1
- 1143 010c 49       		.uleb128 0x49
- 1144 010d 13       		.uleb128 0x13
-ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccwS2uRN.s 			page 23
+ 986 037d 52       		.byte	0x52
+ 987 037e 05       		.uleb128 0x5
+ 988 037f 03       		.byte	0x3
+ 989 0380 10000000 		.4byte	.LC6
+ 990 0384 00       		.byte	0
+ 991 0385 0E       		.uleb128 0xe
+ 992 0386 0E010000 		.4byte	.LVL47
+ 993 038a 79010000 		.4byte	0x179
+ 994 038e 99030000 		.4byte	0x399
+ 995 0392 0F       		.uleb128 0xf
+ 996 0393 01       		.uleb128 0x1
+ 997 0394 50       		.byte	0x50
+ 998 0395 02       		.uleb128 0x2
+ 999 0396 7D       		.byte	0x7d
+ 1000 0397 00       		.sleb128 0
+ 1001 0398 00       		.byte	0
+ 1002 0399 0E       		.uleb128 0xe
+ 1003 039a 24010000 		.4byte	.LVL49
+ 1004 039e 13050000 		.4byte	0x513
+ 1005 03a2 AC030000 		.4byte	0x3ac
+ 1006 03a6 0F       		.uleb128 0xf
+ 1007 03a7 01       		.uleb128 0x1
+ 1008 03a8 50       		.byte	0x50
+ 1009 03a9 01       		.uleb128 0x1
+ 1010 03aa 31       		.byte	0x31
+ 1011 03ab 00       		.byte	0
+ 1012 03ac 0E       		.uleb128 0xe
+ 1013 03ad 2A010000 		.4byte	.LVL50
+ 1014 03b1 79010000 		.4byte	0x179
+ 1015 03b5 C3030000 		.4byte	0x3c3
+ 1016 03b9 0F       		.uleb128 0xf
+ 1017 03ba 01       		.uleb128 0x1
+ 1018 03bb 50       		.byte	0x50
+ 1019 03bc 05       		.uleb128 0x5
+ 1020 03bd 03       		.byte	0x3
+ 1021 03be 18000000 		.4byte	.LC8
+ 1022 03c2 00       		.byte	0
+ 1023 03c3 0E       		.uleb128 0xe
+ 1024 03c4 36010000 		.4byte	.LVL51
+ 1025 03c8 1E050000 		.4byte	0x51e
+ 1026 03cc D6030000 		.4byte	0x3d6
+ 1027 03d0 0F       		.uleb128 0xf
+ 1028 03d1 01       		.uleb128 0x1
+ 1029 03d2 50       		.byte	0x50
+ 1030 03d3 01       		.uleb128 0x1
+ 1031 03d4 31       		.byte	0x31
+ 1032 03d5 00       		.byte	0
+ 1033 03d6 0E       		.uleb128 0xe
+ 1034 03d7 3C010000 		.4byte	.LVL52
+ 1035 03db 79010000 		.4byte	0x179
+ 1036 03df ED030000 		.4byte	0x3ed
+ 1037 03e3 0F       		.uleb128 0xf
+ 1038 03e4 01       		.uleb128 0x1
+ 1039 03e5 50       		.byte	0x50
+ 1040 03e6 05       		.uleb128 0x5
+ 1041 03e7 03       		.byte	0x3
+ 1042 03e8 1C000000 		.4byte	.LC10
+ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccTF0n2y.s 			page 22
 
 
- 1145 010e 01       		.uleb128 0x1
- 1146 010f 13       		.uleb128 0x13
- 1147 0110 00       		.byte	0
- 1148 0111 00       		.byte	0
- 1149 0112 15       		.uleb128 0x15
- 1150 0113 21       		.uleb128 0x21
- 1151 0114 00       		.byte	0
- 1152 0115 49       		.uleb128 0x49
- 1153 0116 13       		.uleb128 0x13
- 1154 0117 2F       		.uleb128 0x2f
- 1155 0118 0B       		.uleb128 0xb
- 1156 0119 00       		.byte	0
- 1157 011a 00       		.byte	0
- 1158 011b 16       		.uleb128 0x16
- 1159 011c 34       		.uleb128 0x34
- 1160 011d 00       		.byte	0
- 1161 011e 03       		.uleb128 0x3
- 1162 011f 0E       		.uleb128 0xe
- 1163 0120 3A       		.uleb128 0x3a
- 1164 0121 0B       		.uleb128 0xb
- 1165 0122 3B       		.uleb128 0x3b
- 1166 0123 0B       		.uleb128 0xb
- 1167 0124 49       		.uleb128 0x49
- 1168 0125 13       		.uleb128 0x13
- 1169 0126 02       		.uleb128 0x2
- 1170 0127 18       		.uleb128 0x18
- 1171 0128 00       		.byte	0
- 1172 0129 00       		.byte	0
- 1173 012a 17       		.uleb128 0x17
- 1174 012b 2E       		.uleb128 0x2e
- 1175 012c 00       		.byte	0
- 1176 012d 3F       		.uleb128 0x3f
- 1177 012e 19       		.uleb128 0x19
- 1178 012f 3C       		.uleb128 0x3c
- 1179 0130 19       		.uleb128 0x19
- 1180 0131 6E       		.uleb128 0x6e
- 1181 0132 0E       		.uleb128 0xe
- 1182 0133 03       		.uleb128 0x3
- 1183 0134 0E       		.uleb128 0xe
- 1184 0135 3A       		.uleb128 0x3a
- 1185 0136 0B       		.uleb128 0xb
- 1186 0137 3B       		.uleb128 0x3b
- 1187 0138 0B       		.uleb128 0xb
- 1188 0139 00       		.byte	0
- 1189 013a 00       		.byte	0
- 1190 013b 18       		.uleb128 0x18
- 1191 013c 2E       		.uleb128 0x2e
- 1192 013d 00       		.byte	0
- 1193 013e 3F       		.uleb128 0x3f
- 1194 013f 19       		.uleb128 0x19
- 1195 0140 3C       		.uleb128 0x3c
- 1196 0141 19       		.uleb128 0x19
- 1197 0142 6E       		.uleb128 0x6e
- 1198 0143 0E       		.uleb128 0xe
- 1199 0144 03       		.uleb128 0x3
- 1200 0145 0E       		.uleb128 0xe
- 1201 0146 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccwS2uRN.s 			page 24
+ 1043 03ec 00       		.byte	0
+ 1044 03ed 0E       		.uleb128 0xe
+ 1045 03ee 48010000 		.4byte	.LVL53
+ 1046 03f2 29050000 		.4byte	0x529
+ 1047 03f6 00040000 		.4byte	0x400
+ 1048 03fa 0F       		.uleb128 0xf
+ 1049 03fb 01       		.uleb128 0x1
+ 1050 03fc 50       		.byte	0x50
+ 1051 03fd 01       		.uleb128 0x1
+ 1052 03fe 31       		.byte	0x31
+ 1053 03ff 00       		.byte	0
+ 1054 0400 0E       		.uleb128 0xe
+ 1055 0401 4E010000 		.4byte	.LVL54
+ 1056 0405 79010000 		.4byte	0x179
+ 1057 0409 17040000 		.4byte	0x417
+ 1058 040d 0F       		.uleb128 0xf
+ 1059 040e 01       		.uleb128 0x1
+ 1060 040f 50       		.byte	0x50
+ 1061 0410 05       		.uleb128 0x5
+ 1062 0411 03       		.byte	0x3
+ 1063 0412 20000000 		.4byte	.LC12
+ 1064 0416 00       		.byte	0
+ 1065 0417 0E       		.uleb128 0xe
+ 1066 0418 5A010000 		.4byte	.LVL55
+ 1067 041c 34050000 		.4byte	0x534
+ 1068 0420 2A040000 		.4byte	0x42a
+ 1069 0424 0F       		.uleb128 0xf
+ 1070 0425 01       		.uleb128 0x1
+ 1071 0426 50       		.byte	0x50
+ 1072 0427 01       		.uleb128 0x1
+ 1073 0428 31       		.byte	0x31
+ 1074 0429 00       		.byte	0
+ 1075 042a 0E       		.uleb128 0xe
+ 1076 042b 60010000 		.4byte	.LVL56
+ 1077 042f 79010000 		.4byte	0x179
+ 1078 0433 41040000 		.4byte	0x441
+ 1079 0437 0F       		.uleb128 0xf
+ 1080 0438 01       		.uleb128 0x1
+ 1081 0439 50       		.byte	0x50
+ 1082 043a 05       		.uleb128 0x5
+ 1083 043b 03       		.byte	0x3
+ 1084 043c 24000000 		.4byte	.LC14
+ 1085 0440 00       		.byte	0
+ 1086 0441 10       		.uleb128 0x10
+ 1087 0442 66010000 		.4byte	.LVL57
+ 1088 0446 79010000 		.4byte	0x179
+ 1089 044a 0F       		.uleb128 0xf
+ 1090 044b 01       		.uleb128 0x1
+ 1091 044c 50       		.byte	0x50
+ 1092 044d 05       		.uleb128 0x5
+ 1093 044e 03       		.byte	0x3
+ 1094 044f 28000000 		.4byte	.LC16
+ 1095 0453 00       		.byte	0
+ 1096 0454 00       		.byte	0
+ 1097 0455 0D       		.uleb128 0xd
+ 1098 0456 08000000 		.4byte	.LVL8
+ 1099 045a DA050000 		.4byte	0x5da
+ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccTF0n2y.s 			page 23
 
 
- 1202 0147 0B       		.uleb128 0xb
- 1203 0148 3B       		.uleb128 0x3b
- 1204 0149 05       		.uleb128 0x5
- 1205 014a 00       		.byte	0
- 1206 014b 00       		.byte	0
- 1207 014c 00       		.byte	0
- 1208              		.section	.debug_loc,"",%progbits
- 1209              	.Ldebug_loc0:
- 1210              	.LLST0:
- 1211 0000 00000000 		.4byte	.LVL1
- 1212 0004 05000000 		.4byte	.LVL2-1
- 1213 0008 0100     		.2byte	0x1
- 1214 000a 50       		.byte	0x50
- 1215 000b 05000000 		.4byte	.LVL2-1
- 1216 000f 08000000 		.4byte	.LFE36
- 1217 0013 0400     		.2byte	0x4
- 1218 0015 F3       		.byte	0xf3
- 1219 0016 01       		.uleb128 0x1
- 1220 0017 50       		.byte	0x50
- 1221 0018 9F       		.byte	0x9f
- 1222 0019 00000000 		.4byte	0
- 1223 001d 00000000 		.4byte	0
- 1224              	.LLST1:
- 1225 0021 04000000 		.4byte	.LVL3
- 1226 0025 1A000000 		.4byte	.LVL8
- 1227 0029 0200     		.2byte	0x2
- 1228 002b 30       		.byte	0x30
- 1229 002c 9F       		.byte	0x9f
- 1230 002d 1A000000 		.4byte	.LVL8
- 1231 0031 C6000000 		.4byte	.LVL34
- 1232 0035 0100     		.2byte	0x1
- 1233 0037 54       		.byte	0x54
- 1234 0038 CA000000 		.4byte	.LVL35
- 1235 003c EE000000 		.4byte	.LVL39
- 1236 0040 0100     		.2byte	0x1
- 1237 0042 54       		.byte	0x54
- 1238 0043 F6000000 		.4byte	.LVL40
- 1239 0047 FE000000 		.4byte	.LVL41
- 1240 004b 0100     		.2byte	0x1
- 1241 004d 54       		.byte	0x54
- 1242 004e 00010000 		.4byte	.LVL42
- 1243 0052 2C010000 		.4byte	.LFE37
- 1244 0056 0100     		.2byte	0x1
- 1245 0058 54       		.byte	0x54
- 1246 0059 00000000 		.4byte	0
- 1247 005d 00000000 		.4byte	0
- 1248              	.LLST2:
- 1249 0061 CE000000 		.4byte	.LVL36
- 1250 0065 00010000 		.4byte	.LVL42
- 1251 0069 0100     		.2byte	0x1
- 1252 006b 51       		.byte	0x51
- 1253 006c 00000000 		.4byte	0
- 1254 0070 00000000 		.4byte	0
- 1255              	.LLST3:
- 1256 0074 D2000000 		.4byte	.LVL37
- 1257 0078 E4000000 		.4byte	.LVL38
- 1258 007c 0100     		.2byte	0x1
-ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccwS2uRN.s 			page 25
+ 1100 045e 0D       		.uleb128 0xd
+ 1101 045f 0C000000 		.4byte	.LVL9
+ 1102 0463 E5050000 		.4byte	0x5e5
+ 1103 0467 0D       		.uleb128 0xd
+ 1104 0468 10000000 		.4byte	.LVL10
+ 1105 046c F0050000 		.4byte	0x5f0
+ 1106 0470 10       		.uleb128 0x10
+ 1107 0471 16000000 		.4byte	.LVL11
+ 1108 0475 FB050000 		.4byte	0x5fb
+ 1109 0479 0F       		.uleb128 0xf
+ 1110 047a 01       		.uleb128 0x1
+ 1111 047b 50       		.byte	0x50
+ 1112 047c 05       		.uleb128 0x5
+ 1113 047d 03       		.byte	0x3
+ 1114 047e 00000000 		.4byte	do_capture
+ 1115 0482 00       		.byte	0
+ 1116 0483 00       		.byte	0
+ 1117 0484 18       		.uleb128 0x18
+ 1118 0485 85000000 		.4byte	0x85
+ 1119 0489 94040000 		.4byte	0x494
+ 1120 048d 19       		.uleb128 0x19
+ 1121 048e A4000000 		.4byte	0xa4
+ 1122 0492 4F       		.byte	0x4f
+ 1123 0493 00       		.byte	0
+ 1124 0494 06       		.uleb128 0x6
+ 1125 0495 04       		.byte	0x4
+ 1126 0496 9A040000 		.4byte	0x49a
+ 1127 049a 07       		.uleb128 0x7
+ 1128 049b D7000000 		.4byte	0xd7
+ 1129 049f 18       		.uleb128 0x18
+ 1130 04a0 33000000 		.4byte	0x33
+ 1131 04a4 AF040000 		.4byte	0x4af
+ 1132 04a8 19       		.uleb128 0x19
+ 1133 04a9 A4000000 		.4byte	0xa4
+ 1134 04ad 63       		.byte	0x63
+ 1135 04ae 00       		.byte	0
+ 1136 04af 1A       		.uleb128 0x1a
+ 1137 04b0 55010000 		.4byte	.LASF22
+ 1138 04b4 01       		.byte	0x1
+ 1139 04b5 1E       		.byte	0x1e
+ 1140 04b6 9F040000 		.4byte	0x49f
+ 1141 04ba 05       		.uleb128 0x5
+ 1142 04bb 03       		.byte	0x3
+ 1143 04bc 04000000 		.4byte	Capture
+ 1144 04c0 1A       		.uleb128 0x1a
+ 1145 04c1 D9020000 		.4byte	.LASF23
+ 1146 04c5 01       		.byte	0x1
+ 1147 04c6 1F       		.byte	0x1f
+ 1148 04c7 5D000000 		.4byte	0x5d
+ 1149 04cb 05       		.uleb128 0x5
+ 1150 04cc 03       		.byte	0x3
+ 1151 04cd 00000000 		.4byte	NCapture
+ 1152 04d1 1B       		.uleb128 0x1b
+ 1153 04d2 1A020000 		.4byte	.LASF24
+ 1154 04d6 01       		.byte	0x1
+ 1155 04d7 0F       		.byte	0xf
+ 1156 04d8 B6000000 		.4byte	0xb6
+ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccTF0n2y.s 			page 24
 
 
- 1259 007e 52       		.byte	0x52
- 1260 007f E4000000 		.4byte	.LVL38
- 1261 0083 00010000 		.4byte	.LVL42
- 1262 0087 0500     		.2byte	0x5
- 1263 0089 71       		.byte	0x71
- 1264 008a 00       		.sleb128 0
- 1265 008b 40       		.byte	0x40
- 1266 008c 25       		.byte	0x25
- 1267 008d 9F       		.byte	0x9f
- 1268 008e 00000000 		.4byte	0
- 1269 0092 00000000 		.4byte	0
- 1270              	.LLST4:
- 1271 0096 82000000 		.4byte	.LVL24
- 1272 009a 88000000 		.4byte	.LVL25
- 1273 009e 0200     		.2byte	0x2
- 1274 00a0 31       		.byte	0x31
- 1275 00a1 9F       		.byte	0x9f
- 1276 00a2 88000000 		.4byte	.LVL25
- 1277 00a6 D2000000 		.4byte	.LVL37
- 1278 00aa 0100     		.2byte	0x1
- 1279 00ac 52       		.byte	0x52
- 1280 00ad 00000000 		.4byte	0
- 1281 00b1 00000000 		.4byte	0
- 1282              	.LLST5:
- 1283 00b5 82000000 		.4byte	.LVL24
- 1284 00b9 88000000 		.4byte	.LVL25
- 1285 00bd 0200     		.2byte	0x2
- 1286 00bf 30       		.byte	0x30
- 1287 00c0 9F       		.byte	0x9f
- 1288 00c1 88000000 		.4byte	.LVL25
- 1289 00c5 08010000 		.4byte	.LVL43
- 1290 00c9 0100     		.2byte	0x1
- 1291 00cb 51       		.byte	0x51
- 1292 00cc 08010000 		.4byte	.LVL43
- 1293 00d0 0D010000 		.4byte	.LVL44-1
- 1294 00d4 0200     		.2byte	0x2
- 1295 00d6 7D       		.byte	0x7d
- 1296 00d7 00       		.sleb128 0
- 1297 00d8 00000000 		.4byte	0
- 1298 00dc 00000000 		.4byte	0
- 1299              	.LLST6:
- 1300 00e0 AE000000 		.4byte	.LVL30
- 1301 00e4 B4000000 		.4byte	.LVL33
- 1302 00e8 0100     		.2byte	0x1
- 1303 00ea 53       		.byte	0x53
- 1304 00eb 00000000 		.4byte	0
- 1305 00ef 00000000 		.4byte	0
- 1306              	.LLST7:
- 1307 00f3 9E000000 		.4byte	.LVL26
- 1308 00f7 A8000000 		.4byte	.LVL27
- 1309 00fb 0100     		.2byte	0x1
- 1310 00fd 53       		.byte	0x53
- 1311 00fe A8000000 		.4byte	.LVL27
- 1312 0102 AA000000 		.4byte	.LVL28
- 1313 0106 2200     		.2byte	0x22
- 1314 0108 72       		.byte	0x72
- 1315 0109 7F       		.sleb128 -1
-ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccwS2uRN.s 			page 26
+ 1157 04dc 05       		.uleb128 0x5
+ 1158 04dd 03       		.byte	0x3
+ 1159 04de 00000000 		.4byte	M_Stat
+ 1160 04e2 18       		.uleb128 0x18
+ 1161 04e3 9A040000 		.4byte	0x49a
+ 1162 04e7 F2040000 		.4byte	0x4f2
+ 1163 04eb 19       		.uleb128 0x19
+ 1164 04ec A4000000 		.4byte	0xa4
+ 1165 04f0 09       		.byte	0x9
+ 1166 04f1 00       		.byte	0
+ 1167 04f2 1C       		.uleb128 0x1c
+ 1168 04f3 6B657900 		.ascii	"key\000"
+ 1169 04f7 01       		.byte	0x1
+ 1170 04f8 12       		.byte	0x12
+ 1171 04f9 03050000 		.4byte	0x503
+ 1172 04fd 05       		.uleb128 0x5
+ 1173 04fe 03       		.byte	0x3
+ 1174 04ff 00000000 		.4byte	key
+ 1175 0503 07       		.uleb128 0x7
+ 1176 0504 E2040000 		.4byte	0x4e2
+ 1177 0508 1D       		.uleb128 0x1d
+ 1178 0509 E2020000 		.4byte	.LASF25
+ 1179 050d E2020000 		.4byte	.LASF25
+ 1180 0511 03       		.byte	0x3
+ 1181 0512 6B       		.byte	0x6b
+ 1182 0513 1D       		.uleb128 0x1d
+ 1183 0514 2D000000 		.4byte	.LASF26
+ 1184 0518 2D000000 		.4byte	.LASF26
+ 1185 051c 04       		.byte	0x4
+ 1186 051d 33       		.byte	0x33
+ 1187 051e 1D       		.uleb128 0x1d
+ 1188 051f 5D010000 		.4byte	.LASF27
+ 1189 0523 5D010000 		.4byte	.LASF27
+ 1190 0527 05       		.byte	0x5
+ 1191 0528 33       		.byte	0x33
+ 1192 0529 1D       		.uleb128 0x1d
+ 1193 052a DF010000 		.4byte	.LASF28
+ 1194 052e DF010000 		.4byte	.LASF28
+ 1195 0532 06       		.byte	0x6
+ 1196 0533 33       		.byte	0x33
+ 1197 0534 1D       		.uleb128 0x1d
+ 1198 0535 B1010000 		.4byte	.LASF29
+ 1199 0539 B1010000 		.4byte	.LASF29
+ 1200 053d 07       		.byte	0x7
+ 1201 053e 33       		.byte	0x33
+ 1202 053f 1E       		.uleb128 0x1e
+ 1203 0540 60000000 		.4byte	.LASF30
+ 1204 0544 60000000 		.4byte	.LASF30
+ 1205 0548 08       		.byte	0x8
+ 1206 0549 2A03     		.2byte	0x32a
+ 1207 054b 1D       		.uleb128 0x1d
+ 1208 054c 39020000 		.4byte	.LASF31
+ 1209 0550 39020000 		.4byte	.LASF31
+ 1210 0554 09       		.byte	0x9
+ 1211 0555 25       		.byte	0x25
+ 1212 0556 1D       		.uleb128 0x1d
+ 1213 0557 01030000 		.4byte	.LASF32
+ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccTF0n2y.s 			page 25
 
 
- 1316 010a 31       		.byte	0x31
- 1317 010b 24       		.byte	0x24
- 1318 010c 03       		.byte	0x3
- 1319 010d 04000000 		.4byte	.LANCHOR0+4
- 1320 0111 22       		.byte	0x22
- 1321 0112 94       		.byte	0x94
- 1322 0113 02       		.byte	0x2
- 1323 0114 40       		.byte	0x40
- 1324 0115 24       		.byte	0x24
- 1325 0116 40       		.byte	0x40
- 1326 0117 26       		.byte	0x26
- 1327 0118 72       		.byte	0x72
- 1328 0119 00       		.sleb128 0
- 1329 011a 31       		.byte	0x31
- 1330 011b 24       		.byte	0x24
- 1331 011c 03       		.byte	0x3
- 1332 011d 04000000 		.4byte	.LANCHOR0+4
- 1333 0121 22       		.byte	0x22
- 1334 0122 94       		.byte	0x94
- 1335 0123 02       		.byte	0x2
- 1336 0124 40       		.byte	0x40
- 1337 0125 24       		.byte	0x24
- 1338 0126 40       		.byte	0x40
- 1339 0127 26       		.byte	0x26
- 1340 0128 1C       		.byte	0x1c
- 1341 0129 9F       		.byte	0x9f
- 1342 012a AA000000 		.4byte	.LVL28
- 1343 012e AC000000 		.4byte	.LVL29
- 1344 0132 0100     		.2byte	0x1
- 1345 0134 53       		.byte	0x53
- 1346 0135 AC000000 		.4byte	.LVL29
- 1347 0139 B4000000 		.4byte	.LVL33
- 1348 013d 2200     		.2byte	0x22
- 1349 013f 72       		.byte	0x72
- 1350 0140 7F       		.sleb128 -1
- 1351 0141 31       		.byte	0x31
- 1352 0142 24       		.byte	0x24
- 1353 0143 03       		.byte	0x3
- 1354 0144 04000000 		.4byte	.LANCHOR0+4
- 1355 0148 22       		.byte	0x22
- 1356 0149 94       		.byte	0x94
- 1357 014a 02       		.byte	0x2
- 1358 014b 40       		.byte	0x40
- 1359 014c 24       		.byte	0x24
- 1360 014d 40       		.byte	0x40
- 1361 014e 26       		.byte	0x26
- 1362 014f 72       		.byte	0x72
- 1363 0150 00       		.sleb128 0
- 1364 0151 31       		.byte	0x31
- 1365 0152 24       		.byte	0x24
- 1366 0153 03       		.byte	0x3
- 1367 0154 04000000 		.4byte	.LANCHOR0+4
- 1368 0158 22       		.byte	0x22
- 1369 0159 94       		.byte	0x94
- 1370 015a 02       		.byte	0x2
- 1371 015b 40       		.byte	0x40
- 1372 015c 24       		.byte	0x24
-ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccwS2uRN.s 			page 27
+ 1214 055b 01030000 		.4byte	.LASF32
+ 1215 055f 09       		.byte	0x9
+ 1216 0560 28       		.byte	0x28
+ 1217 0561 1D       		.uleb128 0x1d
+ 1218 0562 00000000 		.4byte	.LASF33
+ 1219 0566 00000000 		.4byte	.LASF33
+ 1220 056a 0A       		.byte	0xa
+ 1221 056b 6A       		.byte	0x6a
+ 1222 056c 1D       		.uleb128 0x1d
+ 1223 056d 91010000 		.4byte	.LASF34
+ 1224 0571 91010000 		.4byte	.LASF34
+ 1225 0575 0A       		.byte	0xa
+ 1226 0576 69       		.byte	0x69
+ 1227 0577 1D       		.uleb128 0x1d
+ 1228 0578 74000000 		.4byte	.LASF35
+ 1229 057c 74000000 		.4byte	.LASF35
+ 1230 0580 03       		.byte	0x3
+ 1231 0581 86       		.byte	0x86
+ 1232 0582 1D       		.uleb128 0x1d
+ 1233 0583 F5020000 		.4byte	.LASF36
+ 1234 0587 F5020000 		.4byte	.LASF36
+ 1235 058b 03       		.byte	0x3
+ 1236 058c 8A       		.byte	0x8a
+ 1237 058d 1D       		.uleb128 0x1d
+ 1238 058e 21010000 		.4byte	.LASF37
+ 1239 0592 21010000 		.4byte	.LASF37
+ 1240 0596 03       		.byte	0x3
+ 1241 0597 8B       		.byte	0x8b
+ 1242 0598 1D       		.uleb128 0x1d
+ 1243 0599 46020000 		.4byte	.LASF38
+ 1244 059d 46020000 		.4byte	.LASF38
+ 1245 05a1 03       		.byte	0x3
+ 1246 05a2 6A       		.byte	0x6a
+ 1247 05a3 1D       		.uleb128 0x1d
+ 1248 05a4 71010000 		.4byte	.LASF39
+ 1249 05a8 71010000 		.4byte	.LASF39
+ 1250 05ac 03       		.byte	0x3
+ 1251 05ad 68       		.byte	0x68
+ 1252 05ae 1D       		.uleb128 0x1d
+ 1253 05af 19000000 		.4byte	.LASF40
+ 1254 05b3 19000000 		.4byte	.LASF40
+ 1255 05b7 0B       		.byte	0xb
+ 1256 05b8 33       		.byte	0x33
+ 1257 05b9 1D       		.uleb128 0x1d
+ 1258 05ba 13030000 		.4byte	.LASF41
+ 1259 05be 13030000 		.4byte	.LASF41
+ 1260 05c2 09       		.byte	0x9
+ 1261 05c3 23       		.byte	0x23
+ 1262 05c4 1D       		.uleb128 0x1d
+ 1263 05c5 4D000000 		.4byte	.LASF42
+ 1264 05c9 4D000000 		.4byte	.LASF42
+ 1265 05cd 03       		.byte	0x3
+ 1266 05ce 69       		.byte	0x69
+ 1267 05cf 1D       		.uleb128 0x1d
+ 1268 05d0 BC010000 		.4byte	.LASF43
+ 1269 05d4 BC010000 		.4byte	.LASF43
+ 1270 05d8 0C       		.byte	0xc
+ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccTF0n2y.s 			page 26
 
 
- 1373 015d 40       		.byte	0x40
- 1374 015e 26       		.byte	0x26
- 1375 015f 1C       		.byte	0x1c
- 1376 0160 9F       		.byte	0x9f
- 1377 0161 00000000 		.4byte	0
- 1378 0165 00000000 		.4byte	0
- 1379              		.section	.debug_aranges,"",%progbits
- 1380 0000 2C000000 		.4byte	0x2c
- 1381 0004 0200     		.2byte	0x2
- 1382 0006 00000000 		.4byte	.Ldebug_info0
- 1383 000a 04       		.byte	0x4
- 1384 000b 00       		.byte	0
- 1385 000c 0000     		.2byte	0
- 1386 000e 0000     		.2byte	0
- 1387 0010 00000000 		.4byte	.LFB35
- 1388 0014 24000000 		.4byte	.LFE35-.LFB35
- 1389 0018 00000000 		.4byte	.LFB36
- 1390 001c 08000000 		.4byte	.LFE36-.LFB36
- 1391 0020 00000000 		.4byte	.LFB37
- 1392 0024 2C010000 		.4byte	.LFE37-.LFB37
- 1393 0028 00000000 		.4byte	0
- 1394 002c 00000000 		.4byte	0
- 1395              		.section	.debug_ranges,"",%progbits
- 1396              	.Ldebug_ranges0:
- 1397 0000 00000000 		.4byte	.LFB35
- 1398 0004 24000000 		.4byte	.LFE35
- 1399 0008 00000000 		.4byte	.LFB36
- 1400 000c 08000000 		.4byte	.LFE36
- 1401 0010 00000000 		.4byte	.LFB37
- 1402 0014 2C010000 		.4byte	.LFE37
- 1403 0018 00000000 		.4byte	0
- 1404 001c 00000000 		.4byte	0
- 1405              		.section	.debug_line,"",%progbits
- 1406              	.Ldebug_line0:
- 1407 0000 94010000 		.section	.debug_str,"MS",%progbits,1
- 1407      02000601 
- 1407      00000201 
- 1407      FB0E0D00 
- 1407      01010101 
- 1408              	.LASF6:
- 1409 0000 6C6F6E67 		.ascii	"long long int\000"
- 1409      206C6F6E 
- 1409      6720696E 
- 1409      7400
- 1410              	.LASF40:
- 1411 000e 49535231 		.ascii	"ISR1_StartEx\000"
- 1411      5F537461 
- 1411      72744578 
- 1411      00
- 1412              	.LASF34:
- 1413 001b 4C45445F 		.ascii	"LED_Write\000"
- 1413      57726974 
- 1413      6500
- 1414              	.LASF17:
- 1415 0025 50757473 		.ascii	"Puts\000"
- 1415      00
- 1416              	.LASF43:
-ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccwS2uRN.s 			page 28
+ 1271 05d9 FD       		.byte	0xfd
+ 1272 05da 1D       		.uleb128 0x1d
+ 1273 05db 41000000 		.4byte	.LASF44
+ 1274 05df 41000000 		.4byte	.LASF44
+ 1275 05e3 0D       		.byte	0xd
+ 1276 05e4 72       		.byte	0x72
+ 1277 05e5 1D       		.uleb128 0x1d
+ 1278 05e6 3A010000 		.4byte	.LASF45
+ 1279 05ea 3A010000 		.4byte	.LASF45
+ 1280 05ee 03       		.byte	0x3
+ 1281 05ef 5A       		.byte	0x5a
+ 1282 05f0 1D       		.uleb128 0x1d
+ 1283 05f1 A4010000 		.4byte	.LASF46
+ 1284 05f5 A4010000 		.4byte	.LASF46
+ 1285 05f9 0A       		.byte	0xa
+ 1286 05fa 5A       		.byte	0x5a
+ 1287 05fb 1D       		.uleb128 0x1d
+ 1288 05fc 84010000 		.4byte	.LASF47
+ 1289 0600 84010000 		.4byte	.LASF47
+ 1290 0604 09       		.byte	0x9
+ 1291 0605 18       		.byte	0x18
+ 1292 0606 00       		.byte	0
+ 1293              		.section	.debug_abbrev,"",%progbits
+ 1294              	.Ldebug_abbrev0:
+ 1295 0000 01       		.uleb128 0x1
+ 1296 0001 11       		.uleb128 0x11
+ 1297 0002 01       		.byte	0x1
+ 1298 0003 25       		.uleb128 0x25
+ 1299 0004 0E       		.uleb128 0xe
+ 1300 0005 13       		.uleb128 0x13
+ 1301 0006 0B       		.uleb128 0xb
+ 1302 0007 03       		.uleb128 0x3
+ 1303 0008 0E       		.uleb128 0xe
+ 1304 0009 1B       		.uleb128 0x1b
+ 1305 000a 0E       		.uleb128 0xe
+ 1306 000b 55       		.uleb128 0x55
+ 1307 000c 17       		.uleb128 0x17
+ 1308 000d 11       		.uleb128 0x11
+ 1309 000e 01       		.uleb128 0x1
+ 1310 000f 10       		.uleb128 0x10
+ 1311 0010 17       		.uleb128 0x17
+ 1312 0011 00       		.byte	0
+ 1313 0012 00       		.byte	0
+ 1314 0013 02       		.uleb128 0x2
+ 1315 0014 24       		.uleb128 0x24
+ 1316 0015 00       		.byte	0
+ 1317 0016 0B       		.uleb128 0xb
+ 1318 0017 0B       		.uleb128 0xb
+ 1319 0018 3E       		.uleb128 0x3e
+ 1320 0019 0B       		.uleb128 0xb
+ 1321 001a 03       		.uleb128 0x3
+ 1322 001b 0E       		.uleb128 0xe
+ 1323 001c 00       		.byte	0
+ 1324 001d 00       		.byte	0
+ 1325 001e 03       		.uleb128 0x3
+ 1326 001f 24       		.uleb128 0x24
+ 1327 0020 00       		.byte	0
+ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccTF0n2y.s 			page 27
 
 
- 1417 002a 433A5C55 		.ascii	"C:\\Users\\mac_000\\Documents\\Git_IR_REMO\\PSoC\\I"
- 1417      73657273 
- 1417      5C6D6163 
- 1417      5F303030 
- 1417      5C446F63 
- 1418 0057 525F5245 		.ascii	"R_REMO4200M.cydsn\000"
- 1418      4D4F3432 
- 1418      30304D2E 
- 1418      63796473 
- 1418      6E00
- 1419              	.LASF22:
- 1420 0069 54696D65 		.ascii	"Timer1_ReadCapture\000"
- 1420      72315F52 
- 1420      65616443 
- 1420      61707475 
- 1420      726500
- 1421              	.LASF33:
- 1422 007c 49535231 		.ascii	"ISR1_Enable\000"
- 1422      5F456E61 
- 1422      626C6500 
- 1423              	.LASF36:
- 1424 0088 736E7072 		.ascii	"snprintf\000"
- 1424      696E7466 
- 1424      00
- 1425              	.LASF23:
- 1426 0091 55415254 		.ascii	"UART1_UartPutString\000"
- 1426      315F5561 
- 1426      72745075 
- 1426      74537472 
- 1426      696E6700 
- 1427              	.LASF19:
- 1428 00a5 64696666 		.ascii	"diff\000"
- 1428      00
- 1429              	.LASF32:
- 1430 00aa 49525F52 		.ascii	"IR_Read\000"
- 1430      65616400 
- 1431              	.LASF20:
- 1432 00b2 43617074 		.ascii	"Capture\000"
- 1432      75726500 
- 1433              	.LASF24:
- 1434 00ba 49535231 		.ascii	"ISR1_Disable\000"
- 1434      5F446973 
- 1434      61626C65 
- 1434      00
- 1435              	.LASF26:
- 1436 00c7 54696D65 		.ascii	"Timer2_ReadStatusRegister\000"
- 1436      72325F52 
- 1436      65616453 
- 1436      74617475 
- 1436      73526567 
- 1437              	.LASF9:
- 1438 00e1 666C6F61 		.ascii	"float\000"
- 1438      7400
- 1439              	.LASF35:
- 1440 00e7 54696D65 		.ascii	"Timer1_ReadCounter\000"
- 1440      72315F52 
- 1440      65616443 
-ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccwS2uRN.s 			page 29
+ 1328 0021 0B       		.uleb128 0xb
+ 1329 0022 0B       		.uleb128 0xb
+ 1330 0023 3E       		.uleb128 0x3e
+ 1331 0024 0B       		.uleb128 0xb
+ 1332 0025 03       		.uleb128 0x3
+ 1333 0026 08       		.uleb128 0x8
+ 1334 0027 00       		.byte	0
+ 1335 0028 00       		.byte	0
+ 1336 0029 04       		.uleb128 0x4
+ 1337 002a 16       		.uleb128 0x16
+ 1338 002b 00       		.byte	0
+ 1339 002c 03       		.uleb128 0x3
+ 1340 002d 0E       		.uleb128 0xe
+ 1341 002e 3A       		.uleb128 0x3a
+ 1342 002f 0B       		.uleb128 0xb
+ 1343 0030 3B       		.uleb128 0x3b
+ 1344 0031 05       		.uleb128 0x5
+ 1345 0032 49       		.uleb128 0x49
+ 1346 0033 13       		.uleb128 0x13
+ 1347 0034 00       		.byte	0
+ 1348 0035 00       		.byte	0
+ 1349 0036 05       		.uleb128 0x5
+ 1350 0037 35       		.uleb128 0x35
+ 1351 0038 00       		.byte	0
+ 1352 0039 49       		.uleb128 0x49
+ 1353 003a 13       		.uleb128 0x13
+ 1354 003b 00       		.byte	0
+ 1355 003c 00       		.byte	0
+ 1356 003d 06       		.uleb128 0x6
+ 1357 003e 0F       		.uleb128 0xf
+ 1358 003f 00       		.byte	0
+ 1359 0040 0B       		.uleb128 0xb
+ 1360 0041 0B       		.uleb128 0xb
+ 1361 0042 49       		.uleb128 0x49
+ 1362 0043 13       		.uleb128 0x13
+ 1363 0044 00       		.byte	0
+ 1364 0045 00       		.byte	0
+ 1365 0046 07       		.uleb128 0x7
+ 1366 0047 26       		.uleb128 0x26
+ 1367 0048 00       		.byte	0
+ 1368 0049 49       		.uleb128 0x49
+ 1369 004a 13       		.uleb128 0x13
+ 1370 004b 00       		.byte	0
+ 1371 004c 00       		.byte	0
+ 1372 004d 08       		.uleb128 0x8
+ 1373 004e 04       		.uleb128 0x4
+ 1374 004f 01       		.byte	0x1
+ 1375 0050 0B       		.uleb128 0xb
+ 1376 0051 0B       		.uleb128 0xb
+ 1377 0052 49       		.uleb128 0x49
+ 1378 0053 13       		.uleb128 0x13
+ 1379 0054 3A       		.uleb128 0x3a
+ 1380 0055 0B       		.uleb128 0xb
+ 1381 0056 3B       		.uleb128 0x3b
+ 1382 0057 0B       		.uleb128 0xb
+ 1383 0058 01       		.uleb128 0x1
+ 1384 0059 13       		.uleb128 0x13
+ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccTF0n2y.s 			page 28
 
 
- 1440      6F756E74 
- 1440      657200
- 1441              	.LASF1:
- 1442 00fa 756E7369 		.ascii	"unsigned char\000"
- 1442      676E6564 
- 1442      20636861 
- 1442      7200
- 1443              	.LASF13:
- 1444 0108 72656738 		.ascii	"reg8\000"
- 1444      00
- 1445              	.LASF5:
- 1446 010d 6C6F6E67 		.ascii	"long unsigned int\000"
- 1446      20756E73 
- 1446      69676E65 
- 1446      6420696E 
- 1446      7400
- 1447              	.LASF3:
- 1448 011f 73686F72 		.ascii	"short unsigned int\000"
- 1448      7420756E 
- 1448      7369676E 
- 1448      65642069 
- 1448      6E7400
- 1449              	.LASF16:
- 1450 0132 646F5F63 		.ascii	"do_capture\000"
- 1450      61707475 
- 1450      726500
- 1451              	.LASF10:
- 1452 013d 646F7562 		.ascii	"double\000"
- 1452      6C6500
- 1453              	.LASF38:
- 1454 0144 54696D65 		.ascii	"Timer1_Start\000"
- 1454      72315F53 
- 1454      74617274 
- 1454      00
- 1455              	.LASF18:
- 1456 0151 636F6465 		.ascii	"code\000"
- 1456      00
- 1457              	.LASF44:
- 1458 0156 6D61696E 		.ascii	"main\000"
- 1458      00
- 1459              	.LASF28:
- 1460 015b 54696D65 		.ascii	"Timer1_Init\000"
- 1460      72315F49 
- 1460      6E697400 
- 1461              	.LASF8:
- 1462 0167 756E7369 		.ascii	"unsigned int\000"
- 1462      676E6564 
- 1462      20696E74 
- 1462      00
- 1463              	.LASF39:
- 1464 0174 54696D65 		.ascii	"Timer2_Start\000"
- 1464      72325F53 
- 1464      74617274 
- 1464      00
- 1465              	.LASF7:
- 1466 0181 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1466      206C6F6E 
-ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccwS2uRN.s 			page 30
+ 1385 005a 00       		.byte	0
+ 1386 005b 00       		.byte	0
+ 1387 005c 09       		.uleb128 0x9
+ 1388 005d 28       		.uleb128 0x28
+ 1389 005e 00       		.byte	0
+ 1390 005f 03       		.uleb128 0x3
+ 1391 0060 08       		.uleb128 0x8
+ 1392 0061 1C       		.uleb128 0x1c
+ 1393 0062 0B       		.uleb128 0xb
+ 1394 0063 00       		.byte	0
+ 1395 0064 00       		.byte	0
+ 1396 0065 0A       		.uleb128 0xa
+ 1397 0066 13       		.uleb128 0x13
+ 1398 0067 01       		.byte	0x1
+ 1399 0068 03       		.uleb128 0x3
+ 1400 0069 08       		.uleb128 0x8
+ 1401 006a 0B       		.uleb128 0xb
+ 1402 006b 0B       		.uleb128 0xb
+ 1403 006c 3A       		.uleb128 0x3a
+ 1404 006d 0B       		.uleb128 0xb
+ 1405 006e 3B       		.uleb128 0x3b
+ 1406 006f 0B       		.uleb128 0xb
+ 1407 0070 01       		.uleb128 0x1
+ 1408 0071 13       		.uleb128 0x13
+ 1409 0072 00       		.byte	0
+ 1410 0073 00       		.byte	0
+ 1411 0074 0B       		.uleb128 0xb
+ 1412 0075 0D       		.uleb128 0xd
+ 1413 0076 00       		.byte	0
+ 1414 0077 03       		.uleb128 0x3
+ 1415 0078 0E       		.uleb128 0xe
+ 1416 0079 3A       		.uleb128 0x3a
+ 1417 007a 0B       		.uleb128 0xb
+ 1418 007b 3B       		.uleb128 0x3b
+ 1419 007c 0B       		.uleb128 0xb
+ 1420 007d 49       		.uleb128 0x49
+ 1421 007e 13       		.uleb128 0x13
+ 1422 007f 38       		.uleb128 0x38
+ 1423 0080 0B       		.uleb128 0xb
+ 1424 0081 00       		.byte	0
+ 1425 0082 00       		.byte	0
+ 1426 0083 0C       		.uleb128 0xc
+ 1427 0084 2E       		.uleb128 0x2e
+ 1428 0085 01       		.byte	0x1
+ 1429 0086 3F       		.uleb128 0x3f
+ 1430 0087 19       		.uleb128 0x19
+ 1431 0088 03       		.uleb128 0x3
+ 1432 0089 0E       		.uleb128 0xe
+ 1433 008a 3A       		.uleb128 0x3a
+ 1434 008b 0B       		.uleb128 0xb
+ 1435 008c 3B       		.uleb128 0x3b
+ 1436 008d 0B       		.uleb128 0xb
+ 1437 008e 27       		.uleb128 0x27
+ 1438 008f 19       		.uleb128 0x19
+ 1439 0090 11       		.uleb128 0x11
+ 1440 0091 01       		.uleb128 0x1
+ 1441 0092 12       		.uleb128 0x12
+ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccTF0n2y.s 			page 29
 
 
- 1466      6720756E 
- 1466      7369676E 
- 1466      65642069 
- 1467              	.LASF31:
- 1468 0198 54696D65 		.ascii	"Timer1_WritePeriod\000"
- 1468      72315F57 
- 1468      72697465 
- 1468      50657269 
- 1468      6F6400
- 1469              	.LASF25:
- 1470 01ab 49535231 		.ascii	"ISR1_ClearPending\000"
- 1470      5F436C65 
- 1470      61725065 
- 1470      6E64696E 
- 1470      6700
- 1471              	.LASF41:
- 1472 01bd 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 1472      43313120 
- 1472      352E342E 
- 1472      31203230 
- 1472      31363036 
- 1473 01f0 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
- 1473      20726576 
- 1473      6973696F 
- 1473      6E203233 
- 1473      37373135 
- 1474 0223 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 1474      66756E63 
- 1474      74696F6E 
- 1474      2D736563 
- 1474      74696F6E 
- 1475              	.LASF30:
- 1476 024b 54696D65 		.ascii	"Timer1_WriteCounter\000"
- 1476      72315F57 
- 1476      72697465 
- 1476      436F756E 
- 1476      74657200 
- 1477              	.LASF15:
- 1478 025f 73697A65 		.ascii	"sizetype\000"
- 1478      74797065 
- 1478      00
- 1479              	.LASF42:
- 1480 0268 6D61696E 		.ascii	"main.c\000"
- 1480      2E6300
- 1481              	.LASF11:
- 1482 026f 63686172 		.ascii	"char\000"
- 1482      00
- 1483              	.LASF29:
- 1484 0274 54696D65 		.ascii	"Timer1_Enable\000"
- 1484      72315F45 
- 1484      6E61626C 
- 1484      6500
- 1485              	.LASF2:
- 1486 0282 73686F72 		.ascii	"short int\000"
- 1486      7420696E 
- 1486      7400
- 1487              	.LASF12:
-ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccwS2uRN.s 			page 31
+ 1442 0093 06       		.uleb128 0x6
+ 1443 0094 40       		.uleb128 0x40
+ 1444 0095 18       		.uleb128 0x18
+ 1445 0096 9742     		.uleb128 0x2117
+ 1446 0098 19       		.uleb128 0x19
+ 1447 0099 01       		.uleb128 0x1
+ 1448 009a 13       		.uleb128 0x13
+ 1449 009b 00       		.byte	0
+ 1450 009c 00       		.byte	0
+ 1451 009d 0D       		.uleb128 0xd
+ 1452 009e 898201   		.uleb128 0x4109
+ 1453 00a1 00       		.byte	0
+ 1454 00a2 11       		.uleb128 0x11
+ 1455 00a3 01       		.uleb128 0x1
+ 1456 00a4 31       		.uleb128 0x31
+ 1457 00a5 13       		.uleb128 0x13
+ 1458 00a6 00       		.byte	0
+ 1459 00a7 00       		.byte	0
+ 1460 00a8 0E       		.uleb128 0xe
+ 1461 00a9 898201   		.uleb128 0x4109
+ 1462 00ac 01       		.byte	0x1
+ 1463 00ad 11       		.uleb128 0x11
+ 1464 00ae 01       		.uleb128 0x1
+ 1465 00af 31       		.uleb128 0x31
+ 1466 00b0 13       		.uleb128 0x13
+ 1467 00b1 01       		.uleb128 0x1
+ 1468 00b2 13       		.uleb128 0x13
+ 1469 00b3 00       		.byte	0
+ 1470 00b4 00       		.byte	0
+ 1471 00b5 0F       		.uleb128 0xf
+ 1472 00b6 8A8201   		.uleb128 0x410a
+ 1473 00b9 00       		.byte	0
+ 1474 00ba 02       		.uleb128 0x2
+ 1475 00bb 18       		.uleb128 0x18
+ 1476 00bc 9142     		.uleb128 0x2111
+ 1477 00be 18       		.uleb128 0x18
+ 1478 00bf 00       		.byte	0
+ 1479 00c0 00       		.byte	0
+ 1480 00c1 10       		.uleb128 0x10
+ 1481 00c2 898201   		.uleb128 0x4109
+ 1482 00c5 01       		.byte	0x1
+ 1483 00c6 11       		.uleb128 0x11
+ 1484 00c7 01       		.uleb128 0x1
+ 1485 00c8 31       		.uleb128 0x31
+ 1486 00c9 13       		.uleb128 0x13
+ 1487 00ca 00       		.byte	0
+ 1488 00cb 00       		.byte	0
+ 1489 00cc 11       		.uleb128 0x11
+ 1490 00cd 05       		.uleb128 0x5
+ 1491 00ce 00       		.byte	0
+ 1492 00cf 03       		.uleb128 0x3
+ 1493 00d0 08       		.uleb128 0x8
+ 1494 00d1 3A       		.uleb128 0x3a
+ 1495 00d2 0B       		.uleb128 0xb
+ 1496 00d3 3B       		.uleb128 0x3b
+ 1497 00d4 0B       		.uleb128 0xb
+ 1498 00d5 49       		.uleb128 0x49
+ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccTF0n2y.s 			page 30
 
 
- 1488 028c 75696E74 		.ascii	"uint8\000"
- 1488      3800
- 1489              	.LASF4:
- 1490 0292 6C6F6E67 		.ascii	"long int\000"
- 1490      20696E74 
- 1490      00
- 1491              	.LASF27:
- 1492 029b 54696D65 		.ascii	"Timer1_ClearFIFO\000"
- 1492      72315F43 
- 1492      6C656172 
- 1492      4649464F 
- 1492      00
- 1493              	.LASF14:
- 1494 02ac 6C6F6E67 		.ascii	"long double\000"
- 1494      20646F75 
- 1494      626C6500 
- 1495              	.LASF37:
- 1496 02b8 55415254 		.ascii	"UART1_Start\000"
- 1496      315F5374 
- 1496      61727400 
- 1497              	.LASF0:
- 1498 02c4 7369676E 		.ascii	"signed char\000"
- 1498      65642063 
- 1498      68617200 
- 1499              	.LASF21:
- 1500 02d0 4E436170 		.ascii	"NCapture\000"
- 1500      74757265 
- 1500      00
- 1501              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 1499 00d6 13       		.uleb128 0x13
+ 1500 00d7 02       		.uleb128 0x2
+ 1501 00d8 17       		.uleb128 0x17
+ 1502 00d9 00       		.byte	0
+ 1503 00da 00       		.byte	0
+ 1504 00db 12       		.uleb128 0x12
+ 1505 00dc 2E       		.uleb128 0x2e
+ 1506 00dd 01       		.byte	0x1
+ 1507 00de 3F       		.uleb128 0x3f
+ 1508 00df 19       		.uleb128 0x19
+ 1509 00e0 03       		.uleb128 0x3
+ 1510 00e1 0E       		.uleb128 0xe
+ 1511 00e2 3A       		.uleb128 0x3a
+ 1512 00e3 0B       		.uleb128 0xb
+ 1513 00e4 3B       		.uleb128 0x3b
+ 1514 00e5 0B       		.uleb128 0xb
+ 1515 00e6 27       		.uleb128 0x27
+ 1516 00e7 19       		.uleb128 0x19
+ 1517 00e8 49       		.uleb128 0x49
+ 1518 00e9 13       		.uleb128 0x13
+ 1519 00ea 8701     		.uleb128 0x87
+ 1520 00ec 19       		.uleb128 0x19
+ 1521 00ed 11       		.uleb128 0x11
+ 1522 00ee 01       		.uleb128 0x1
+ 1523 00ef 12       		.uleb128 0x12
+ 1524 00f0 06       		.uleb128 0x6
+ 1525 00f1 40       		.uleb128 0x40
+ 1526 00f2 18       		.uleb128 0x18
+ 1527 00f3 9742     		.uleb128 0x2117
+ 1528 00f5 19       		.uleb128 0x19
+ 1529 00f6 01       		.uleb128 0x1
+ 1530 00f7 13       		.uleb128 0x13
+ 1531 00f8 00       		.byte	0
+ 1532 00f9 00       		.byte	0
+ 1533 00fa 13       		.uleb128 0x13
+ 1534 00fb 34       		.uleb128 0x34
+ 1535 00fc 00       		.byte	0
+ 1536 00fd 03       		.uleb128 0x3
+ 1537 00fe 08       		.uleb128 0x8
+ 1538 00ff 3A       		.uleb128 0x3a
+ 1539 0100 0B       		.uleb128 0xb
+ 1540 0101 3B       		.uleb128 0x3b
+ 1541 0102 0B       		.uleb128 0xb
+ 1542 0103 49       		.uleb128 0x49
+ 1543 0104 13       		.uleb128 0x13
+ 1544 0105 02       		.uleb128 0x2
+ 1545 0106 18       		.uleb128 0x18
+ 1546 0107 00       		.byte	0
+ 1547 0108 00       		.byte	0
+ 1548 0109 14       		.uleb128 0x14
+ 1549 010a 34       		.uleb128 0x34
+ 1550 010b 00       		.byte	0
+ 1551 010c 03       		.uleb128 0x3
+ 1552 010d 0E       		.uleb128 0xe
+ 1553 010e 3A       		.uleb128 0x3a
+ 1554 010f 0B       		.uleb128 0xb
+ 1555 0110 3B       		.uleb128 0x3b
+ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccTF0n2y.s 			page 31
+
+
+ 1556 0111 0B       		.uleb128 0xb
+ 1557 0112 49       		.uleb128 0x49
+ 1558 0113 13       		.uleb128 0x13
+ 1559 0114 02       		.uleb128 0x2
+ 1560 0115 17       		.uleb128 0x17
+ 1561 0116 00       		.byte	0
+ 1562 0117 00       		.byte	0
+ 1563 0118 15       		.uleb128 0x15
+ 1564 0119 34       		.uleb128 0x34
+ 1565 011a 00       		.byte	0
+ 1566 011b 03       		.uleb128 0x3
+ 1567 011c 08       		.uleb128 0x8
+ 1568 011d 3A       		.uleb128 0x3a
+ 1569 011e 0B       		.uleb128 0xb
+ 1570 011f 3B       		.uleb128 0x3b
+ 1571 0120 0B       		.uleb128 0xb
+ 1572 0121 49       		.uleb128 0x49
+ 1573 0122 13       		.uleb128 0x13
+ 1574 0123 02       		.uleb128 0x2
+ 1575 0124 17       		.uleb128 0x17
+ 1576 0125 00       		.byte	0
+ 1577 0126 00       		.byte	0
+ 1578 0127 16       		.uleb128 0x16
+ 1579 0128 34       		.uleb128 0x34
+ 1580 0129 00       		.byte	0
+ 1581 012a 03       		.uleb128 0x3
+ 1582 012b 08       		.uleb128 0x8
+ 1583 012c 3A       		.uleb128 0x3a
+ 1584 012d 0B       		.uleb128 0xb
+ 1585 012e 3B       		.uleb128 0x3b
+ 1586 012f 0B       		.uleb128 0xb
+ 1587 0130 49       		.uleb128 0x49
+ 1588 0131 13       		.uleb128 0x13
+ 1589 0132 00       		.byte	0
+ 1590 0133 00       		.byte	0
+ 1591 0134 17       		.uleb128 0x17
+ 1592 0135 0B       		.uleb128 0xb
+ 1593 0136 01       		.byte	0x1
+ 1594 0137 11       		.uleb128 0x11
+ 1595 0138 01       		.uleb128 0x1
+ 1596 0139 12       		.uleb128 0x12
+ 1597 013a 06       		.uleb128 0x6
+ 1598 013b 01       		.uleb128 0x1
+ 1599 013c 13       		.uleb128 0x13
+ 1600 013d 00       		.byte	0
+ 1601 013e 00       		.byte	0
+ 1602 013f 18       		.uleb128 0x18
+ 1603 0140 01       		.uleb128 0x1
+ 1604 0141 01       		.byte	0x1
+ 1605 0142 49       		.uleb128 0x49
+ 1606 0143 13       		.uleb128 0x13
+ 1607 0144 01       		.uleb128 0x1
+ 1608 0145 13       		.uleb128 0x13
+ 1609 0146 00       		.byte	0
+ 1610 0147 00       		.byte	0
+ 1611 0148 19       		.uleb128 0x19
+ 1612 0149 21       		.uleb128 0x21
+ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccTF0n2y.s 			page 32
+
+
+ 1613 014a 00       		.byte	0
+ 1614 014b 49       		.uleb128 0x49
+ 1615 014c 13       		.uleb128 0x13
+ 1616 014d 2F       		.uleb128 0x2f
+ 1617 014e 0B       		.uleb128 0xb
+ 1618 014f 00       		.byte	0
+ 1619 0150 00       		.byte	0
+ 1620 0151 1A       		.uleb128 0x1a
+ 1621 0152 34       		.uleb128 0x34
+ 1622 0153 00       		.byte	0
+ 1623 0154 03       		.uleb128 0x3
+ 1624 0155 0E       		.uleb128 0xe
+ 1625 0156 3A       		.uleb128 0x3a
+ 1626 0157 0B       		.uleb128 0xb
+ 1627 0158 3B       		.uleb128 0x3b
+ 1628 0159 0B       		.uleb128 0xb
+ 1629 015a 49       		.uleb128 0x49
+ 1630 015b 13       		.uleb128 0x13
+ 1631 015c 02       		.uleb128 0x2
+ 1632 015d 18       		.uleb128 0x18
+ 1633 015e 00       		.byte	0
+ 1634 015f 00       		.byte	0
+ 1635 0160 1B       		.uleb128 0x1b
+ 1636 0161 34       		.uleb128 0x34
+ 1637 0162 00       		.byte	0
+ 1638 0163 03       		.uleb128 0x3
+ 1639 0164 0E       		.uleb128 0xe
+ 1640 0165 3A       		.uleb128 0x3a
+ 1641 0166 0B       		.uleb128 0xb
+ 1642 0167 3B       		.uleb128 0x3b
+ 1643 0168 0B       		.uleb128 0xb
+ 1644 0169 49       		.uleb128 0x49
+ 1645 016a 13       		.uleb128 0x13
+ 1646 016b 3F       		.uleb128 0x3f
+ 1647 016c 19       		.uleb128 0x19
+ 1648 016d 02       		.uleb128 0x2
+ 1649 016e 18       		.uleb128 0x18
+ 1650 016f 00       		.byte	0
+ 1651 0170 00       		.byte	0
+ 1652 0171 1C       		.uleb128 0x1c
+ 1653 0172 34       		.uleb128 0x34
+ 1654 0173 00       		.byte	0
+ 1655 0174 03       		.uleb128 0x3
+ 1656 0175 08       		.uleb128 0x8
+ 1657 0176 3A       		.uleb128 0x3a
+ 1658 0177 0B       		.uleb128 0xb
+ 1659 0178 3B       		.uleb128 0x3b
+ 1660 0179 0B       		.uleb128 0xb
+ 1661 017a 49       		.uleb128 0x49
+ 1662 017b 13       		.uleb128 0x13
+ 1663 017c 3F       		.uleb128 0x3f
+ 1664 017d 19       		.uleb128 0x19
+ 1665 017e 02       		.uleb128 0x2
+ 1666 017f 18       		.uleb128 0x18
+ 1667 0180 00       		.byte	0
+ 1668 0181 00       		.byte	0
+ 1669 0182 1D       		.uleb128 0x1d
+ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccTF0n2y.s 			page 33
+
+
+ 1670 0183 2E       		.uleb128 0x2e
+ 1671 0184 00       		.byte	0
+ 1672 0185 3F       		.uleb128 0x3f
+ 1673 0186 19       		.uleb128 0x19
+ 1674 0187 3C       		.uleb128 0x3c
+ 1675 0188 19       		.uleb128 0x19
+ 1676 0189 6E       		.uleb128 0x6e
+ 1677 018a 0E       		.uleb128 0xe
+ 1678 018b 03       		.uleb128 0x3
+ 1679 018c 0E       		.uleb128 0xe
+ 1680 018d 3A       		.uleb128 0x3a
+ 1681 018e 0B       		.uleb128 0xb
+ 1682 018f 3B       		.uleb128 0x3b
+ 1683 0190 0B       		.uleb128 0xb
+ 1684 0191 00       		.byte	0
+ 1685 0192 00       		.byte	0
+ 1686 0193 1E       		.uleb128 0x1e
+ 1687 0194 2E       		.uleb128 0x2e
+ 1688 0195 00       		.byte	0
+ 1689 0196 3F       		.uleb128 0x3f
+ 1690 0197 19       		.uleb128 0x19
+ 1691 0198 3C       		.uleb128 0x3c
+ 1692 0199 19       		.uleb128 0x19
+ 1693 019a 6E       		.uleb128 0x6e
+ 1694 019b 0E       		.uleb128 0xe
+ 1695 019c 03       		.uleb128 0x3
+ 1696 019d 0E       		.uleb128 0xe
+ 1697 019e 3A       		.uleb128 0x3a
+ 1698 019f 0B       		.uleb128 0xb
+ 1699 01a0 3B       		.uleb128 0x3b
+ 1700 01a1 05       		.uleb128 0x5
+ 1701 01a2 00       		.byte	0
+ 1702 01a3 00       		.byte	0
+ 1703 01a4 00       		.byte	0
+ 1704              		.section	.debug_loc,"",%progbits
+ 1705              	.Ldebug_loc0:
+ 1706              	.LLST0:
+ 1707 0000 00000000 		.4byte	.LVL5
+ 1708 0004 05000000 		.4byte	.LVL6-1
+ 1709 0008 0100     		.2byte	0x1
+ 1710 000a 50       		.byte	0x50
+ 1711 000b 05000000 		.4byte	.LVL6-1
+ 1712 000f 08000000 		.4byte	.LFE37
+ 1713 0013 0400     		.2byte	0x4
+ 1714 0015 F3       		.byte	0xf3
+ 1715 0016 01       		.uleb128 0x1
+ 1716 0017 50       		.byte	0x50
+ 1717 0018 9F       		.byte	0x9f
+ 1718 0019 00000000 		.4byte	0
+ 1719 001d 00000000 		.4byte	0
+ 1720              	.LLST1:
+ 1721 0021 04000000 		.4byte	.LVL7
+ 1722 0025 1A000000 		.4byte	.LVL12
+ 1723 0029 0200     		.2byte	0x2
+ 1724 002b 30       		.byte	0x30
+ 1725 002c 9F       		.byte	0x9f
+ 1726 002d 1A000000 		.4byte	.LVL12
+ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccTF0n2y.s 			page 34
+
+
+ 1727 0031 C4000000 		.4byte	.LVL37
+ 1728 0035 0100     		.2byte	0x1
+ 1729 0037 54       		.byte	0x54
+ 1730 0038 C8000000 		.4byte	.LVL38
+ 1731 003c EC000000 		.4byte	.LVL42
+ 1732 0040 0100     		.2byte	0x1
+ 1733 0042 54       		.byte	0x54
+ 1734 0043 F4000000 		.4byte	.LVL43
+ 1735 0047 FC000000 		.4byte	.LVL44
+ 1736 004b 0100     		.2byte	0x1
+ 1737 004d 54       		.byte	0x54
+ 1738 004e FE000000 		.4byte	.LVL45
+ 1739 0052 A0010000 		.4byte	.LFE38
+ 1740 0056 0100     		.2byte	0x1
+ 1741 0058 54       		.byte	0x54
+ 1742 0059 00000000 		.4byte	0
+ 1743 005d 00000000 		.4byte	0
+ 1744              	.LLST2:
+ 1745 0061 CC000000 		.4byte	.LVL39
+ 1746 0065 FE000000 		.4byte	.LVL45
+ 1747 0069 0100     		.2byte	0x1
+ 1748 006b 53       		.byte	0x53
+ 1749 006c 00000000 		.4byte	0
+ 1750 0070 00000000 		.4byte	0
+ 1751              	.LLST3:
+ 1752 0074 D0000000 		.4byte	.LVL40
+ 1753 0078 E2000000 		.4byte	.LVL41
+ 1754 007c 0100     		.2byte	0x1
+ 1755 007e 51       		.byte	0x51
+ 1756 007f E2000000 		.4byte	.LVL41
+ 1757 0083 FE000000 		.4byte	.LVL45
+ 1758 0087 0500     		.2byte	0x5
+ 1759 0089 73       		.byte	0x73
+ 1760 008a 00       		.sleb128 0
+ 1761 008b 40       		.byte	0x40
+ 1762 008c 25       		.byte	0x25
+ 1763 008d 9F       		.byte	0x9f
+ 1764 008e 00000000 		.4byte	0
+ 1765 0092 00000000 		.4byte	0
+ 1766              	.LLST4:
+ 1767 0096 7C000000 		.4byte	.LVL27
+ 1768 009a 82000000 		.4byte	.LVL28
+ 1769 009e 0200     		.2byte	0x2
+ 1770 00a0 31       		.byte	0x31
+ 1771 00a1 9F       		.byte	0x9f
+ 1772 00a2 82000000 		.4byte	.LVL28
+ 1773 00a6 D0000000 		.4byte	.LVL40
+ 1774 00aa 0100     		.2byte	0x1
+ 1775 00ac 51       		.byte	0x51
+ 1776 00ad 00000000 		.4byte	0
+ 1777 00b1 00000000 		.4byte	0
+ 1778              	.LLST5:
+ 1779 00b5 7C000000 		.4byte	.LVL27
+ 1780 00b9 82000000 		.4byte	.LVL28
+ 1781 00bd 0200     		.2byte	0x2
+ 1782 00bf 30       		.byte	0x30
+ 1783 00c0 9F       		.byte	0x9f
+ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccTF0n2y.s 			page 35
+
+
+ 1784 00c1 82000000 		.4byte	.LVL28
+ 1785 00c5 07010000 		.4byte	.LVL46-1
+ 1786 00c9 0100     		.2byte	0x1
+ 1787 00cb 53       		.byte	0x53
+ 1788 00cc 00000000 		.4byte	0
+ 1789 00d0 00000000 		.4byte	0
+ 1790              	.LLST6:
+ 1791 00d4 0E010000 		.4byte	.LVL47
+ 1792 00d8 12010000 		.4byte	.LVL48
+ 1793 00dc 0600     		.2byte	0x6
+ 1794 00de 03       		.byte	0x3
+ 1795 00df 00000000 		.4byte	key
+ 1796 00e3 9F       		.byte	0x9f
+ 1797 00e4 12010000 		.4byte	.LVL48
+ 1798 00e8 A0010000 		.4byte	.LFE38
+ 1799 00ec 0100     		.2byte	0x1
+ 1800 00ee 55       		.byte	0x55
+ 1801 00ef 00000000 		.4byte	0
+ 1802 00f3 00000000 		.4byte	0
+ 1803              	.LLST7:
+ 1804 00f7 A8000000 		.4byte	.LVL33
+ 1805 00fb B2000000 		.4byte	.LVL36
+ 1806 00ff 0100     		.2byte	0x1
+ 1807 0101 52       		.byte	0x52
+ 1808 0102 00000000 		.4byte	0
+ 1809 0106 00000000 		.4byte	0
+ 1810              	.LLST8:
+ 1811 010a 98000000 		.4byte	.LVL29
+ 1812 010e A2000000 		.4byte	.LVL30
+ 1813 0112 0100     		.2byte	0x1
+ 1814 0114 52       		.byte	0x52
+ 1815 0115 A2000000 		.4byte	.LVL30
+ 1816 0119 A4000000 		.4byte	.LVL31
+ 1817 011d 2200     		.2byte	0x22
+ 1818 011f 71       		.byte	0x71
+ 1819 0120 7F       		.sleb128 -1
+ 1820 0121 31       		.byte	0x31
+ 1821 0122 24       		.byte	0x24
+ 1822 0123 03       		.byte	0x3
+ 1823 0124 04000000 		.4byte	.LANCHOR0+4
+ 1824 0128 22       		.byte	0x22
+ 1825 0129 94       		.byte	0x94
+ 1826 012a 02       		.byte	0x2
+ 1827 012b 40       		.byte	0x40
+ 1828 012c 24       		.byte	0x24
+ 1829 012d 40       		.byte	0x40
+ 1830 012e 26       		.byte	0x26
+ 1831 012f 71       		.byte	0x71
+ 1832 0130 00       		.sleb128 0
+ 1833 0131 31       		.byte	0x31
+ 1834 0132 24       		.byte	0x24
+ 1835 0133 03       		.byte	0x3
+ 1836 0134 04000000 		.4byte	.LANCHOR0+4
+ 1837 0138 22       		.byte	0x22
+ 1838 0139 94       		.byte	0x94
+ 1839 013a 02       		.byte	0x2
+ 1840 013b 40       		.byte	0x40
+ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccTF0n2y.s 			page 36
+
+
+ 1841 013c 24       		.byte	0x24
+ 1842 013d 40       		.byte	0x40
+ 1843 013e 26       		.byte	0x26
+ 1844 013f 1C       		.byte	0x1c
+ 1845 0140 9F       		.byte	0x9f
+ 1846 0141 A4000000 		.4byte	.LVL31
+ 1847 0145 A6000000 		.4byte	.LVL32
+ 1848 0149 0100     		.2byte	0x1
+ 1849 014b 52       		.byte	0x52
+ 1850 014c A6000000 		.4byte	.LVL32
+ 1851 0150 B2000000 		.4byte	.LVL36
+ 1852 0154 2200     		.2byte	0x22
+ 1853 0156 71       		.byte	0x71
+ 1854 0157 7F       		.sleb128 -1
+ 1855 0158 31       		.byte	0x31
+ 1856 0159 24       		.byte	0x24
+ 1857 015a 03       		.byte	0x3
+ 1858 015b 04000000 		.4byte	.LANCHOR0+4
+ 1859 015f 22       		.byte	0x22
+ 1860 0160 94       		.byte	0x94
+ 1861 0161 02       		.byte	0x2
+ 1862 0162 40       		.byte	0x40
+ 1863 0163 24       		.byte	0x24
+ 1864 0164 40       		.byte	0x40
+ 1865 0165 26       		.byte	0x26
+ 1866 0166 71       		.byte	0x71
+ 1867 0167 00       		.sleb128 0
+ 1868 0168 31       		.byte	0x31
+ 1869 0169 24       		.byte	0x24
+ 1870 016a 03       		.byte	0x3
+ 1871 016b 04000000 		.4byte	.LANCHOR0+4
+ 1872 016f 22       		.byte	0x22
+ 1873 0170 94       		.byte	0x94
+ 1874 0171 02       		.byte	0x2
+ 1875 0172 40       		.byte	0x40
+ 1876 0173 24       		.byte	0x24
+ 1877 0174 40       		.byte	0x40
+ 1878 0175 26       		.byte	0x26
+ 1879 0176 1C       		.byte	0x1c
+ 1880 0177 9F       		.byte	0x9f
+ 1881 0178 00000000 		.4byte	0
+ 1882 017c 00000000 		.4byte	0
+ 1883              		.section	.debug_aranges,"",%progbits
+ 1884 0000 34000000 		.4byte	0x34
+ 1885 0004 0200     		.2byte	0x2
+ 1886 0006 00000000 		.4byte	.Ldebug_info0
+ 1887 000a 04       		.byte	0x4
+ 1888 000b 00       		.byte	0
+ 1889 000c 0000     		.2byte	0
+ 1890 000e 0000     		.2byte	0
+ 1891 0010 00000000 		.4byte	.LFB35
+ 1892 0014 24000000 		.4byte	.LFE35-.LFB35
+ 1893 0018 00000000 		.4byte	.LFB36
+ 1894 001c 24000000 		.4byte	.LFE36-.LFB36
+ 1895 0020 00000000 		.4byte	.LFB37
+ 1896 0024 08000000 		.4byte	.LFE37-.LFB37
+ 1897 0028 00000000 		.4byte	.LFB38
+ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccTF0n2y.s 			page 37
+
+
+ 1898 002c A0010000 		.4byte	.LFE38-.LFB38
+ 1899 0030 00000000 		.4byte	0
+ 1900 0034 00000000 		.4byte	0
+ 1901              		.section	.debug_ranges,"",%progbits
+ 1902              	.Ldebug_ranges0:
+ 1903 0000 00000000 		.4byte	.LFB35
+ 1904 0004 24000000 		.4byte	.LFE35
+ 1905 0008 00000000 		.4byte	.LFB36
+ 1906 000c 24000000 		.4byte	.LFE36
+ 1907 0010 00000000 		.4byte	.LFB37
+ 1908 0014 08000000 		.4byte	.LFE37
+ 1909 0018 00000000 		.4byte	.LFB38
+ 1910 001c A0010000 		.4byte	.LFE38
+ 1911 0020 00000000 		.4byte	0
+ 1912 0024 00000000 		.4byte	0
+ 1913              		.section	.debug_line,"",%progbits
+ 1914              	.Ldebug_line0:
+ 1915 0000 D5010000 		.section	.debug_str,"MS",%progbits,1
+ 1915      02002601 
+ 1915      00000201 
+ 1915      FB0E0D00 
+ 1915      01010101 
+ 1916              	.LASF33:
+ 1917 0000 54696D65 		.ascii	"Timer2_WriteCounter\000"
+ 1917      72325F57 
+ 1917      72697465 
+ 1917      436F756E 
+ 1917      74657200 
+ 1918              	.LASF21:
+ 1919 0014 64696666 		.ascii	"diff\000"
+ 1919      00
+ 1920              	.LASF40:
+ 1921 0019 4C45445F 		.ascii	"LED_Write\000"
+ 1921      57726974 
+ 1921      6500
+ 1922              	.LASF2:
+ 1923 0023 73686F72 		.ascii	"short int\000"
+ 1923      7420696E 
+ 1923      7400
+ 1924              	.LASF26:
+ 1925 002d 4D5F424C 		.ascii	"M_BL_Write\000"
+ 1925      5F577269 
+ 1925      746500
+ 1926              	.LASF15:
+ 1927 0038 73697A65 		.ascii	"sizetype\000"
+ 1927      74797065 
+ 1927      00
+ 1928              	.LASF44:
+ 1929 0041 55415254 		.ascii	"UART1_Start\000"
+ 1929      315F5374 
+ 1929      61727400 
+ 1930              	.LASF42:
+ 1931 004d 54696D65 		.ascii	"Timer1_ReadCounter\000"
+ 1931      72315F52 
+ 1931      65616443 
+ 1931      6F756E74 
+ 1931      657200
+ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccTF0n2y.s 			page 38
+
+
+ 1932              	.LASF30:
+ 1933 0060 55415254 		.ascii	"UART1_UartPutString\000"
+ 1933      315F5561 
+ 1933      72745075 
+ 1933      74537472 
+ 1933      696E6700 
+ 1934              	.LASF35:
+ 1935 0074 54696D65 		.ascii	"Timer1_ClearFIFO\000"
+ 1935      72315F43 
+ 1935      6C656172 
+ 1935      4649464F 
+ 1935      00
+ 1936              	.LASF48:
+ 1937 0085 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1937      43313120 
+ 1937      352E342E 
+ 1937      31203230 
+ 1937      31363036 
+ 1938 00b8 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 1938      20726576 
+ 1938      6973696F 
+ 1938      6E203233 
+ 1938      37373135 
+ 1939 00eb 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1939      66756E63 
+ 1939      74696F6E 
+ 1939      2D736563 
+ 1939      74696F6E 
+ 1940              	.LASF12:
+ 1941 0113 75696E74 		.ascii	"uint8\000"
+ 1941      3800
+ 1942              	.LASF19:
+ 1943 0119 646F5F73 		.ascii	"do_stop\000"
+ 1943      746F7000 
+ 1944              	.LASF37:
+ 1945 0121 54696D65 		.ascii	"Timer1_Enable\000"
+ 1945      72315F45 
+ 1945      6E61626C 
+ 1945      6500
+ 1946              	.LASF20:
+ 1947 012f 50757473 		.ascii	"Puts\000"
+ 1947      00
+ 1948              	.LASF9:
+ 1949 0134 666C6F61 		.ascii	"float\000"
+ 1949      7400
+ 1950              	.LASF45:
+ 1951 013a 54696D65 		.ascii	"Timer1_Start\000"
+ 1951      72315F53 
+ 1951      74617274 
+ 1951      00
+ 1952              	.LASF6:
+ 1953 0147 6C6F6E67 		.ascii	"long long int\000"
+ 1953      206C6F6E 
+ 1953      6720696E 
+ 1953      7400
+ 1954              	.LASF22:
+ 1955 0155 43617074 		.ascii	"Capture\000"
+ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccTF0n2y.s 			page 39
+
+
+ 1955      75726500 
+ 1956              	.LASF27:
+ 1957 015d 4D5F4252 		.ascii	"M_BR_Write\000"
+ 1957      5F577269 
+ 1957      746500
+ 1958              	.LASF4:
+ 1959 0168 6C6F6E67 		.ascii	"long int\000"
+ 1959      20696E74 
+ 1959      00
+ 1960              	.LASF39:
+ 1961 0171 54696D65 		.ascii	"Timer1_WritePeriod\000"
+ 1961      72315F57 
+ 1961      72697465 
+ 1961      50657269 
+ 1961      6F6400
+ 1962              	.LASF47:
+ 1963 0184 49535231 		.ascii	"ISR1_StartEx\000"
+ 1963      5F537461 
+ 1963      72744578 
+ 1963      00
+ 1964              	.LASF34:
+ 1965 0191 54696D65 		.ascii	"Timer2_ReadCounter\000"
+ 1965      72325F52 
+ 1965      65616443 
+ 1965      6F756E74 
+ 1965      657200
+ 1966              	.LASF46:
+ 1967 01a4 54696D65 		.ascii	"Timer2_Start\000"
+ 1967      72325F53 
+ 1967      74617274 
+ 1967      00
+ 1968              	.LASF29:
+ 1969 01b1 4D5F4652 		.ascii	"M_FR_Write\000"
+ 1969      5F577269 
+ 1969      746500
+ 1970              	.LASF43:
+ 1971 01bc 736E7072 		.ascii	"snprintf\000"
+ 1971      696E7466 
+ 1971      00
+ 1972              	.LASF1:
+ 1973 01c5 756E7369 		.ascii	"unsigned char\000"
+ 1973      676E6564 
+ 1973      20636861 
+ 1973      7200
+ 1974              	.LASF14:
+ 1975 01d3 6C6F6E67 		.ascii	"long double\000"
+ 1975      20646F75 
+ 1975      626C6500 
+ 1976              	.LASF28:
+ 1977 01df 4D5F464C 		.ascii	"M_FL_Write\000"
+ 1977      5F577269 
+ 1977      746500
+ 1978              	.LASF0:
+ 1979 01ea 7369676E 		.ascii	"signed char\000"
+ 1979      65642063 
+ 1979      68617200 
+ 1980              	.LASF7:
+ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccTF0n2y.s 			page 40
+
+
+ 1981 01f6 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1981      206C6F6E 
+ 1981      6720756E 
+ 1981      7369676E 
+ 1981      65642069 
+ 1982              	.LASF8:
+ 1983 020d 756E7369 		.ascii	"unsigned int\000"
+ 1983      676E6564 
+ 1983      20696E74 
+ 1983      00
+ 1984              	.LASF24:
+ 1985 021a 4D5F5374 		.ascii	"M_Stat\000"
+ 1985      617400
+ 1986              	.LASF16:
+ 1987 0221 636F6465 		.ascii	"code\000"
+ 1987      00
+ 1988              	.LASF3:
+ 1989 0226 73686F72 		.ascii	"short unsigned int\000"
+ 1989      7420756E 
+ 1989      7369676E 
+ 1989      65642069 
+ 1989      6E7400
+ 1990              	.LASF31:
+ 1991 0239 49535231 		.ascii	"ISR1_Disable\000"
+ 1991      5F446973 
+ 1991      61626C65 
+ 1991      00
+ 1992              	.LASF38:
+ 1993 0246 54696D65 		.ascii	"Timer1_WriteCounter\000"
+ 1993      72315F57 
+ 1993      72697465 
+ 1993      436F756E 
+ 1993      74657200 
+ 1994              	.LASF11:
+ 1995 025a 63686172 		.ascii	"char\000"
+ 1995      00
+ 1996              	.LASF51:
+ 1997 025f 6D61696E 		.ascii	"main\000"
+ 1997      00
+ 1998              	.LASF17:
+ 1999 0264 6D6F746F 		.ascii	"motor\000"
+ 1999      7200
+ 2000              	.LASF18:
+ 2001 026a 646F5F63 		.ascii	"do_capture\000"
+ 2001      61707475 
+ 2001      726500
+ 2002              	.LASF50:
+ 2003 0275 433A5C55 		.ascii	"C:\\Users\\mac_000\\Documents\\Git_IR_REMO\\PSoC\\I"
+ 2003      73657273 
+ 2003      5C6D6163 
+ 2003      5F303030 
+ 2003      5C446F63 
+ 2004 02a2 525F5245 		.ascii	"R_REMO4200M.cydsn\000"
+ 2004      4D4F3432 
+ 2004      30304D2E 
+ 2004      63796473 
+ 2004      6E00
+ARM GAS  C:\Users\mac_000\AppData\Local\Temp\ccTF0n2y.s 			page 41
+
+
+ 2005              	.LASF49:
+ 2006 02b4 6D61696E 		.ascii	"main.c\000"
+ 2006      2E6300
+ 2007              	.LASF13:
+ 2008 02bb 72656738 		.ascii	"reg8\000"
+ 2008      00
+ 2009              	.LASF5:
+ 2010 02c0 6C6F6E67 		.ascii	"long unsigned int\000"
+ 2010      20756E73 
+ 2010      69676E65 
+ 2010      6420696E 
+ 2010      7400
+ 2011              	.LASF10:
+ 2012 02d2 646F7562 		.ascii	"double\000"
+ 2012      6C6500
+ 2013              	.LASF23:
+ 2014 02d9 4E436170 		.ascii	"NCapture\000"
+ 2014      74757265 
+ 2014      00
+ 2015              	.LASF25:
+ 2016 02e2 54696D65 		.ascii	"Timer1_ReadCapture\000"
+ 2016      72315F52 
+ 2016      65616443 
+ 2016      61707475 
+ 2016      726500
+ 2017              	.LASF36:
+ 2018 02f5 54696D65 		.ascii	"Timer1_Init\000"
+ 2018      72315F49 
+ 2018      6E697400 
+ 2019              	.LASF32:
+ 2020 0301 49535231 		.ascii	"ISR1_ClearPending\000"
+ 2020      5F436C65 
+ 2020      61725065 
+ 2020      6E64696E 
+ 2020      6700
+ 2021              	.LASF41:
+ 2022 0313 49535231 		.ascii	"ISR1_Enable\000"
+ 2022      5F456E61 
+ 2022      626C6500 
+ 2023              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

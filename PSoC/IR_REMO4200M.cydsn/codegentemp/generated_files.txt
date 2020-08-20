@@ -45,6 +45,22 @@
   <file name="C:\Users\mac_000\Documents\Git_IR_REMO\PSoC\IR_REMO4200M.cydsn\codegentemp\ISR1.h" value="HEADER;;;;;ISR1" />
   <file name="C:\Users\mac_000\Documents\Git_IR_REMO\PSoC\IR_REMO4200M.cydsn\codegentemp\timer_clk2.c" value="SOURCE_C;CortexM0;;;;timer_clk2" />
   <file name="C:\Users\mac_000\Documents\Git_IR_REMO\PSoC\IR_REMO4200M.cydsn\codegentemp\timer_clk2.h" value="HEADER;;;;;timer_clk2" />
+  <file name="C:\Users\mac_000\Documents\Git_IR_REMO\PSoC\IR_REMO4200M.cydsn\codegentemp\M_FL.c" value="SOURCE_C;CortexM0;;;;M_FL" />
+  <file name="C:\Users\mac_000\Documents\Git_IR_REMO\PSoC\IR_REMO4200M.cydsn\codegentemp\M_FL.h" value="HEADER;;;;;M_FL" />
+  <file name="C:\Users\mac_000\Documents\Git_IR_REMO\PSoC\IR_REMO4200M.cydsn\codegentemp\M_FL_aliases.h" value="HEADER;;;;;M_FL" />
+  <file name="C:\Users\mac_000\Documents\Git_IR_REMO\PSoC\IR_REMO4200M.cydsn\codegentemp\M_FL_PM.c" value="SOURCE_C;CortexM0;;;;M_FL" />
+  <file name="C:\Users\mac_000\Documents\Git_IR_REMO\PSoC\IR_REMO4200M.cydsn\codegentemp\M_BL.c" value="SOURCE_C;CortexM0;;;;M_BL" />
+  <file name="C:\Users\mac_000\Documents\Git_IR_REMO\PSoC\IR_REMO4200M.cydsn\codegentemp\M_BL.h" value="HEADER;;;;;M_BL" />
+  <file name="C:\Users\mac_000\Documents\Git_IR_REMO\PSoC\IR_REMO4200M.cydsn\codegentemp\M_BL_aliases.h" value="HEADER;;;;;M_BL" />
+  <file name="C:\Users\mac_000\Documents\Git_IR_REMO\PSoC\IR_REMO4200M.cydsn\codegentemp\M_BL_PM.c" value="SOURCE_C;CortexM0;;;;M_BL" />
+  <file name="C:\Users\mac_000\Documents\Git_IR_REMO\PSoC\IR_REMO4200M.cydsn\codegentemp\M_FR.c" value="SOURCE_C;CortexM0;;;;M_FR" />
+  <file name="C:\Users\mac_000\Documents\Git_IR_REMO\PSoC\IR_REMO4200M.cydsn\codegentemp\M_FR.h" value="HEADER;;;;;M_FR" />
+  <file name="C:\Users\mac_000\Documents\Git_IR_REMO\PSoC\IR_REMO4200M.cydsn\codegentemp\M_FR_aliases.h" value="HEADER;;;;;M_FR" />
+  <file name="C:\Users\mac_000\Documents\Git_IR_REMO\PSoC\IR_REMO4200M.cydsn\codegentemp\M_FR_PM.c" value="SOURCE_C;CortexM0;;;;M_FR" />
+  <file name="C:\Users\mac_000\Documents\Git_IR_REMO\PSoC\IR_REMO4200M.cydsn\codegentemp\M_BR.c" value="SOURCE_C;CortexM0;;;;M_BR" />
+  <file name="C:\Users\mac_000\Documents\Git_IR_REMO\PSoC\IR_REMO4200M.cydsn\codegentemp\M_BR.h" value="HEADER;;;;;M_BR" />
+  <file name="C:\Users\mac_000\Documents\Git_IR_REMO\PSoC\IR_REMO4200M.cydsn\codegentemp\M_BR_aliases.h" value="HEADER;;;;;M_BR" />
+  <file name="C:\Users\mac_000\Documents\Git_IR_REMO\PSoC\IR_REMO4200M.cydsn\codegentemp\M_BR_PM.c" value="SOURCE_C;CortexM0;;;;M_BR" />
   <file name="C:\Users\mac_000\Documents\Git_IR_REMO\PSoC\IR_REMO4200M.cydsn\codegentemp\Timer2.c" value="SOURCE_C;CortexM0;;;;Timer2" />
   <file name="C:\Users\mac_000\Documents\Git_IR_REMO\PSoC\IR_REMO4200M.cydsn\codegentemp\Timer2.h" value="HEADER;;;;;Timer2" />
   <file name="C:\Users\mac_000\Documents\Git_IR_REMO\PSoC\IR_REMO4200M.cydsn\codegentemp\Timer2_PM.c" value="SOURCE_C;CortexM0;;;;Timer2" />

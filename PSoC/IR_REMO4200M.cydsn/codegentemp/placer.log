@@ -6,7 +6,7 @@
 
 #Build Date:         Sep  9 2019 11:47:43
 
-#File Generated:     Aug 19 2020 12:58:04
+#File Generated:     Aug 21 2020 00:09:27
 
 #Purpose:            
 
@@ -55,13 +55,109 @@ Design Statistics after Packing
 Device Utilization Summary after Packing
     Macrocells                  :	8/32
     UDBS                        :	3/4
-    IOs                         :	4/51
+    IOs                         :	8/51
 
 
 D2088: Phase 3, elapsed time : 0.0 (sec)
 
 Phase 4
 D2088: Phase 4, elapsed time : 0.0 (sec)
+
+Phase 6
+
+######################################################################
+Placement Timing Summary
+
+The timing summary is based on estimated routing delays after
+placement. For final timing report, please carry out the timing
+analysis after routing.
+======================================================================
+
+######################################################################
+                     Clock Summary 
+======================================================================
+Number of clocks: 10
+Clock: CyHFClk              | Frequency: N/A       | Target:  48.0 MHz
+Clock: CyILO                | Frequency: N/A       | Target:   0.0 MHz
+Clock: CyIMO                | Frequency: N/A       | Target:  48.0 MHz
+Clock: CyLFClk              | Frequency: N/A       | Target:   0.0 MHz
+Clock: CyRouted1            | Frequency: N/A       | Target:  48.0 MHz
+Clock: CySysClk             | Frequency: N/A       | Target:  48.0 MHz
+Clock: timer_clk2           | Frequency:  53.4 MHz | Target:   0.0 MHz
+Clock: timer_clock          | Frequency:  41.7 MHz | Target:   0.3 MHz
+Clock: timer_clock_1        | Frequency: N/A       | Target:   1.1 MHz
+Clock: timer_clock_1(FFB)   | Frequency: N/A       | Target:   1.1 MHz
+
+======================================================================
+                     End of Clock Summary
+######################################################################
+
+D2088: Phase 6, elapsed time : 0.0 (sec)
+
+Phase 7
+######################################################################
+                     Clock Summary 
+======================================================================
+Number of clocks: 10
+Clock: CyHFClk              | Frequency: N/A       | Target:  48.0 MHz
+Clock: CyILO                | Frequency: N/A       | Target:   0.0 MHz
+Clock: CyIMO                | Frequency: N/A       | Target:  48.0 MHz
+Clock: CyLFClk              | Frequency: N/A       | Target:   0.0 MHz
+Clock: CyRouted1            | Frequency: N/A       | Target:  48.0 MHz
+Clock: CySysClk             | Frequency: N/A       | Target:  48.0 MHz
+Clock: timer_clk2           | Frequency:  53.4 MHz | Target:   0.0 MHz
+Clock: timer_clock          | Frequency:  41.7 MHz | Target:   0.3 MHz
+Clock: timer_clock_1        | Frequency: N/A       | Target:   1.1 MHz
+Clock: timer_clock_1(FFB)   | Frequency: N/A       | Target:   1.1 MHz
+
+======================================================================
+                     End of Clock Summary
+######################################################################
+D2088: Phase 7, elapsed time : 0.1 (sec)
+
+Final Design Statistics
+    Number of Combinational MCs 	:	3
+    Number of Sequential MCs    	:	5
+    Number of DPs               	:	3
+    Number of Controls          	:	2
+    Number of Status            	:	2
+    Number of SyncCells         	:	0
+    Number of count7cells       	:	0
+    Number of IOs       	:	8
+
+Device Utilization Summary
+    Macrocells                  :	8/32
+    IOs                         :	8/51
+
+
+
+######################################################################
+Placement Timing Summary
+
+The timing summary is based on estimated routing delays after
+placement. For final timing report, please carry out the timing
+analysis after routing.
+======================================================================
+
+
+######################################################################
+                     Clock Summary 
+======================================================================
+Number of clocks: 10
+Clock: CyHFClk              | Frequency: N/A       | Target:  48.0 MHz
+Clock: CyILO                | Frequency: N/A       | Target:   0.0 MHz
+Clock: CyIMO                | Frequency: N/A       | Target:  48.0 MHz
+Clock: CyLFClk              | Frequency: N/A       | Target:   0.0 MHz
+Clock: CyRouted1            | Frequency: N/A       | Target:  48.0 MHz
+Clock: CySysClk             | Frequency: N/A       | Target:  48.0 MHz
+Clock: timer_clk2           | Frequency:  53.4 MHz | Target:   0.0 MHz
+Clock: timer_clock          | Frequency:  41.7 MHz | Target:   0.3 MHz
+Clock: timer_clock_1        | Frequency: N/A       | Target:   1.1 MHz
+Clock: timer_clock_1(FFB)   | Frequency: N/A       | Target:   1.1 MHz
+
+======================================================================
+                     End of Clock Summary
+######################################################################
 
 Phase 6
 
@@ -123,11 +219,11 @@ Final Design Statistics
     Number of Status            	:	2
     Number of SyncCells         	:	0
     Number of count7cells       	:	0
-    Number of IOs       	:	4
+    Number of IOs       	:	8
 
 Device Utilization Summary
     Macrocells                  :	8/32
-    IOs                         :	4/51
+    IOs                         :	8/51
 
 
 
@@ -151,7 +247,7 @@ Clock: CyLFClk              | Frequency: N/A       | Target:   0.0 MHz
 Clock: CyRouted1            | Frequency: N/A       | Target:  48.0 MHz
 Clock: CySysClk             | Frequency: N/A       | Target:  48.0 MHz
 Clock: timer_clk2           | Frequency:  53.4 MHz | Target:   0.0 MHz
-Clock: timer_clock          | Frequency:  41.7 MHz | Target:   0.3 MHz
+Clock: timer_clock          | Frequency:  41.7 MHz | Target:   0.4 MHz
 Clock: timer_clock_1        | Frequency: N/A       | Target:   1.1 MHz
 Clock: timer_clock_1(FFB)   | Frequency: N/A       | Target:   1.1 MHz
 
@@ -164,5 +260,5 @@ D2088: Phase 8, elapsed time : 0.0 (sec)
 
 D2054: Placement of the design completed successfully
 
-I2076: Total run-time: 0.9 sec.
+I2076: Total run-time: 0.8 sec.
 

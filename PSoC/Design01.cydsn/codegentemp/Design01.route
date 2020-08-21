@@ -1,0 +1,18 @@
+net ClockBlock_HFClk
+	term   ":m0s8clockblockcell.hfclk"
+	switch ":m0s8clockblockcell.hfclk==>:interrupt_8.clock"
+	term   ":interrupt_8.clock"
+end ClockBlock_HFClk
+net Net_230
+	term   ":ioport0:pin1.fb"
+	switch ":ioport0:pin1.fb==>:ioport0:hsiom_in1.hsiom1_in"
+	switch ":ioport0:hsiom_in1.fixed_ACT_1==>:m0s8tcpwmcell_permute.tr_in<1>"
+	switch ":m0s8tcpwmcell_permute.capture==>:m0s8tcpwmcell.capture"
+	term   ":m0s8tcpwmcell.capture"
+end Net_230
+net Net_3
+	term   ":m0s8tcpwmcell.interrupt"
+	switch ":m0s8tcpwmcell.interrupt==>:interrupt_idmux_8.in_0"
+	switch ":interrupt_idmux_8.interrupt_idmux_8__out==>:interrupt_8.interrupt"
+	term   ":interrupt_8.interrupt"
+end Net_3

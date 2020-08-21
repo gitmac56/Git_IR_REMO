@@ -3,11 +3,13 @@
 <!--This file is machine generated and read. It is not intended to be edited by hand.-->
 <!--Due to this, there is no schema for this file.-->
 <CyGuid_2867d519-54d2-4c01-9830-c51cb08bc3dd type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWorkspaceSerialize" version="5" xml_contents_version="3" name="IR-Remo" persistent="IR-Remo.cywrk" platform="NOT_USED">
-<current_project name=".\IR_REMO4200M.cydsn\IR_REMO4200M.cyprj" />
+<current_project name=".\4244PVA-442.cydsn\4244PVA-442.cyprj" />
 <wrkspc_folders />
 <files />
 <projects>
 <v>.\IR_REMO4200M.cydsn\IR_REMO4200M.cyprj</v>
+<v>.\Design01.cydsn\Design01.cyprj</v>
+<v>.\4244PVA-442.cydsn\4244PVA-442.cyprj</v>
 </projects>
 <workspace_id v="d8af7cf9-a8d2-4765-9d19-74a6abf4f564" />
 <WriteAppVersionLastSavedWith v="4.3.0.1445" />

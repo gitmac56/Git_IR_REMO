@@ -1,0 +1,11 @@
+C:\Users\mac_000\Documents\Git_IR_REMO\PSoC\4244PVA-442.cydsn\4244PVA-442.cyprj|f27327e0-dad2-4a8a-8992-dd64409d754f
+C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|7e7c10d3-70cf-4155-8ab0-a04247e95202
+C:\Users\mac_000\Documents\PSoC Creator\4.3\Downloads ( 4.3).cylib\Downloads ( 4.3).cyprj|17ce22e2-47a9-4ed5-9847-94045292b172
+C:\Users\mac_000\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|b7d3d543-b5d0-4d98-b59b-c88a09209c9b
+C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|821dcfcf-3f1b-44e4-853e-9ab4abba1f7b
+C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|fa34553c-1508-4f12-80bd-0b5cf62bd770
+C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|b0abe7be-a3d9-43fa-833b-5b3f14240cb4
+C:\Users\mac_000\Documents\Git_IR_REMO\PSoC\IR_REMO4200M.cydsn\IR_REMO4200M.cyprj|d3b7aa05-da60-4632-bd82-3e2d39d7e53d
+C:\Users\mac_000\Documents\Git_IR_REMO\PSoC\Design01.cydsn\Design01.cyprj|4da5e37d-cdb9-4b5c-8665-615965ae47a7
+C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\dev\psoc4\PSoC4AnalogDevice\psoc4arch.cydsn\psoc4arch.cyprj|3489af64-7a17-4feb-8999-9c7268fad0e4
+C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\default\CyReferenceLibrary\CyReferenceLibrary.cylib\CyReferenceLibrary.cyprj|bb829e5f-0ee4-475c-aa08-8d3297288e82

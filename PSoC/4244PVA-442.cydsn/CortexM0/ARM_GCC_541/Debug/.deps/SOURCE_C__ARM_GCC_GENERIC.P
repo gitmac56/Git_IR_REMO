@@ -1,0 +1,252 @@
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/CortexM0/ARM_GCC_541/Debug/Cm0Start.o : C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/Cm0Start.c C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cyfitter_cfg.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cytypes.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/cyapicallbacks.h 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/Cm0Start.c : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/CyLFClk.h : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/CyLib.h : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cydevice_trm.h : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cyfitter.h : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cyfitter_cfg.h : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cytypes.h : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/cyapicallbacks.h : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/CortexM0/ARM_GCC_541/Debug/CyFlash.o : C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/CyFlash.c C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/CyFlash.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/CyFlash.c : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/CyFlash.h : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/CortexM0/ARM_GCC_541/Debug/CyLFClk.o : C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/CyLFClk.c C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/CyLFClk.c : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/CortexM0/ARM_GCC_541/Debug/CyLib.o : C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/CyFlash.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/CyLib.c C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/CyLib.c : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/CortexM0/ARM_GCC_541/Debug/IR.o : C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/IR.c C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/IR.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/IR_aliases.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cypins.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/IR.c : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/IR.h : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/IR_aliases.h : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cypins.h : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/CortexM0/ARM_GCC_541/Debug/IR_PM.o : C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/IR.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/IR_PM.c C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/IR_aliases.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cypins.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/IR_PM.c : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/CortexM0/ARM_GCC_541/Debug/ISR1.o : C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/ISR1.c C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/ISR1.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cytypes.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/cyapicallbacks.h 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/ISR1.c : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/ISR1.h : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/CortexM0/ARM_GCC_541/Debug/LED.o : C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/LED.c C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/LED.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/LED_aliases.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cypins.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/LED.c : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/LED.h : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/LED_aliases.h : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/CortexM0/ARM_GCC_541/Debug/LED_PM.o : C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/LED.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/LED_PM.c C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/LED_aliases.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cypins.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/LED_PM.c : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/CortexM0/ARM_GCC_541/Debug/M_BL.o : C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/M_BL.c C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/M_BL.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/M_BL_aliases.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cypins.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/M_BL.c : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/M_BL.h : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/M_BL_aliases.h : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/CortexM0/ARM_GCC_541/Debug/M_BL_PM.o : C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/M_BL.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/M_BL_PM.c C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/M_BL_aliases.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cypins.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/M_BL_PM.c : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/CortexM0/ARM_GCC_541/Debug/M_BR.o : C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/M_BR.c C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/M_BR.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/M_BR_aliases.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cypins.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/M_BR.c : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/M_BR.h : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/M_BR_aliases.h : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/CortexM0/ARM_GCC_541/Debug/M_BR_PM.o : C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/M_BR.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/M_BR_PM.c C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/M_BR_aliases.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cypins.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/M_BR_PM.c : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/CortexM0/ARM_GCC_541/Debug/M_FL.o : C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/M_FL.c C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/M_FL.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/M_FL_aliases.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cypins.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/M_FL.c : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/M_FL.h : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/M_FL_aliases.h : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/CortexM0/ARM_GCC_541/Debug/M_FL_PM.o : C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/M_FL.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/M_FL_PM.c C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/M_FL_aliases.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cypins.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/M_FL_PM.c : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/CortexM0/ARM_GCC_541/Debug/M_FR.o : C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/M_FR.c C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/M_FR.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/M_FR_aliases.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cypins.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/M_FR.c : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/M_FR.h : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/M_FR_aliases.h : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/CortexM0/ARM_GCC_541/Debug/M_FR_PM.o : C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/M_FR.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/M_FR_PM.c C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/M_FR_aliases.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cypins.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/M_FR_PM.c : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/CortexM0/ARM_GCC_541/Debug/Timer1.o : C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/Timer1.c C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/Timer1.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/Timer1.c : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/Timer1.h : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/CortexM0/ARM_GCC_541/Debug/Timer1_PM.o : C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/Timer1.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/Timer1_PM.c C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/Timer1_PM.c : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/CortexM0/ARM_GCC_541/Debug/Timer2.o : C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/Timer2.c C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/Timer2.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/Timer2.c : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/Timer2.h : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/CortexM0/ARM_GCC_541/Debug/Timer2_PM.o : C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/Timer2.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/Timer2_PM.c C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/Timer2_PM.c : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/CortexM0/ARM_GCC_541/Debug/UART1.o : C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1.c C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_PINS.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_PVT.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_SPI_UART.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_SPI_UART_PVT.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_rx.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_rx_aliases.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_tx.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_tx_aliases.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cypins.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1.c : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1.h : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_PINS.h : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_PVT.h : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_SPI_UART.h : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_SPI_UART_PVT.h : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_rx.h : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_rx_aliases.h : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_tx.h : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_tx_aliases.h : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/CortexM0/ARM_GCC_541/Debug/UART1_BOOT.o : C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_BOOT.c C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_BOOT.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_PINS.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_PVT.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_SPI_UART.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_rx.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_rx_aliases.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_tx.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_tx_aliases.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cypins.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_BOOT.c : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_BOOT.h : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/CortexM0/ARM_GCC_541/Debug/UART1_PM.o : C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_PINS.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_PM.c C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_PVT.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_SPI_UART.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_SPI_UART_PVT.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_rx.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_rx_aliases.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_tx.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_tx_aliases.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cypins.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_PM.c : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/CortexM0/ARM_GCC_541/Debug/UART1_SPI_UART.o : C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_PINS.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_PVT.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_SPI_UART.c C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_SPI_UART.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_SPI_UART_PVT.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_rx.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_rx_aliases.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_tx.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_tx_aliases.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cypins.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_SPI_UART.c : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/CortexM0/ARM_GCC_541/Debug/UART1_SPI_UART_INT.o : C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_PINS.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_PVT.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_SPI_UART.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_SPI_UART_INT.c C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_SPI_UART_PVT.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_rx.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_rx_aliases.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_tx.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_tx_aliases.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cypins.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cytypes.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/cyapicallbacks.h 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_SPI_UART_INT.c : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/CortexM0/ARM_GCC_541/Debug/UART1_UART.o : C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_PINS.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_PVT.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_SPI_UART.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_SPI_UART_PVT.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_UART.c C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_rx.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_rx_aliases.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_tx.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_tx_aliases.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cypins.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cytypes.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/cyapicallbacks.h 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_UART.c : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/CortexM0/ARM_GCC_541/Debug/UART1_UART_BOOT.o : C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_BOOT.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_PINS.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_PVT.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_SPI_UART.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_UART_BOOT.c C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_rx.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_rx_aliases.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_tx.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_tx_aliases.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cypins.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_UART_BOOT.c : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/CortexM0/ARM_GCC_541/Debug/UART1_rx.o : C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_rx.c C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_rx.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_rx_aliases.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cypins.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_rx.c : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/CortexM0/ARM_GCC_541/Debug/UART1_rx_PM.o : C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_rx.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_rx_PM.c C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_rx_aliases.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cypins.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_rx_PM.c : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/CortexM0/ARM_GCC_541/Debug/UART1_tx.o : C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_tx.c C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_tx.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_tx_aliases.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cypins.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_tx.c : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/CortexM0/ARM_GCC_541/Debug/UART1_tx_PM.o : C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_tx.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_tx_PM.c C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_tx_aliases.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cypins.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_tx_PM.c : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/CortexM0/ARM_GCC_541/Debug/cyPm.o : C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/CyFlash.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cyPm.c C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cyPm.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cypins.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cyPm.c : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cyPm.h : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/CortexM0/ARM_GCC_541/Debug/cy_em_eeprom.o : C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/CyFlash.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cy_em_eeprom.c C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cy_em_eeprom.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cy_em_eeprom.c : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cy_em_eeprom.h : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/CortexM0/ARM_GCC_541/Debug/cyfitter_cfg.o : C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cyfitter_cfg.c C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cyfitter_cfg.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cytypes.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/cyapicallbacks.h 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cyfitter_cfg.c : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/CortexM0/ARM_GCC_541/Debug/cyutils.o : C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cytypes.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cyutils.c 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cyutils.c : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/CortexM0/ARM_GCC_541/Debug/timer_clock.o : C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cytypes.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/timer_clock.c C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/timer_clock.h 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/timer_clock.c : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/timer_clock.h : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/CortexM0/ARM_GCC_541/Debug/timer_clock_1.o : C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cytypes.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/timer_clock_1.c C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/timer_clock_1.h 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/timer_clock_1.c : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/timer_clock_1.h : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/CortexM0/ARM_GCC_541/Debug/timer_clock_2.o : C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cytypes.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/timer_clock_2.c C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/timer_clock_2.h 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/timer_clock_2.c : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/timer_clock_2.h : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/CortexM0/ARM_GCC_541/Debug/main.o : C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cmsis_armcc.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cmsis_compiler.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cmsis_gcc.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/core_cm0.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/core_cm0_psoc4.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cydisabledsheets.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/project.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/CyFlash.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/IR.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/IR_aliases.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/ISR1.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/LED.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/LED_aliases.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/M_BL.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/M_BL_aliases.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/M_BR.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/M_BR_aliases.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/M_FL.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/M_FL_aliases.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/M_FR.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/M_FR_aliases.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/Timer1.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/Timer2.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_BOOT.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_PINS.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_PVT.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_SPI_UART.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_SPI_UART_PVT.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_rx.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_rx_aliases.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_tx.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/UART1_tx_aliases.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cyPm.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cy_em_eeprom.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cyfitter_cfg.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cypins.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cytypes.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/timer_clock.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/timer_clock_1.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/timer_clock_2.h C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/main.c 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cmsis_armcc.h : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cmsis_compiler.h : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cmsis_gcc.h : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/core_cm0.h : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/core_cm0_psoc4.h : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/cydisabledsheets.h : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/Generated_Source/PSoC4/project.h : 
+
+C:/Users/mac_000/Documents/Git_IR_REMO/PSoC/4244PVA-442.cydsn/main.c : 
+

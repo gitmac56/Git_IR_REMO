@@ -1,4 +1,0 @@
-(sym_lib_table
-  (lib (name Batt)(type Legacy)(uri ${KIPRJMOD}/Batt.lib)(options "")(descr ""))
-  (lib (name IRRemo-rescue)(type Legacy)(uri ${KIPRJMOD}/IRRemo-rescue.lib)(options "")(descr ""))
-)

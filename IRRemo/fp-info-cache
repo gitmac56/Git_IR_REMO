@@ -1,4 +1,18 @@
-15975339068654781
+15980135032736227
+2020-08-21_07-11-41
+BGA35N35P7X5_258X209X48N
+
+
+0
+35
+35
+2020-08-21_07-11-41
+Jumper-Con
+SMD Solder Jumper, 1x1.5mm, rounded Pads, 0.3mm gap, bridged with 1 copper strip
+solder jumper open
+0
+2
+2
 Batt
 BatteryHolder_BHC-CR123A
 18650 Battery Holder (http://www.memoryprotectiondevices.com/datasheets/BK-18650-PC2-datasheet.pdf)
@@ -62611,6 +62625,13 @@ rak811
 BatteryHolder_MPD_BH-18650-PC2
 18650 Battery Holder (http://www.memoryprotectiondevices.com/datasheets/BK-18650-PC2-datasheet.pdf)
 18650 Battery Holder
+0
+2
+2
+rak811
+Jumper-Con
+SMD Solder Jumper, 1x1.5mm, rounded Pads, 0.3mm gap, bridged with 1 copper strip
+solder jumper open
 0
 2
 2

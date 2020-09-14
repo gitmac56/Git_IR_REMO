@@ -13,9 +13,10 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="IR-Remo\D4245FNI\D4245FNI.cydwr\Pins">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="IR-Remo\D4245FNI\TopDesign">
 <ExpandedNodeIds>
 <v>IR-Remo</v>
+<v>IR-Remo\4244PVA-442</v>
 <v>IR-Remo\4244PVA-442\TopDesign</v>
 <v>IR-Remo\4244PVA-442\4244PVA-442.cydwr</v>
 <v>IR-Remo\4244PVA-442\4244PVA-442.cydwr\Pins</v>
@@ -31,6 +32,22 @@
 <v>IR-Remo\4244PVA-442\Source Files\main.c</v>
 <v>IR-Remo\4244PVA-442\Generated_Source</v>
 <v>IR-Remo\4244PVA-442\Generated_Source\PSoC4</v>
+<v>IR-Remo\C4245AZI-483</v>
+<v>IR-Remo\C4245AZI-483\TopDesign</v>
+<v>IR-Remo\C4245AZI-483\C4245AZI-483.cydwr</v>
+<v>IR-Remo\C4245AZI-483\C4245AZI-483.cydwr\Pins</v>
+<v>IR-Remo\C4245AZI-483\C4245AZI-483.cydwr\Analog</v>
+<v>IR-Remo\C4245AZI-483\C4245AZI-483.cydwr\Clocks</v>
+<v>IR-Remo\C4245AZI-483\C4245AZI-483.cydwr\Interrupts</v>
+<v>IR-Remo\C4245AZI-483\C4245AZI-483.cydwr\System</v>
+<v>IR-Remo\C4245AZI-483\C4245AZI-483.cydwr\Directives</v>
+<v>IR-Remo\C4245AZI-483\C4245AZI-483.cydwr\Flash Security</v>
+<v>IR-Remo\C4245AZI-483\Header Files</v>
+<v>IR-Remo\C4245AZI-483\Header Files\cyapicallbacks.h</v>
+<v>IR-Remo\C4245AZI-483\Source Files</v>
+<v>IR-Remo\C4245AZI-483\Source Files\main.c</v>
+<v>IR-Remo\C4245AZI-483\Generated_Source</v>
+<v>IR-Remo\C4245AZI-483\Generated_Source\PSoC4</v>
 <v>IR-Remo\D4245FNI</v>
 <v>IR-Remo\D4245FNI\TopDesign</v>
 <v>IR-Remo\D4245FNI\D4245FNI.cydwr</v>
@@ -82,53 +99,54 @@
 <v>IR-Remo\IR_REMO4200M\Generated_Source\PSoC4\IR</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
-<v>IR-Remo\D4245FNI\D4245FNI.cydwr\System</v>
-<v>IR-Remo\D4245FNI\D4245FNI.cydwr\Directives</v>
-<v>IR-Remo\D4245FNI\D4245FNI.cydwr\Flash Security</v>
-<v>IR-Remo\D4245FNI\Header Files</v>
-<v>IR-Remo\D4245FNI\Header Files\cyapicallbacks.h</v>
-<v>IR-Remo\D4245FNI\Source Files</v>
-<v>IR-Remo\D4245FNI\Source Files\main.c</v>
-<v>IR-Remo\D4245FNI\Generated_Source</v>
-<v>IR-Remo\D4245FNI\Generated_Source\PSoC4</v>
-<v>IR-Remo\D4245FNI\Generated_Source\PSoC4\cy_boot</v>
-<v>IR-Remo\D4245FNI\Generated_Source\PSoC4\cy_lfclk</v>
-<v>IR-Remo\D4245FNI\Generated_Source\PSoC4\Em_EEPROM_Dynamic</v>
-<v>IR-Remo\D4245FNI\Generated_Source\PSoC4\IR</v>
-<v>IR-Remo\D4245FNI\Generated_Source\PSoC4\ISR1</v>
-<v>IR-Remo\D4245FNI\Generated_Source\PSoC4\LED</v>
-<v>IR-Remo\D4245FNI\Generated_Source\PSoC4\M_BL</v>
-<v>IR-Remo\D4245FNI\Generated_Source\PSoC4\M_BR</v>
-<v>IR-Remo\D4245FNI\Generated_Source\PSoC4\M_FL</v>
-<v>IR-Remo\D4245FNI\Generated_Source\PSoC4\M_FR</v>
-<v>IR-Remo\D4245FNI\Generated_Source\PSoC4\timer_clock</v>
-<v>IR-Remo\D4245FNI\Generated_Source\PSoC4\timer_clock_1</v>
-<v>IR-Remo\D4245FNI\Generated_Source\PSoC4\timer_clock_2</v>
-<v>IR-Remo\D4245FNI\Generated_Source\PSoC4\Timer1</v>
-<v>IR-Remo\D4245FNI\Generated_Source\PSoC4\Timer2</v>
-<v>IR-Remo\D4245FNI\Generated_Source\PSoC4\UART1</v>
-<v>IR-Remo\D4245FNI\Generated_Source\PSoC4\UART1_rx</v>
-<v>IR-Remo\D4245FNI\Generated_Source\PSoC4\UART1_tx</v>
-<v>IR-Remo\D4245FNI\Generated_Source\PSoC4\cycodeshareexport.ld</v>
-<v>IR-Remo\D4245FNI\Generated_Source\PSoC4\cycodeshareimport.ld</v>
-<v>IR-Remo\D4245FNI\Generated_Source\PSoC4\cycodeshareimport.scat</v>
-<v>IR-Remo\D4245FNI\Generated_Source\PSoC4\cydevice_trm.h</v>
-<v>IR-Remo\D4245FNI\Generated_Source\PSoC4\cydevicegnu_trm.inc</v>
-<v>IR-Remo\D4245FNI\Generated_Source\PSoC4\cydeviceiar_trm.inc</v>
-<v>IR-Remo\D4245FNI\Generated_Source\PSoC4\cydevicerv_trm.inc</v>
-<v>IR-Remo\D4245FNI\Generated_Source\PSoC4\cydisabledsheets.h</v>
-<v>IR-Remo\D4245FNI\Generated_Source\PSoC4\cyfitter.h</v>
-<v>IR-Remo\D4245FNI\Generated_Source\PSoC4\cyfitter_cfg.c</v>
-<v>IR-Remo\D4245FNI\Generated_Source\PSoC4\cyfitter_cfg.h</v>
-<v>IR-Remo\D4245FNI\Generated_Source\PSoC4\cyfittergnu.inc</v>
-<v>IR-Remo\D4245FNI\Generated_Source\PSoC4\cyfitteriar.inc</v>
-<v>IR-Remo\D4245FNI\Generated_Source\PSoC4\cyfitterrv.inc</v>
-<v>IR-Remo\D4245FNI\Generated_Source\PSoC4\cymetadata.c</v>
-<v>IR-Remo\D4245FNI\Generated_Source\PSoC4\project.h</v>
-<v>IR-Remo\Design01</v>
-<v>IR-Remo\IR_REMO4200M</v>
-<v>IR-Remo\IR_REMO4200M\TopDesign</v>
-<v>IR-Remo\IR_REMO4200M\IR_REMO4200M.cydwr</v>
+<v>IR-Remo</v>
+<v>IR-Remo\4244PVA-442</v>
+<v>IR-Remo\4244PVA-442\TopDesign</v>
+<v>IR-Remo\4244PVA-442\4244PVA-442.cydwr</v>
+<v>IR-Remo\4244PVA-442\4244PVA-442.cydwr\Pins</v>
+<v>IR-Remo\4244PVA-442\4244PVA-442.cydwr\Analog</v>
+<v>IR-Remo\4244PVA-442\4244PVA-442.cydwr\Clocks</v>
+<v>IR-Remo\4244PVA-442\4244PVA-442.cydwr\Interrupts</v>
+<v>IR-Remo\4244PVA-442\4244PVA-442.cydwr\System</v>
+<v>IR-Remo\4244PVA-442\4244PVA-442.cydwr\Directives</v>
+<v>IR-Remo\4244PVA-442\4244PVA-442.cydwr\Flash Security</v>
+<v>IR-Remo\4244PVA-442\Header Files</v>
+<v>IR-Remo\4244PVA-442\Header Files\cyapicallbacks.h</v>
+<v>IR-Remo\4244PVA-442\Source Files</v>
+<v>IR-Remo\4244PVA-442\Source Files\main.c</v>
+<v>IR-Remo\4244PVA-442\Generated_Source</v>
+<v>IR-Remo\4244PVA-442\Generated_Source\PSoC4</v>
+<v>IR-Remo\4244PVA-442\Generated_Source\PSoC4\cy_boot</v>
+<v>IR-Remo\4244PVA-442\Generated_Source\PSoC4\cy_lfclk</v>
+<v>IR-Remo\4244PVA-442\Generated_Source\PSoC4\Em_EEPROM_Dynamic</v>
+<v>IR-Remo\4244PVA-442\Generated_Source\PSoC4\IR</v>
+<v>IR-Remo\4244PVA-442\Generated_Source\PSoC4\ISR1</v>
+<v>IR-Remo\4244PVA-442\Generated_Source\PSoC4\LED</v>
+<v>IR-Remo\4244PVA-442\Generated_Source\PSoC4\M_BL</v>
+<v>IR-Remo\4244PVA-442\Generated_Source\PSoC4\M_BR</v>
+<v>IR-Remo\4244PVA-442\Generated_Source\PSoC4\M_FL</v>
+<v>IR-Remo\4244PVA-442\Generated_Source\PSoC4\M_FR</v>
+<v>IR-Remo\4244PVA-442\Generated_Source\PSoC4\timer_clock</v>
+<v>IR-Remo\4244PVA-442\Generated_Source\PSoC4\timer_clock_1</v>
+<v>IR-Remo\4244PVA-442\Generated_Source\PSoC4\timer_clock_2</v>
+<v>IR-Remo\4244PVA-442\Generated_Source\PSoC4\Timer1</v>
+<v>IR-Remo\4244PVA-442\Generated_Source\PSoC4\Timer2</v>
+<v>IR-Remo\4244PVA-442\Generated_Source\PSoC4\UART1</v>
+<v>IR-Remo\4244PVA-442\Generated_Source\PSoC4\UART1_rx</v>
+<v>IR-Remo\4244PVA-442\Generated_Source\PSoC4\UART1_tx</v>
+<v>IR-Remo\4244PVA-442\Generated_Source\PSoC4\cycodeshareexport.ld</v>
+<v>IR-Remo\4244PVA-442\Generated_Source\PSoC4\cycodeshareimport.ld</v>
+<v>IR-Remo\4244PVA-442\Generated_Source\PSoC4\cycodeshareimport.scat</v>
+<v>IR-Remo\4244PVA-442\Generated_Source\PSoC4\cydevice_trm.h</v>
+<v>IR-Remo\4244PVA-442\Generated_Source\PSoC4\cydevicegnu_trm.inc</v>
+<v>IR-Remo\4244PVA-442\Generated_Source\PSoC4\cydeviceiar_trm.inc</v>
+<v>IR-Remo\4244PVA-442\Generated_Source\PSoC4\cydevicerv_trm.inc</v>
+<v>IR-Remo\4244PVA-442\Generated_Source\PSoC4\cydisabledsheets.h</v>
+<v>IR-Remo\4244PVA-442\Generated_Source\PSoC4\cyfitter.h</v>
+<v>IR-Remo\4244PVA-442\Generated_Source\PSoC4\cyfitter_cfg.c</v>
+<v>IR-Remo\4244PVA-442\Generated_Source\PSoC4\cyfitter_cfg.h</v>
+<v>IR-Remo\4244PVA-442\Generated_Source\PSoC4\cyfittergnu.inc</v>
+<v>IR-Remo\4244PVA-442\Generated_Source\PSoC4\cyfitteriar.inc</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
@@ -137,6 +155,9 @@
 <v>IR-Remo\4244PVA-442</v>
 <v>IR-Remo\4244PVA-442\TopDesign</v>
 <v>IR-Remo\4244PVA-442\TopDesign\TopDesign.cysch</v>
+<v>IR-Remo\C4245AZI-483</v>
+<v>IR-Remo\C4245AZI-483\TopDesign</v>
+<v>IR-Remo\C4245AZI-483\TopDesign\TopDesign.cysch</v>
 <v>IR-Remo\D4245FNI</v>
 <v>IR-Remo\D4245FNI\TopDesign</v>
 <v>IR-Remo\D4245FNI\TopDesign\TopDesign.cysch</v>
@@ -152,6 +173,9 @@
 <v>IR-Remo\4244PVA-442</v>
 <v>IR-Remo\4244PVA-442\TopDesign</v>
 <v>IR-Remo\4244PVA-442\TopDesign\TopDesign.cysch</v>
+<v>IR-Remo\C4245AZI-483</v>
+<v>IR-Remo\C4245AZI-483\TopDesign</v>
+<v>IR-Remo\C4245AZI-483\TopDesign\TopDesign.cysch</v>
 <v>IR-Remo\D4245FNI</v>
 <v>IR-Remo\D4245FNI\TopDesign</v>
 <v>IR-Remo\D4245FNI\TopDesign\TopDesign.cysch</v>
@@ -219,6 +243,63 @@
 <v>IR-Remo\4244PVA-442\4244PVA-442.gpdsc</v>
 <v>IR-Remo\4244PVA-442\4244PVA-442.rpt</v>
 <v>IR-Remo\4244PVA-442\4244PVA-442_timing.html</v>
+<v>IR-Remo\C4245AZI-483</v>
+<v>IR-Remo\C4245AZI-483\CortexM0</v>
+<v>IR-Remo\C4245AZI-483\CortexM0\ARM_GCC_541</v>
+<v>IR-Remo\C4245AZI-483\CortexM0\ARM_GCC_541\Debug</v>
+<v>IR-Remo\C4245AZI-483\CortexM0\ARM_GCC_541\Debug\Listing Files</v>
+<v>IR-Remo\C4245AZI-483\CortexM0\ARM_GCC_541\Debug\Listing Files\Ch0.lst</v>
+<v>IR-Remo\C4245AZI-483\CortexM0\ARM_GCC_541\Debug\Listing Files\Ch0_PM.lst</v>
+<v>IR-Remo\C4245AZI-483\CortexM0\ARM_GCC_541\Debug\Listing Files\Ch1.lst</v>
+<v>IR-Remo\C4245AZI-483\CortexM0\ARM_GCC_541\Debug\Listing Files\Ch1_PM.lst</v>
+<v>IR-Remo\C4245AZI-483\CortexM0\ARM_GCC_541\Debug\Listing Files\Cm0Start.lst</v>
+<v>IR-Remo\C4245AZI-483\CortexM0\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>IR-Remo\C4245AZI-483\CortexM0\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>IR-Remo\C4245AZI-483\CortexM0\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>IR-Remo\C4245AZI-483\CortexM0\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>IR-Remo\C4245AZI-483\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLFClk.lst</v>
+<v>IR-Remo\C4245AZI-483\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>IR-Remo\C4245AZI-483\CortexM0\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>IR-Remo\C4245AZI-483\CortexM0\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>IR-Remo\C4245AZI-483\CortexM0\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>IR-Remo\C4245AZI-483\CortexM0\ARM_GCC_541\Debug\Listing Files\IR.lst</v>
+<v>IR-Remo\C4245AZI-483\CortexM0\ARM_GCC_541\Debug\Listing Files\IR_PM.lst</v>
+<v>IR-Remo\C4245AZI-483\CortexM0\ARM_GCC_541\Debug\Listing Files\ISR1.lst</v>
+<v>IR-Remo\C4245AZI-483\CortexM0\ARM_GCC_541\Debug\Listing Files\LED.lst</v>
+<v>IR-Remo\C4245AZI-483\CortexM0\ARM_GCC_541\Debug\Listing Files\LED_PM.lst</v>
+<v>IR-Remo\C4245AZI-483\CortexM0\ARM_GCC_541\Debug\Listing Files\M_BL.lst</v>
+<v>IR-Remo\C4245AZI-483\CortexM0\ARM_GCC_541\Debug\Listing Files\M_BL_PM.lst</v>
+<v>IR-Remo\C4245AZI-483\CortexM0\ARM_GCC_541\Debug\Listing Files\M_BR.lst</v>
+<v>IR-Remo\C4245AZI-483\CortexM0\ARM_GCC_541\Debug\Listing Files\M_BR_PM.lst</v>
+<v>IR-Remo\C4245AZI-483\CortexM0\ARM_GCC_541\Debug\Listing Files\M_FL.lst</v>
+<v>IR-Remo\C4245AZI-483\CortexM0\ARM_GCC_541\Debug\Listing Files\M_FL_PM.lst</v>
+<v>IR-Remo\C4245AZI-483\CortexM0\ARM_GCC_541\Debug\Listing Files\M_FR.lst</v>
+<v>IR-Remo\C4245AZI-483\CortexM0\ARM_GCC_541\Debug\Listing Files\M_FR_PM.lst</v>
+<v>IR-Remo\C4245AZI-483\CortexM0\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>IR-Remo\C4245AZI-483\CortexM0\ARM_GCC_541\Debug\Listing Files\timer_clock.lst</v>
+<v>IR-Remo\C4245AZI-483\CortexM0\ARM_GCC_541\Debug\Listing Files\timer_clock_1.lst</v>
+<v>IR-Remo\C4245AZI-483\CortexM0\ARM_GCC_541\Debug\Listing Files\timer_clock_2.lst</v>
+<v>IR-Remo\C4245AZI-483\CortexM0\ARM_GCC_541\Debug\Listing Files\Timer1.lst</v>
+<v>IR-Remo\C4245AZI-483\CortexM0\ARM_GCC_541\Debug\Listing Files\Timer1_PM.lst</v>
+<v>IR-Remo\C4245AZI-483\CortexM0\ARM_GCC_541\Debug\Listing Files\Timer2.lst</v>
+<v>IR-Remo\C4245AZI-483\CortexM0\ARM_GCC_541\Debug\Listing Files\Timer2_PM.lst</v>
+<v>IR-Remo\C4245AZI-483\CortexM0\ARM_GCC_541\Debug\Listing Files\UART1.lst</v>
+<v>IR-Remo\C4245AZI-483\CortexM0\ARM_GCC_541\Debug\Listing Files\UART1_BOOT.lst</v>
+<v>IR-Remo\C4245AZI-483\CortexM0\ARM_GCC_541\Debug\Listing Files\UART1_PM.lst</v>
+<v>IR-Remo\C4245AZI-483\CortexM0\ARM_GCC_541\Debug\Listing Files\UART1_rx.lst</v>
+<v>IR-Remo\C4245AZI-483\CortexM0\ARM_GCC_541\Debug\Listing Files\UART1_rx_PM.lst</v>
+<v>IR-Remo\C4245AZI-483\CortexM0\ARM_GCC_541\Debug\Listing Files\UART1_SPI_UART.lst</v>
+<v>IR-Remo\C4245AZI-483\CortexM0\ARM_GCC_541\Debug\Listing Files\UART1_SPI_UART_INT.lst</v>
+<v>IR-Remo\C4245AZI-483\CortexM0\ARM_GCC_541\Debug\Listing Files\UART1_tx.lst</v>
+<v>IR-Remo\C4245AZI-483\CortexM0\ARM_GCC_541\Debug\Listing Files\UART1_tx_PM.lst</v>
+<v>IR-Remo\C4245AZI-483\CortexM0\ARM_GCC_541\Debug\Listing Files\UART1_UART.lst</v>
+<v>IR-Remo\C4245AZI-483\CortexM0\ARM_GCC_541\Debug\Listing Files\UART1_UART_BOOT.lst</v>
+<v>IR-Remo\C4245AZI-483\CortexM0\ARM_GCC_541\Debug\C4245AZI-483.elf</v>
+<v>IR-Remo\C4245AZI-483\CortexM0\ARM_GCC_541\Debug\C4245AZI-483.hex</v>
+<v>IR-Remo\C4245AZI-483\CortexM0\ARM_GCC_541\Debug\C4245AZI-483.map</v>
+<v>IR-Remo\C4245AZI-483\C4245AZI-483.gpdsc</v>
+<v>IR-Remo\C4245AZI-483\C4245AZI-483.rpt</v>
+<v>IR-Remo\C4245AZI-483\C4245AZI-483_timing.html</v>
 <v>IR-Remo\D4245FNI</v>
 <v>IR-Remo\D4245FNI\CortexM0</v>
 <v>IR-Remo\D4245FNI\CortexM0\ARM_GCC_541</v>
@@ -370,51 +451,6 @@
 <VisibleNodeIds>
 <v>IR-Remo</v>
 <v>IR-Remo\4244PVA-442</v>
-<v>IR-Remo\4244PVA-442\CortexM0</v>
-<v>IR-Remo\4244PVA-442\CortexM0\ARM_GCC_541</v>
-<v>IR-Remo\4244PVA-442\CortexM0\ARM_GCC_541\Debug</v>
-<v>IR-Remo\4244PVA-442\CortexM0\ARM_GCC_541\Debug\Listing Files</v>
-<v>IR-Remo\4244PVA-442\CortexM0\ARM_GCC_541\Debug\Listing Files\Cm0Start.lst</v>
-<v>IR-Remo\4244PVA-442\CortexM0\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
-<v>IR-Remo\4244PVA-442\CortexM0\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
-<v>IR-Remo\4244PVA-442\CortexM0\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
-<v>IR-Remo\4244PVA-442\CortexM0\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
-<v>IR-Remo\4244PVA-442\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLFClk.lst</v>
-<v>IR-Remo\4244PVA-442\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
-<v>IR-Remo\4244PVA-442\CortexM0\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
-<v>IR-Remo\4244PVA-442\CortexM0\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
-<v>IR-Remo\4244PVA-442\CortexM0\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
-<v>IR-Remo\4244PVA-442\CortexM0\ARM_GCC_541\Debug\Listing Files\IR.lst</v>
-<v>IR-Remo\4244PVA-442\CortexM0\ARM_GCC_541\Debug\Listing Files\IR_PM.lst</v>
-<v>IR-Remo\4244PVA-442\CortexM0\ARM_GCC_541\Debug\Listing Files\ISR1.lst</v>
-<v>IR-Remo\4244PVA-442\CortexM0\ARM_GCC_541\Debug\Listing Files\LED.lst</v>
-<v>IR-Remo\4244PVA-442\CortexM0\ARM_GCC_541\Debug\Listing Files\LED_PM.lst</v>
-<v>IR-Remo\4244PVA-442\CortexM0\ARM_GCC_541\Debug\Listing Files\M_BL.lst</v>
-<v>IR-Remo\4244PVA-442\CortexM0\ARM_GCC_541\Debug\Listing Files\M_BL_PM.lst</v>
-<v>IR-Remo\4244PVA-442\CortexM0\ARM_GCC_541\Debug\Listing Files\M_BR.lst</v>
-<v>IR-Remo\4244PVA-442\CortexM0\ARM_GCC_541\Debug\Listing Files\M_BR_PM.lst</v>
-<v>IR-Remo\4244PVA-442\CortexM0\ARM_GCC_541\Debug\Listing Files\M_FL.lst</v>
-<v>IR-Remo\4244PVA-442\CortexM0\ARM_GCC_541\Debug\Listing Files\M_FL_PM.lst</v>
-<v>IR-Remo\4244PVA-442\CortexM0\ARM_GCC_541\Debug\Listing Files\M_FR.lst</v>
-<v>IR-Remo\4244PVA-442\CortexM0\ARM_GCC_541\Debug\Listing Files\M_FR_PM.lst</v>
-<v>IR-Remo\4244PVA-442\CortexM0\ARM_GCC_541\Debug\Listing Files\main.lst</v>
-<v>IR-Remo\4244PVA-442\CortexM0\ARM_GCC_541\Debug\Listing Files\timer_clock.lst</v>
-<v>IR-Remo\4244PVA-442\CortexM0\ARM_GCC_541\Debug\Listing Files\timer_clock_1.lst</v>
-<v>IR-Remo\4244PVA-442\CortexM0\ARM_GCC_541\Debug\Listing Files\timer_clock_2.lst</v>
-<v>IR-Remo\4244PVA-442\CortexM0\ARM_GCC_541\Debug\Listing Files\Timer1.lst</v>
-<v>IR-Remo\4244PVA-442\CortexM0\ARM_GCC_541\Debug\Listing Files\Timer1_PM.lst</v>
-<v>IR-Remo\4244PVA-442\CortexM0\ARM_GCC_541\Debug\Listing Files\Timer2.lst</v>
-<v>IR-Remo\4244PVA-442\CortexM0\ARM_GCC_541\Debug\Listing Files\Timer2_PM.lst</v>
-<v>IR-Remo\4244PVA-442\CortexM0\ARM_GCC_541\Debug\Listing Files\UART1.lst</v>
-<v>IR-Remo\4244PVA-442\CortexM0\ARM_GCC_541\Debug\Listing Files\UART1_BOOT.lst</v>
-<v>IR-Remo\4244PVA-442\CortexM0\ARM_GCC_541\Debug\Listing Files\UART1_PM.lst</v>
-<v>IR-Remo\4244PVA-442\CortexM0\ARM_GCC_541\Debug\Listing Files\UART1_rx.lst</v>
-<v>IR-Remo\4244PVA-442\CortexM0\ARM_GCC_541\Debug\Listing Files\UART1_rx_PM.lst</v>
-<v>IR-Remo\4244PVA-442\CortexM0\ARM_GCC_541\Debug\Listing Files\UART1_SPI_UART.lst</v>
-<v>IR-Remo\4244PVA-442\CortexM0\ARM_GCC_541\Debug\Listing Files\UART1_SPI_UART_INT.lst</v>
-<v>IR-Remo\4244PVA-442\CortexM0\ARM_GCC_541\Debug\Listing Files\UART1_tx.lst</v>
-<v>IR-Remo\4244PVA-442\CortexM0\ARM_GCC_541\Debug\Listing Files\UART1_tx_PM.lst</v>
-<v>IR-Remo\4244PVA-442\CortexM0\ARM_GCC_541\Debug\Listing Files\UART1_UART.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -440,6 +476,21 @@
 <v>IR-Remo\4244PVA-442\SCB_P4_v4_0.pdf</v>
 <v>IR-Remo\4244PVA-442\Timer_v2_80</v>
 <v>IR-Remo\4244PVA-442\Timer_v2_80\Timer_v2_80.pdf</v>
+<v>IR-Remo\C4245AZI-483</v>
+<v>IR-Remo\C4245AZI-483\PSoC 4 Architecture TRM</v>
+<v>IR-Remo\C4245AZI-483\PSoC 4200 Family Datasheet</v>
+<v>IR-Remo\C4245AZI-483\System Reference Guides</v>
+<v>IR-Remo\C4245AZI-483\System Reference Guides\cy_boot_v5_90</v>
+<v>IR-Remo\C4245AZI-483\System Reference Guides\cy_lfclk_v1_20</v>
+<v>IR-Remo\C4245AZI-483\cy_clock_v2_20</v>
+<v>IR-Remo\C4245AZI-483\cy_clock_v2_20\cy_clock_v2_20.pdf</v>
+<v>IR-Remo\C4245AZI-483\cy_constant_v1_0.pdf</v>
+<v>IR-Remo\C4245AZI-483\cy_isr_v1_70.pdf</v>
+<v>IR-Remo\C4245AZI-483\cy_pins_v2_20</v>
+<v>IR-Remo\C4245AZI-483\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>IR-Remo\C4245AZI-483\SCB_P4_v4_0.pdf</v>
+<v>IR-Remo\C4245AZI-483\Timer_v2_80</v>
+<v>IR-Remo\C4245AZI-483\Timer_v2_80\Timer_v2_80.pdf</v>
 <v>IR-Remo\D4245FNI</v>
 <v>IR-Remo\D4245FNI\PSoC 4 Architecture TRM</v>
 <v>IR-Remo\D4245FNI\PSoC 4200 Family Datasheet</v>
@@ -500,6 +551,21 @@
 <v>IR-Remo\4244PVA-442\SCB_P4_v4_0.pdf</v>
 <v>IR-Remo\4244PVA-442\Timer_v2_80</v>
 <v>IR-Remo\4244PVA-442\Timer_v2_80\Timer_v2_80.pdf</v>
+<v>IR-Remo\C4245AZI-483</v>
+<v>IR-Remo\C4245AZI-483\PSoC 4 Architecture TRM</v>
+<v>IR-Remo\C4245AZI-483\PSoC 4200 Family Datasheet</v>
+<v>IR-Remo\C4245AZI-483\System Reference Guides</v>
+<v>IR-Remo\C4245AZI-483\System Reference Guides\cy_boot_v5_90</v>
+<v>IR-Remo\C4245AZI-483\System Reference Guides\cy_lfclk_v1_20</v>
+<v>IR-Remo\C4245AZI-483\cy_clock_v2_20</v>
+<v>IR-Remo\C4245AZI-483\cy_clock_v2_20\cy_clock_v2_20.pdf</v>
+<v>IR-Remo\C4245AZI-483\cy_constant_v1_0.pdf</v>
+<v>IR-Remo\C4245AZI-483\cy_isr_v1_70.pdf</v>
+<v>IR-Remo\C4245AZI-483\cy_pins_v2_20</v>
+<v>IR-Remo\C4245AZI-483\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>IR-Remo\C4245AZI-483\SCB_P4_v4_0.pdf</v>
+<v>IR-Remo\C4245AZI-483\Timer_v2_80</v>
+<v>IR-Remo\C4245AZI-483\Timer_v2_80\Timer_v2_80.pdf</v>
 <v>IR-Remo\D4245FNI</v>
 <v>IR-Remo\D4245FNI\PSoC 4 Architecture TRM</v>
 <v>IR-Remo\D4245FNI\PSoC 4200 Family Datasheet</v>
@@ -517,20 +583,6 @@
 <v>IR-Remo\D4245FNI\Timer_v2_80\Timer_v2_80.pdf</v>
 <v>IR-Remo\Design01</v>
 <v>IR-Remo\Design01\PSoC 4 Architecture TRM</v>
-<v>IR-Remo\Design01\PSoC 4000 Family Datasheet</v>
-<v>IR-Remo\Design01\System Reference Guides</v>
-<v>IR-Remo\Design01\System Reference Guides\cy_boot_v5_90</v>
-<v>IR-Remo\Design01\System Reference Guides\cy_lfclk_v1_20</v>
-<v>IR-Remo\Design01\cy_clock_v2_20.pdf</v>
-<v>IR-Remo\Design01\cy_isr_v1_70.pdf</v>
-<v>IR-Remo\Design01\cy_pins_v2_20</v>
-<v>IR-Remo\Design01\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
-<v>IR-Remo\Design01\SW_Tx_UART_v1_50.pdf</v>
-<v>IR-Remo\Design01\TCPWM_P4_v2_10.pdf</v>
-<v>IR-Remo\IR_REMO4200M</v>
-<v>IR-Remo\IR_REMO4200M\PSoC 4 Architecture TRM</v>
-<v>IR-Remo\IR_REMO4200M\PSoC 4200M Family Datasheet</v>
-<v>IR-Remo\IR_REMO4200M\System Reference Guides</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStatesV2>
@@ -545,14 +597,9 @@
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
 <OpenDocs>
-<name v=".\4244PVA-442.cydsn\main.c" />
-<name v=".\4244PVA-442.cydsn\TopDesign\TopDesign.cysch" />
-<name v=".\4244PVA-442.cydsn\4244PVA-442.cydwr" />
-<name v=".\D4245FNI.cydsn\TopDesign\TopDesign.cysch" />
-<name v=".\IR_REMO4200M.cydsn\TopDesign\TopDesign.cysch" />
-<name v=".\IR_REMO4200M.cydsn\main.c" />
-<name v=".\D4245FNI.cydsn\main.c" />
-<name v=".\D4245FNI.cydsn\D4245FNI.cydwr" />
+<name v=".\C4245AZI-483.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\C4245AZI-483.cydsn\C4245AZI-483.cydwr" />
+<name v=".\C4245AZI-483.cydsn\main.c" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -560,7 +607,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1604, 703" SelectedTabbedMdiWindow="6d6aa571-b99b-46d8-a55d-f06a4a1559fe"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="92db47e7-1468-4076-9afa-3b5efa8956d9" /><DocumentWindow Key="C:\Users\mac_000\Documents\Git_IR_REMO\PSoC\4244PVA-442.cydsn\main.c" Guid="7d7a0991-21f4-44b0-9bc7-e6b5bcb55911" /><DocumentWindow Key="C:\Users\mac_000\Documents\Git_IR_REMO\PSoC\4244PVA-442.cydsn\TopDesign\TopDesign.cysch" Guid="fe5ae1fc-9b93-44fb-b41b-faa39f32596b" /><DocumentWindow Key="C:\Users\mac_000\Documents\Git_IR_REMO\PSoC\4244PVA-442.cydsn\4244PVA-442.cydwr" Guid="ffe20fd0-372b-4733-b4dd-ca3584e7d657" /><DocumentWindow Key="C:\Users\mac_000\Documents\Git_IR_REMO\PSoC\D4245FNI.cydsn\TopDesign\TopDesign.cysch" Guid="acc0242a-170a-4ce9-84a8-79ae3c257b81" /><DocumentWindow Key="C:\Users\mac_000\Documents\Git_IR_REMO\PSoC\IR_REMO4200M.cydsn\TopDesign\TopDesign.cysch" Guid="888b5b7b-dc82-49a4-80f4-7adf96f848d2" /><DocumentWindow Key="C:\Users\mac_000\Documents\Git_IR_REMO\PSoC\IR_REMO4200M.cydsn\main.c" Guid="e007f5c6-290d-4f1c-88e7-840e46dc30af" /><DocumentWindow Key="C:\Users\mac_000\Documents\Git_IR_REMO\PSoC\D4245FNI.cydsn\main.c" Guid="987ec561-4264-4cd7-8722-c13308f96578" /><DocumentWindow Key="C:\Users\mac_000\Documents\Git_IR_REMO\PSoC\D4245FNI.cydsn\D4245FNI.cydwr" Guid="6d6aa571-b99b-46d8-a55d-f06a4a1559fe" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1515, 725" SelectedTabbedMdiWindow="20bd9a5a-cc3a-4881-a17d-2d9f11b0006f"><DocumentWindow Key="C:\Users\mac_000\Documents\Git_IR_REMO\PSoC\C4245AZI-483.cydsn\TopDesign\TopDesign.cysch" Guid="2ac25c4e-75a0-483d-a7db-3c25c0113b89" /><DocumentWindow Key="C:\Users\mac_000\Documents\Git_IR_REMO\PSoC\C4245AZI-483.cydsn\C4245AZI-483.cydwr" Guid="20bd9a5a-cc3a-4881-a17d-2d9f11b0006f" /><DocumentWindow Key="C:\Users\mac_000\Documents\Git_IR_REMO\PSoC\C4245AZI-483.cydsn\main.c" Guid="e93f7d86-0cc5-450e-abcd-6ddd3e549086" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="92db47e7-1468-4076-9afa-3b5efa8956d9" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
